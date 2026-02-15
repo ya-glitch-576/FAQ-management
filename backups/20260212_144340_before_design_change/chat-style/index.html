@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun-Net Support - Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="logo-container">
+            <img src="http://sunrise-net.sakura.ne.jp/img/sunnetlogo.png" alt="Logo" class="sun-logo">
+            <h1 id="app-title">FAQボット</h1>
+        </div>
+        <div class="header-actions">
+            <div class="lang-switcher">
+                <button id="lang-ja" class="lang-btn active">JP</button>
+                <button id="lang-en" class="lang-btn">EN</button>
+            </div>
+            <button id="reset-button" class="finish-btn">終了</button>
+        </div>
+    </header>
+
+    <main class="chat-container">
+        <div id="message-container" class="message-container">
+            <!-- メッセージ履歴はJSで動的に挿入されます -->
+        </div>
+    </main>
+
+    <footer class="input-container">
+        <div id="controls" class="controls">
+            <button id="back-button" class="back-link" disabled>ひとつ前に戻る</button>
+        </div>
+        <div id="options-area" class="options-area">
+            <!-- 選択肢ボタンはJSで動的に挿入されます -->
+        </div>
+    </footer>
+
+    <script src="../data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

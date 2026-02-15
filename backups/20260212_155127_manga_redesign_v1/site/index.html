@@ -1,0 +1,908 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun-Net FAQ情報サイト</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sunnet: {
+                            DEFAULT: '#2563eb',
+                            light: '#3b82f6',
+                            dark: '#1d4ed8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', '"Noto Sans JP"', 'sans-serif'],
+                        manga: ['"Dela Gothic One"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; }
+        .manga-font { font-family: 'Dela Gothic One', cursive; }
+        .text-outline {
+            text-shadow: 
+                -2px -2px 0 #fff,  
+                 2px -2px 0 #fff,
+                -2px  2px 0 #fff,
+                 2px  2px 0 #fff,
+                 3px  3px 0 rgba(0,0,0,0.2);
+        }
+        .google-shadow {
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+        }
+        .google-shadow:focus-within {
+            box-shadow: 0 1px 8px rgba(32,33,36,0.35);
+        }
+        .mascot-15x { transform: scale(1.5); }
+    </style>
+
+    <script src="search_index.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+    <!-- Header: Manga Style Redesign -->
+    <header class="bg-gradient-to-br from-blue-600 to-blue-700 text-white relative overflow-hidden pt-16 pb-24 shadow-2xl">
+        <!-- Floating shapes -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-10 left-10 w-32 h-32 border-4 border-white rounded-full"></div>
+            <div class="absolute bottom-20 right-20 w-48 h-48 border-[16px] border-white/20 skew-y-12"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 relative z-10 text-center">
+            <!-- Logo area -->
+            <div class="mb-10 flex flex-col items-center justify-center">
+                <img src="images/sunnet_logo_orig.png" alt="Sun-Net Logo" class="h-16 mb-4 brightness-0 invert object-contain drop-shadow-md">
+                <div class="relative">
+                    <h1 class="text-6xl md:text-8xl font-black manga-font text-blue-600 tracking-tighter italic text-outline transform -rotate-3 mb-2">
+                        FAQ
+                    </h1>
+                    <!-- Mascot integration -->
+                    <div class="absolute -top-12 -left-28 hidden lg:block scale-150 transform -rotate-12 drop-shadow-2xl">
+                        <img src="images/mascot_thumbsup.png" alt="Thumbs Up" class="w-32 h-32 object-contain">
+                    </div>
+                    <div class="absolute -bottom-8 -right-24 hidden lg:block scale-150 transform rotate-6 drop-shadow-2xl">
+                        <img src="images/mascot_redman.png" alt="Redman" class="w-28 h-28 object-contain">
+                    </div>
+                </div>
+                <p class="text-blue-100 text-lg font-bold mt-4 tracking-widest bg-blue-800/50 px-6 py-1 rounded-full inline-block uppercase">Internet Support Center</p>
+            </div>
+            
+            <!-- Google Style Search Bar -->
+            <div class="max-w-2xl mx-auto mt-12 w-full">
+                <div class="google-shadow bg-white rounded-full flex items-center px-4 md:px-6 py-1 md:py-2 transition duration-200 relative z-30 group">
+                    <div class="text-slate-400 p-2">
+                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </div>
+                    <input type="text" id="search-input" 
+                        class="flex-1 px-3 py-3 md:py-4 bg-transparent border-none text-slate-800 text-base md:text-lg focus:ring-0 outline-none" 
+                        placeholder="知りたいことを入力してください" 
+                        autocomplete="off">
+                    <div class="text-blue-600 p-2 opacity-0 group-focus-within:opacity-100 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/><path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Suggest Box: Google style -->
+                    <div id="suggest-box" class="absolute top-full left-0 right-0 mt-3 bg-white rounded-3xl shadow-2xl overflow-hidden hidden z-50 text-left border border-slate-100 py-4"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom wave -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
+            <svg class="relative block w-[calc(100%+1.3px)] h-12" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C51.1,102.39,103.23,109.11,155.19,102.7c60.77-7.51,114.48-26,172-41.86Z" fill="#f8f9fa"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-16 relative z-10">
+        
+        <!-- Search Results Area -->
+        <div id="search-results-area" class="hidden mb-16 animate-in fade-in duration-500">
+            <h2 id="search-results-title" class="text-2xl font-bold text-slate-800 mb-8 manga-font flex items-center">
+                <span class="w-3 h-3 bg-blue-600 rounded-full mr-3 animate-ping"></span>検索結果
+            </h2>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden p-2 border-2 border-blue-50">
+                <ul id="search-results-list" class="space-y-2"></ul>
+            </div>
+            <div id="search-no-results" class="hidden text-center py-20 bg-white rounded-3xl border-2 border-dashed border-slate-200">
+                <img src="images/mascot_confused.png" class="w-48 h-48 mx-auto mb-6 scale-125" alt="Not Found">
+                <p class="text-slate-600 font-bold text-xl mb-2">あちゃー！見つかりませんでした...</p>
+                <p class="text-slate-400">キーワードを工夫して、もう一度検索してみてね！</p>
+            </div>
+        </div>
+
+        <div id="main-content">
+            
+    <section class="mb-16">
+        <div class="bg-white border-2 border-slate-100 rounded-3xl p-8 shadow-sm">
+            <h2 class="text-slate-800 font-bold text-xl mb-6 flex items-center manga-font">
+                <img src="images/mascot_thumbsup.png" class="w-12 h-12 mr-4 scale-125" alt="Popular">
+                <span>みんなが注目！よくある質問</span>
+            </h2>
+            <ul class="grid grid-cols-1 gap-2 text-slate-700">
+                <li><a href="FAQ-0089.html" class="block p-4 rounded-xl border border-transparent hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 transition flex items-start group"><span class="mr-3 text-blue-500 font-bold font-manga mt-0.5 group-hover:scale-125 transition">Q.</span><span class="font-medium">インターネットが突然切断されます。原因は何でしょうか？</span></a></li><li><a href="FAQ-0090.html" class="block p-4 rounded-xl border border-transparent hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700 transition flex items-start group"><span class="mr-3 text-blue-500 font-bold font-manga mt-0.5 group-hover:scale-125 transition">Q.</span><span class="font-medium">物理（MAC）アドレスとは何ですか？なぜ登録が必要なのですか？</span></a></li>
+            </ul>
+        </div>
+    </section>
+    
+            <section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>寮内ネット</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">MACアドレス</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0020.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Iphoneを3台所有しています。登録することはできますか？</a></li><li><a href="FAQ-0164.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>個人契約となり、ご利用は契約者が所有する端末に限ります。ご契約者以外の端末に関する登録及び利用はご遠慮いただいております。</a></li><li><a href="FAQ-0021.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>友人の端末でMACアドレスの登録を行いたいのですが可能ですか？</a></li><li><a href="FAQ-0163.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>同系統端末の登録は2台までとなります。尚、契約者所有の端末のみ対象です。3台目以降の登録を希望される場合は別途誓約書をご提出いただきます。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">MACアドレス|寮内ネット|Android</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0082.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Android OS</a></li><li><a href="FAQ-0222.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>※AndroidはOSのバージョンやメーカーよって表示手順が異なります。詳しくはインターネット検索にてお調べください
+1.端末のWiFiを「有効」にします。
+2. ホーム画面で「設定」アプリを開きます。
+3. 「端末情報」を選択します。
+4. 「端末の状態」をタップします。
+5. 「WiFi-MACアドレス」が、Androidデバイスの物理アドレス（MACアドレス）です。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">MACアドレス|寮内ネット|iphone|ipad</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0221.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>1. ホーム画面で「設定」アプリを開きます。
+2. 「一般」をタップします。
+3. 「情報」を選択します。
+4. 「Wi-Fiアドレス」の横に表示されている値が、iPhoneの物理アドレス（MACアドレス）です。</a></li><li><a href="FAQ-0081.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>【ios】iphone/ipad</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">SIMサービス</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0147.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>1ヶ月単位でのご契約が可能です。ご都合のよい契約期間をお選びください。</a></li><li><a href="FAQ-0003.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>1年間は寮にいる予定がありますが2年目に寮に住むか未定です。2年目はまた再契約になりますか？手続きはどのようにすればよいのでしょうか？</a></li><li><a href="FAQ-0145.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Netサービスが学生寮全体で導入されている場合ご利用いただけます。ご自身の学生寮のご利用可否についてはお手数ですが下記までお問合せください。
+フリーダイヤル：0120-336-326
+メールアドレス：sales@sunrise-net.co.jp</a></li><li><a href="FAQ-0148.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>お引越し先では引き続き『Sun-Net光』のご利用（プラン変更）が可能です。※一部建物を除く
+以下ページをご確認ください。
+http://www.sunrise-net.ne.jp/sunnethikari.html
+プラン変更をされない場合は解約はご解約月の前月末日までに弊社ホームページよりお手続きが必要です。お電話やメールによる解約受付は行っておりません。解約金として月額料金相当の解約金が発生いたしますのでご了承ください。</a></li><li><a href="FAQ-0149.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい、可能です。但し購入プランの方がレンタルプランに比べて月額料金の設定を低くしておりますので今後のご利用予定期間と比較しご検討ください。ご希望の際はプラン変更フォームよりお手続きをおねがいします。※別途無線ルーターの送料が発生いたします。</a></li><li><a href="FAQ-0006.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ルーター購入プランで契約しておいて、途中からレンタルプランに変更することはできますか？</a></li><li><a href="FAQ-0146.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>契約期間に空白がなければ2年目以降は継続でのご案内となります。継続の際の手数料は発生致しません。契約期間に空白がある場合は再入会扱いとなります。</a></li><li><a href="FAQ-0150.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>無線ルータのご使用に関してシステム運営上、一律弊社ルータに限らせて頂いており、無線ルーターを含むお持ち込み機器の利用はご遠慮頂いております。</a></li><li><a href="FAQ-0007.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>自分で購入した無線ルーターを利用することはできますか？</a></li><li><a href="FAQ-0002.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>自分の住んでいる学生寮で『寮内ネット』は利用できますか？</a></li><li><a href="FAQ-0005.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>退寮等でサービスを辞めたい場合、どのような手続きが必要ですか？</a></li><li><a href="FAQ-0004.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>部屋でネットが必要かまだわからないので、夏までの契約にしたいのですが可能ですか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">SIM設定</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0009.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>MACアドレスはどのようなものですか？</a></li><li><a href="FAQ-0008.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>WiFiプラス/レンタルプランと購入プランの違いを教えてください。</a></li><li><a href="FAQ-0152.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ネットワーク機器等に付いている固有の識別番号です。有線LANのほかに、無線LANやスマートフォン、プリンターなどにもMACアドレスが割り当てられています。
+MACアドレスは12桁の16進数で「00-00-00-XX-XX-XX」と表される。前半6桁がメーカー固有のアドレスで、後半6桁が製品個々のアドレスとなります。物理アドレスやWiFiアドレス等と表示される場合があります。</a></li><li><a href="FAQ-0151.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>購入プランの方がレンタルプランに比べて月額利用料金を低く設定しています。継続して2年以上ご利用の予定がある場合は購入プランがおすすめです。尚、一部プランを除きいずれのプランにおいてもインターネット品質に大きな違いはありません。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">Sun-Net光</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0142.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Netの公式ウェブサイトやSNSアカウントで最新の障害情報を確認できます。大規模な障害の場合は、メールでも通知されます。</a></li><li><a href="FAQ-0139.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Netサービスでは通常、データ使用量に制限はありません。ただし、過度な使用や不正利用は避けてください。</a></li><li><a href="FAQ-0109.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットの使用量に制限はありますか？</a></li><li><a href="FAQ-0112.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットの障害情報はどこで確認できますか？</a></li><li><a href="FAQ-0114.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットサービスを解約したい場合、どうすればよいですか？</a></li><li><a href="FAQ-0110.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネット料金の支払い方法を変更したいです。可能ですか？</a></li><li><a href="FAQ-0113.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>サポートの営業時間外に問題が発生した場合、どうすればよいですか？</a></li><li><a href="FAQ-0111.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引っ越しする予定です。インターネットサービスはどうなりますか？</a></li><li><a href="FAQ-0141.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引っ越し先がSun-Netのサービス提供エリア内であれば、移転手続きが可能です。早めにSun-Netサポートに連絡して、必要な手続きを確認してください。</a></li><li><a href="FAQ-0140.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>支払い方法の変更は可能です。Sun-Netカスタマーサポートに連絡し、希望する支払い方法をお伝えください。</a></li><li><a href="FAQ-0143.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>緊急の場合は、Sun-Netの公式ウェブサイトのヘルプセンターやFAQを参照してください。翌営業日にサポートに連絡することもできます。</a></li><li><a href="FAQ-0144.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>解約希望の場合は、Sun-Netカスタマーサポートに連絡してください。解約手続きや必要書類、機器の返却方法などについてご案内いたします。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">カスタマーサポートと情報</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0019.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>登録中の端末（MACアドレス）を忘れてしまいました。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">クレジットカード</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0161.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>■ご返却先
+
+株式会社 サンライズ
+〒103-0004 東京都中央区東日本橋2-14-1　DKK東日本橋ビル4F
+
+無線ルータの箱又は袋の中に弊社住所印字済みの伝票がございましたら
+そちらをお使いください。
+
+伝票がない場合はお手数ですがお近くのコンビニエンス等で返却いただきますようお願い致します。
+（※伝票のいずれかに会員ID番号をお書きください）
+ご返却時の送料はお客様負担となりますのでご了承ください。</a></li><li><a href="FAQ-0159.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ご契約終了後1週間以内までにお願いします。契約終了期間前にご退寮・お引越し等ございましたら事前にご返却ください。</a></li><li><a href="FAQ-0160.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>まずは弊社までお問合せを頂きお早目にご返却ください。ご返却がない場合は無線ルーター相当額の弁償金の請求となりますのでご注意ください。</a></li><li><a href="FAQ-0055.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>クレジットカードの領収書はもらえませんか？</a></li><li><a href="FAQ-0016.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>レンタルしていた無線ルーターはいつまでに返却すればよいのでしょうか？</a></li><li><a href="FAQ-0199.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>再度こちらからクレジット情報を入力して頂くURLをメールでお送り致します。⇒info@sunrise-net.co.jpまでクレジットURL希望・名前をご記入の上メールをお願いします</a></li><li><a href="FAQ-0200.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月10日前後です。但し決済システムによる都合や年末年始、GWなど長期休暇及び長期祝日の際は変更する場合がございますのでご了承ください。</a></li><li><a href="FAQ-0057.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月のクレジットカード決済はいつ頃になりますか？</a></li><li><a href="FAQ-0017.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>無線ルーターの返却を忘れ、契約終了後1週間が経過しました。どうすればいいでしょうか？</a></li><li><a href="FAQ-0018.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>無線ルーターの返却方法について教えてください。</a></li><li><a href="FAQ-0056.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>途中から別のクレジットカードにしたい場合はどうすればいいですか？</a></li><li><a href="FAQ-0198.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>領収書の発行には対応しておりません。カード会社発行の明細にてご確認をお願いします。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">クレジットカード払い</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0197.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>お申込み情報到着後1週間以内に指定のメールアドレス宛に届きます。アクセス有効期限がありますので期限内の手続きをお願いします。期限切れの際は弊社までお問合せください。
+
+クレジット支払手続きのメールは株式会社ゼウス（https://www.cardservice.co.jp/）のシステムを通じて配信されます。
+
+●件名：[ZEUS]お支払手続きご案内メール
+●差出人：mailinfo@cardservice.co.jp</a></li><li><a href="FAQ-0166.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ご契約期間中となりますのでご利用料金として発生します。</a></li><li><a href="FAQ-0165.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>まずは1年間でお申込頂き、教育実習が決まるまでは最小単位でのご継続手続きをおすすめしております。尚、寮内ネットサービスに限り、大学公認での一時離寮で且つ弊社契約期間内に同じ寮に戻る予定がある場合は一時休止扱いが可能です。詳しくはカスタマーデスクまでお問合せください。</a></li><li><a href="FAQ-0167.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>まずは短期契約期間にてお申込頂き、留学期間が決まるまでは最小単位でのご継続手続きをおすすめしております。尚、寮内ネットサービスに限り、大学公認の留学で且つ帰国後、弊社契約期間内に同じ寮に戻る予定がある場合は一時休止扱いが可能です。詳しくはカスタマーデスクまでお問合せください。</a></li><li><a href="FAQ-0054.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>クレジットカード決済のメールはいつごろ届きますか？</a></li><li><a href="FAQ-0023.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>夏、冬、春休みと帰省することがあります。その期間の料金はどのような扱いになりますか？</a></li><li><a href="FAQ-0022.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>教育実習で2年目の夏は寮を離れますがどのようにするのがいいのでしょうか？</a></li><li><a href="FAQ-0024.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>留学予定がありますが時期は未定です。どのように契約期間を定めればよいのでしょうか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">セキュリティとプライバシー</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0137.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>VPNの使用自体は問題ありませんが、一部のVPNサービスはネットワークのパフォーマンスに影響を与える可能性があります。また、不正利用はお控えください。</a></li><li><a href="FAQ-0107.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>VPNを使用してもよいですか？</a></li><li><a href="FAQ-0108.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>セキュリティ対策として何をすればよいですか？</a></li><li><a href="FAQ-0106.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>友人が来た時、一時的にWi-Fiを使わせることはできますか？</a></li><li><a href="FAQ-0136.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>基本的には可能ですが、セキュリティのため、ゲスト用のWi-Fi設定を使用することをお勧めします。設定方法についてはSun-Netサポートにお問い合わせください。</a></li><li><a href="FAQ-0138.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>強力なWi-Fiパスワードの設定、ルーターのファームウェア更新、不要なポートの閉鎖、定期的なデバイスのセキュリティ更新を行ってください。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">デバイス別の設定と問題解決</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0101.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットを介して家電を操作したいです。可能ですか？</a></li><li><a href="FAQ-0099.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ゲーム機のインターネット接続設定方法を教えてください。</a></li><li><a href="FAQ-0129.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ゲーム機の種類によって異なりますが、一般的にはネットワーク設定からWi-Fiを選択し、SSIDとパスワードを入力します。詳細な手順はガイドブックを参照してください。</a></li><li><a href="FAQ-0098.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>スマートフォンのWi-Fi接続ができません。</a></li><li><a href="FAQ-0128.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>スマートフォンのWi-Fi設定で「プライベートアドレス」や「ランダムMACアドレス」機能がONになっている場合、OFFにしてみてください。</a></li><li><a href="FAQ-0131.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>スマートホーム機器の利用は可能です。ただし、セキュリティには十分注意し、各機器のセットアップ方法に従ってください。不明点はメーカーサポートにお問い合わせください。</a></li><li><a href="FAQ-0100.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>セキュリティソフトがインターネット接続を妨げていませんか？</a></li><li><a href="FAQ-0130.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>セキュリティソフトの設定を確認し、必要に応じて一時的に無効にしてみてください。接続できた場合は、セキュリティソフトの設定を見直してください。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">トラブルシューティング</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0216.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>【iPhoneの場合】
+”プライベートアドレス設定”を「オフ」してください。
+※プライベートアドレス設定が
+不明な場合は下記サイトを参考にしてください。
+https://support.apple.com/ja-jp/guide/iphone/iph6b324bb33/ios
+
+【android端末の場合】
+※android10に関してですが、初期設定でMACアドレスが1つのアドレスに固定されていない設定になっております。
+インターネットに接続するためには、固定MACアドレスに設定していただく必要がございますので、
+以下の手順で設定をお願いいたします。
+
+1）「設定」をタップ
+2）「ネットワークとインターネット」をタップ
+3）「WI-FI」をタップ
+4）現在使用しているWIFIをタップ
+5）「詳細設定」をタップ
+6）「プライバシー」をタップ
+7）”ランダムなMACを使用する”から、”デバイスのMACを使用する”に変更
+8）「保存」をタップ</a></li><li><a href="FAQ-0074.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>スマホのWiFiがつかえません。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">ネットワークのパフォーマンスと最適化</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0102.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Wi-Fiの電波が弱い部屋があります。対策はありますか？</a></li><li><a href="FAQ-0132.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Wi-Fi中継器やメッシュWi-Fiシステムの導入を検討してください。ただし、導入前にSun-Netサポートに相談することをおすすめします。</a></li><li><a href="FAQ-0103.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットの速度を測定したいです。どうすればよいですか？</a></li><li><a href="FAQ-0133.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>オンラインの速度測定サービス（例：Speedtest.net）を利用できます。測定結果に疑問がある場合は、Sun-Netサポートにお問い合わせください。</a></li><li><a href="FAQ-0135.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>デバイスの数が増えると、帯域幅が分散されるため速度が低下する可能性があります。重要なタスクを行う際は、他のデバイスの使用を控えることをお勧めします。</a></li><li><a href="FAQ-0134.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ファームウェアの更新は、セキュリティや性能の向上のため重要です。定期的に確認し、更新することをお勧めします。更新方法はルーターの取扱説明書を参照してください。</a></li><li><a href="FAQ-0104.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ルーターのファームウェアを更新する必要がありますか？</a></li><li><a href="FAQ-0105.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>複数のデバイスを同時に使用すると、速度が遅くなりますか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">ネットワーク設定</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0096.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>DNSサーバーの設定方法を教えてください。</a></li><li><a href="FAQ-0097.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>IPv6は利用できますか？</a></li><li><a href="FAQ-0095.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>IPアドレスの設定方法を教えてください。</a></li><li><a href="FAQ-0127.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Netサービスでのまたは居住地域でのIPv6対応状況については、カスタマーサポートにお問い合わせください。利用可能な場合、設定方法をご案内いたします。</a></li><li><a href="FAQ-0126.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>デバイスのネットワーク設定から「DNSサーバーのアドレスを手動で設定する」を選択し、Sun-Netから提供されたDNSサーバーアドレスを入力してください。</a></li><li><a href="FAQ-0124.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ルーターが初期化される為SSIDが変更されます。プライマリSSID（例：aterm~~）を選択し、ルーター裏面に記載されているパスワードを入力してください。</a></li><li><a href="FAQ-0094.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ルーターのリセットボタンを押してしまいました。どうすればよいですか？</a></li><li><a href="FAQ-0125.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>通常は自動取得で問題ありませんが、手動設定が必要な場合は、デバイスのネットワーク設定から「IPアドレスを手動で設定する」を選択し、必要な情報を入力します。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">口座振替</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0213.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-NetHP内の『お申込・各種お手続き』ページ内の『【会員様向け】口座振替依頼書ダウンロード』をご利用ください。
+http://www.sunrise-net.ne.jp/contact_list.html
+印刷し、必要事項に記入・捺印の上、お客様保管用の複写を取った上で弊社までご郵送ください。
+郵送での発送をご希望の場合は書類再送費用として220円をご請求いたします。郵送希望のお客様は下記メールアドレス宛に、お問合せください。
+info@sunrise-net.co.jp　</a></li><li><a href="FAQ-0201.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>再引き落とし（再振替）は受付しておりません。支払い期日までにお振込みいただくようおねがいします。</a></li><li><a href="FAQ-0212.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>再提出のご案内書類にて不備理由が明記されています。よくある不備内容は以下の項目です。
+
+・お届け印のもれ、相違、不鮮明
+・他人名義口座記入
+・預金者名の字体相違、フリガナもれ
+・金融機関名・支店名・口座番号の相違
+・口座番号不明瞭
+・インターネットバンキング手続きの登録未完了
+
+※記入内容を間違えた場合は、二重線で訂正を入れお届け印を押してください。
+※ご印鑑は鮮明に確認がとれる状態に押印ください。不鮮明（にじみ、かすみ等）であれば枠外に追加で押印ください。</a></li><li><a href="FAQ-0069.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座振替依頼書の手続きをしても内容に不備があり再提出の通知が届きます。どのようにすればよいのでしょうか？</a></li><li><a href="FAQ-0070.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座振替依頼書を紛失してしまいました。どうすればいいでしょうか？</a></li><li><a href="FAQ-0211.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座開設時にサインを必要としたネット銀行の場合は捺印欄にサインをおねがいします。捺印・サインなしで口座開設された場合は不要です。詳しくはネット銀行側にお問合せください。</a></li><li><a href="FAQ-0068.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座開設時に印鑑を必要としないネット銀行を登録する場合、口座振替依頼書の捺印はどうしたらいいですか？</a></li><li><a href="FAQ-0058.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引落ができなかったと通知と振込請求案内のメールが届きました。次回引落時に引落してもらえませんか？</a></li><li><a href="FAQ-0202.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月28日です。28日が土・日や祝日の際は翌金融機関営業日が引落日となります。前営業日までに引落金額以上の口座残高となるようご留意ください。</a></li><li><a href="FAQ-0059.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月の銀行引落しはいつですか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">変更手続き</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0205.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい。親権者又は代理人の口座であれば可能でございます。口座振替依頼書下部に契約者情報を記入の上お手続きください。</a></li><li><a href="FAQ-0215.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>下記『お部屋番号変更フォーム』よりお手続きをお願いします。
+https://sunrise-net-s.cms2.jp/changeroom.html</a></li><li><a href="FAQ-0214.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>各種お手続きページ内の『変更申請（お客様情報/契約プラン）』よりお手続きをお願いします。https://sunrise-net-s.cms2.jp/contact_list/alteration.html</a></li><li><a href="FAQ-0062.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>契約者以外の銀行口座を引落口座として登録することはできますか？</a></li><li><a href="FAQANOTHER-0010.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>携帯番号やメールアドレスが変更になった場合はどうすればよいですか？</a></li><li><a href="FAQ-0072.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>途中で部屋が変わるかもしれませんが、どうすればよいのでしょうか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">払込票払い</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0067.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>払込取扱票での支払い方法を教えてください。</a></li><li><a href="FAQ-0053.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>払込取扱票にて指定された支払期日が過ぎてしまいました。支払い期日が過ぎた後はどのように支払えばよいのでしょうか？</a></li><li><a href="FAQ-0196.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>期日が過ぎてもお支払いは可能です。但し督促料金が発生している場合は追加のお支払いが必要です。詳しくは弊社カスタマーサポートデスクまでお問い合わせください。</a></li><li><a href="FAQ-0210.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>＜ゆうちょ銀行ATMでの方法＞
+
+---払込取扱票での送金の場合---
+1.「ご送金」を選択します。
+2.「払込書でのご送金」を選択します。
+3.「払込書」を入れます。払込書に住所氏名、会員IDをご記入の上、払込書を入れてください。
+
+---ゆうちょ口座間での送金の場合---
+1.「ゆうちょ口座へのご送金」を選択します。
+2.「通帳、またはカード」を入れます。
+3.「記号番号」を選択します。
+4. 記号に「00150-3」を入力します。
+5. 番号に「611077」を入力します。
+6. 金額を入力してください。
+7. 最後に確認を押せば手続きは完了します。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">接続の基本とトラブルシューティング</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0086.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Wi-Fiのパスワードがわかりません。どうすればよいですか？</a></li><li><a href="FAQ-0116.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Wi-Fiパスワード（暗号化キー）は通常、ルーターの裏面や底面に記載されています。見つからない場合は、Sun-Netサポートに連絡してください。</a></li><li><a href="FAQ-0115.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>まず、ルーターの電源が入っているか確認してください。次に、Wi-FiのSSIDとパスワードが正しいか確認します。それでも接続できない場合は、デバイスを再起動してみてください。</a></li><li><a href="FAQ-0089.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットが突然切断されます。原因は何でしょうか？</a></li><li><a href="FAQ-0085.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットに接続できません。どうすればよいですか？</a></li><li><a href="FAQ-0087.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネット速度が遅いです。改善方法はありますか？</a></li><li><a href="FAQ-0118.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ルーターが「BR（ブリッジ）」モードになっているか確認してください。側面や底面のスイッチを確認し、必要に応じて切り替えてから電源を入れ直してください。</a></li><li><a href="FAQ-0088.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ルーターの「ACTIVE」ランプが点灯しません。どうすればよいですか？</a></li><li><a href="FAQ-0119.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ルーターの位置、電波干渉、ファームウェアの古さなどが考えられます。ルーターの再起動や位置の変更、最新のファームウェアへの更新を試してみてください。</a></li><li><a href="FAQ-0117.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ルーターを再起動したり、ルーターに近づいたりしてみてください。他のデバイスの使用状況も確認し、必要に応じてネットワークの設定を最適化してください。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">料金支払</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0013.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>LANケーブルは必要ですか？</a></li><li><a href="FAQ-0153.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>LANケーブルを用いた接続方式です。一般的に無線接続に比べて通信や電波状況が安定しています。ご利用いただくにはLAN端子対応の機器及びMACアドレスの登録が必要です。未対応機器の場合有線LANアダプター（MACアドレスの登録が必要）を利用することにより接続が可能です。</a></li><li><a href="FAQ-0015.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>WiFiアドレスをMACアドレスとして申請できますか？</a></li><li><a href="FAQ-0155.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>WiFiプラス購入プランご加入の場合は可能です。無線ルーター代金及び送料のご請求となります。</a></li><li><a href="FAQ-0203.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>お申込時に実家請求希望欄にチェックをお願い致します。</a></li><li><a href="FAQ-0157.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい。お申込は可能です。ノートパソコンが届きましたらMACアドレスをお調べいただき下記フォームよりMACアドレス申請をおねがいします。
+https://sunrise-net-s.cms2.jp/contact_list/mac_application_add.html</a></li><li><a href="FAQ-0158.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい。可能です。MACアドレスを物理アドレスやフィジカルアドレス（physical address）と呼ぶ場合もあります。又、端末によりMACアドレスの名称が異なる場合があります。IOSの場合はWiFiアドレス、Androidの場合はWiFiMACアドレスと表示されます。Windows製品とAPPLE製品でも名称が異なります。</a></li><li><a href="FAQ-0206.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい。親権者又は代理人のクレジットカードであれば可能でございます。</a></li><li><a href="FAQ-0204.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>コンビニエンスストアでのお支払いには対応しておりません。コンビニエンスストア設置のATMからのお支払い操作をおねがいします。</a></li><li><a href="FAQ-0061.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>コンビニエンスストアで支払う事はできますか？</a></li><li><a href="FAQ-0195.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>以下、いずれかの金融機関宛てにお願いします。
+※お振込み時にご自身の会員ID番号をご入力ください。
+
+1.ゆうちょ銀行（Japan Post Bank）
+　口座記号番号　00150-3-611077
+　加入者名	株式会社サンライズ
+
+2.三菱UFJ銀行/0005（Mitsubishi UFJ bank）
+　浅草橋支店/069（Asakusabashi Branch）
+　普通預金
+　口座番号　0912502
+　口座名義　株式会社サンライズ
+
+3.りそな銀行/0010（Resona bank）
+　秋葉原支店/275（Akihabara Branch）
+　普通預金
+　口座番号　2069388
+　口座名義　株式会社サンライズ</a></li><li><a href="FAQANOTHER-0008.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>利用料金の振込先を教えてください。</a></li><li><a href="FAQ-0063.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>契約者以外のクレジットカードでの支払いは可能ですか？</a></li><li><a href="FAQ-0156.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>弊社からお送りする無線ルーターに付属のLANケーブルがついています。WiFi接続のみご利用の場合はご用意いただく必要はありません。有線LAN接続をご希望の場合や無線ルーターの設置場所を変更される場合はご用意ください。※弊社でもLANケーブルの販売を行っております。</a></li><li><a href="FAQ-0154.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>弊社システムの仕様上ご利用いただくことはできません。弊社から送られる指定の無線ルーターをご利用ください。</a></li><li><a href="FAQ-0060.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>料金支払は親に任せたいのですが、どのようにすればよいのでしょうか？</a></li><li><a href="FAQ-0010.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>有線LAN（有線接続）の意味を教えてください。</a></li><li><a href="FAQ-0012.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>無線ルーターを買い替えたいのですが可能ですか？</a></li><li><a href="FAQ-0014.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>申込時点ではノートパソコンを持っていませんが申し込むことはできますか？</a></li><li><a href="FAQ-0011.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>自身で購入した無線ルーターを利用することはできますか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">未分類</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0208.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Visa、Mastercard、JCB、American Express、Diners Clubの国際ブランドに対応しています。</a></li><li><a href="FAQ-0075.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>WindowsのパソコンのWiFiが使えません。</a></li><li><a href="FAQ-0207.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>いいえ。指定することができません。日本国内の金融機関の口座をご指定ください。</a></li><li><a href="FAQ-0209.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>カード発行会社や諸条件によりお使いいただけない場合がございます。詳しくはお客様のカード発行会社までお尋ねください。</a></li><li><a href="FAQ-0066.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>デビット機能付きクレジットカードは利用できますか？</a></li><li><a href="FAQ-0073.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>会員IDを忘れてしまいました。</a></li><li><a href="FAQ-0065.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>利用できるクレジットカードについて教えてください。</a></li><li><a href="FAQ-0217.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>弊社のインターネットに接続するためには、固定MACアドレスに設定していただく必要がございます。 
+以下の手順で設定をお願いいたします。
+
+1）「設定」　をクリック
+2）「ネットワークとインターネット」　をクリック
+3）「WI-FI」　をクリック
+4）「ランダムなハードウェアアドレスを使う」をスイッチをクリックし、オフにします。</a></li><li><a href="FAQ-0162.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>弊社カスタマーサポートまでお問合せください。</a></li><li><a href="FAQ-0064.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引落口座について日本国外の銀行を指定することはできますか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">無線ルーター|LANケーブル|MACアドレス|契約期間|寮内ネット</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0218.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>1)契約期間内ですか？ご契約期間終了後はインターネットの利用ができません。
+2)端末のMACアドレスの申請はお済ですか？申請がない場合インターネットのご利用はできません。
+3)無線ルーターは正しく設置されていますか？LANケーブルがしっかり刺さっているかどうか確認しましょう。</a></li><li><a href="FAQ-0076.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットがつながらない場合、まず最初に確認すべきことは何ですか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">物理アドレス（MACアドレス）と登録</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0121.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>デバイスによって異なりますが、一般的にはWindows PCの場合、コマンドプロンプトで「getmac /v」と入力します。Mac OSの場合は「システム環境設定」→「ネットワーク」から確認できます。</a></li><li><a href="FAQ-0123.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>基本的に5台まで登録可能です。6台目以降は1台につき月額220円（税込）で追加登録できます。同系統端末の登録は2台までとなります。</a></li><li><a href="FAQ-0122.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>新しいデバイスの物理アドレスを確認し、MACアドレス追加フォームよりお手続きください。https://sunrise-net-s.cms2.jp/contact_list/mac_application_add.html</a></li><li><a href="FAQ-0092.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>新しいデバイスを購入しました。どうすればよいですか？</a></li><li><a href="FAQ-0091.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>物理アドレスの確認方法を教えてください。</a></li><li><a href="FAQ-0120.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>物理アドレスは、ネットワークデバイスを識別するための固有の番号です。Sun-Netでは、セキュリティと管理のために各デバイスのMACアドレスの登録が必要です。</a></li><li><a href="FAQ-0090.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>物理（MAC）アドレスとは何ですか？なぜ登録が必要なのですか？</a></li><li><a href="FAQ-0093.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>登録できるデバイスの数に制限はありますか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">相部屋</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0168.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ご契約中の方が同室にいるかご確認ください。無線ルーターは個人貸出となりますのでご契約者毎にそれぞれお使いください。その際分配に使用するHUBが必要な場合は弊社よりレンタル品としてお送りしますのでお問合せください。同室にご契約者がいない場合は、前契約者様がご返却されていない可能性がございますので、お手数ですが弊社までお問合せください。</a></li><li><a href="FAQ-0169.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>個人貸出となりますので、ご契約者様にてご返却ください。</a></li><li><a href="FAQ-0170.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>分配に使用するHUBが必要な場合は弊社よりレンタル品としてお送りしますのでお問合せください。</a></li><li><a href="FAQ-0026.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>相部屋でHUBは誰が返却するのでしょうか？</a></li><li><a href="FAQ-0027.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>相部屋で、無線ルータが2台あり、それぞれが契約者です。差込口が足りないのですがどうすればいいでしょうか？</a></li><li><a href="FAQ-0025.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>相部屋になり、部屋には既にSun-Netの無線ルータが置いてありました。無線ルーターの返却は必要ですか？</a></li>
+            </ul>
+        </div>
+        </div></section><section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>Sun-Net光</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">SIMサービス</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0147.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>1ヶ月単位でのご契約が可能です。ご都合のよい契約期間をお選びください。</a></li><li><a href="FAQ-0003.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>1年間は寮にいる予定がありますが2年目に寮に住むか未定です。2年目はまた再契約になりますか？手続きはどのようにすればよいのでしょうか？</a></li><li><a href="FAQ-0174.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>●NTT東、西日本が提供する光回線をご契約中の場合→転用手続きによりご利用が可能です。
+●他社光コラボレーション事業者の光回線をご利用の場合→事業者変更手続きによりご利用が可能です。
+※プロバイダ契約については上記手続きによる切替ができませんのでお客様ご自身で解約手続きを行っていただく必要があります。
+※NTT東、西または光コラボレーション事業者が提供する光回線以外のサービスをご利用中の場合は、新規申込としてSun-Net光のご提供となります。</a></li><li><a href="FAQ-0148.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>お引越し先では引き続き『Sun-Net光』のご利用（プラン変更）が可能です。※一部建物を除く
+以下ページをご確認ください。
+http://www.sunrise-net.ne.jp/sunnethikari.html
+プラン変更をされない場合は解約はご解約月の前月末日までに弊社ホームページよりお手続きが必要です。お電話やメールによる解約受付は行っておりません。解約金として月額料金相当の解約金が発生いたしますのでご了承ください。</a></li><li><a href="FAQ-0149.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい、可能です。但し購入プランの方がレンタルプランに比べて月額料金の設定を低くしておりますので今後のご利用予定期間と比較しご検討ください。ご希望の際はプラン変更フォームよりお手続きをおねがいします。※別途無線ルーターの送料が発生いたします。</a></li><li><a href="FAQ-0006.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ルーター購入プランで契約しておいて、途中からレンタルプランに変更することはできますか？</a></li><li><a href="FAQ-0146.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>契約期間に空白がなければ2年目以降は継続でのご案内となります。継続の際の手数料は発生致しません。契約期間に空白がある場合は再入会扱いとなります。</a></li><li><a href="FAQ-0031.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>現在、別の会社の光サービスを利用していますがSun-Net光に申込することはできますか？</a></li><li><a href="FAQ-0005.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>退寮等でサービスを辞めたい場合、どのような手続きが必要ですか？</a></li><li><a href="FAQ-0004.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>部屋でネットが必要かまだわからないので、夏までの契約にしたいのですが可能ですか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">Sun-Net光</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0142.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Netの公式ウェブサイトやSNSアカウントで最新の障害情報を確認できます。大規模な障害の場合は、メールでも通知されます。</a></li><li><a href="FAQ-0139.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Netサービスでは通常、データ使用量に制限はありません。ただし、過度な使用や不正利用は避けてください。</a></li><li><a href="FAQ-0178.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Net光では利用台数の制限はありません。但し一般的には同時にインターネット接続をする端末が多いほど速度は遅くなりますのでご注意ください。毎月の通信量上限は設けておらず使い放題のサービスです。</a></li><li><a href="FAQ-0177.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Net光サービスではMACアドレスの申請は必要ありません。ご利用においては個人所有端末等の制限なくご自由に接続可能です。</a></li><li><a href="FAQ-0180.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい、ご利用可能です。光回線ご利用にあたっては無線ルーターの初期化及び設定を行う必要があります。</a></li><li><a href="FAQ-0109.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットの使用量に制限はありますか？</a></li><li><a href="FAQ-0112.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットの障害情報はどこで確認できますか？</a></li><li><a href="FAQ-0114.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットサービスを解約したい場合、どうすればよいですか？</a></li><li><a href="FAQ-0110.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネット料金の支払い方法を変更したいです。可能ですか？</a></li><li><a href="FAQ-0113.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>サポートの営業時間外に問題が発生した場合、どうすればよいですか？</a></li><li><a href="FAQ-0037.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>寮内ネットからSun-Net光への切り替えを検討しています。いまSun-Netで購入した無線ルーターを利用していますが、そのまま利用することはできますか？</a></li><li><a href="FAQ-0035.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>寮内ネットからSun-Net光への切り替えを検討しています。利用台数の制限はありますか？毎月の通信量の上限はありますか？</a></li><li><a href="FAQ-0034.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>寮内ネットからSun-Net光への切り替えを検討しています。接続するためにはMACアドレスの申請は必要ですか？</a></li><li><a href="FAQ-0038.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>寮内ネットからSun-Net光への切り替えを検討しています。無線ルーターはSun-Net指定のものを利用しなければならないのでしょうか？</a></li><li><a href="FAQ-0181.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>弊社指定無線ルーター以外のご利用も可能でございますが、設定についてはお客様ご自身で行っていただきます。無線ルーターの設定サポートについては弊社では対応できかねますので各メーカーにお問い合わせください。</a></li><li><a href="FAQ-0111.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引っ越しする予定です。インターネットサービスはどうなりますか？</a></li><li><a href="FAQ-0141.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引っ越し先がSun-Netのサービス提供エリア内であれば、移転手続きが可能です。早めにSun-Netサポートに連絡して、必要な手続きを確認してください。</a></li><li><a href="FAQ-0140.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>支払い方法の変更は可能です。Sun-Netカスタマーサポートに連絡し、希望する支払い方法をお伝えください。</a></li><li><a href="FAQ-0143.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>緊急の場合は、Sun-Netの公式ウェブサイトのヘルプセンターやFAQを参照してください。翌営業日にサポートに連絡することもできます。</a></li><li><a href="FAQ-0144.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>解約希望の場合は、Sun-Netカスタマーサポートに連絡してください。解約手続きや必要書類、機器の返却方法などについてご案内いたします。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">エリア判定</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0171.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>お引越し先のご住所をお伺いの上、建物のインターネット設備状況や開通工事発生の有無や開通可能日をお調べすることができます。まずはお気軽に弊社までお問合せください。</a></li><li><a href="FAQ-0028.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引越し先の物件ではインターネットは必要なら自分で契約してくださいと言われました。Sun-Net光を利用することはできますか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">クレジットカード</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0055.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>クレジットカードの領収書はもらえませんか？</a></li><li><a href="FAQ-0199.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>再度こちらからクレジット情報を入力して頂くURLをメールでお送り致します。⇒info@sunrise-net.co.jpまでクレジットURL希望・名前をご記入の上メールをお願いします</a></li><li><a href="FAQ-0200.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月10日前後です。但し決済システムによる都合や年末年始、GWなど長期休暇及び長期祝日の際は変更する場合がございますのでご了承ください。</a></li><li><a href="FAQ-0057.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月のクレジットカード決済はいつ頃になりますか？</a></li><li><a href="FAQ-0056.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>途中から別のクレジットカードにしたい場合はどうすればいいですか？</a></li><li><a href="FAQ-0198.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>領収書の発行には対応しておりません。カード会社発行の明細にてご確認をお願いします。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">クレジットカード払い</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0197.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>お申込み情報到着後1週間以内に指定のメールアドレス宛に届きます。アクセス有効期限がありますので期限内の手続きをお願いします。期限切れの際は弊社までお問合せください。
+
+クレジット支払手続きのメールは株式会社ゼウス（https://www.cardservice.co.jp/）のシステムを通じて配信されます。
+
+●件名：[ZEUS]お支払手続きご案内メール
+●差出人：mailinfo@cardservice.co.jp</a></li><li><a href="FAQ-0054.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>クレジットカード決済のメールはいつごろ届きますか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">口座振替</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0213.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-NetHP内の『お申込・各種お手続き』ページ内の『【会員様向け】口座振替依頼書ダウンロード』をご利用ください。
+http://www.sunrise-net.ne.jp/contact_list.html
+印刷し、必要事項に記入・捺印の上、お客様保管用の複写を取った上で弊社までご郵送ください。
+郵送での発送をご希望の場合は書類再送費用として220円をご請求いたします。郵送希望のお客様は下記メールアドレス宛に、お問合せください。
+info@sunrise-net.co.jp　</a></li><li><a href="FAQ-0201.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>再引き落とし（再振替）は受付しておりません。支払い期日までにお振込みいただくようおねがいします。</a></li><li><a href="FAQ-0212.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>再提出のご案内書類にて不備理由が明記されています。よくある不備内容は以下の項目です。
+
+・お届け印のもれ、相違、不鮮明
+・他人名義口座記入
+・預金者名の字体相違、フリガナもれ
+・金融機関名・支店名・口座番号の相違
+・口座番号不明瞭
+・インターネットバンキング手続きの登録未完了
+
+※記入内容を間違えた場合は、二重線で訂正を入れお届け印を押してください。
+※ご印鑑は鮮明に確認がとれる状態に押印ください。不鮮明（にじみ、かすみ等）であれば枠外に追加で押印ください。</a></li><li><a href="FAQ-0069.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座振替依頼書の手続きをしても内容に不備があり再提出の通知が届きます。どのようにすればよいのでしょうか？</a></li><li><a href="FAQ-0070.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座振替依頼書を紛失してしまいました。どうすればいいでしょうか？</a></li><li><a href="FAQ-0211.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座開設時にサインを必要としたネット銀行の場合は捺印欄にサインをおねがいします。捺印・サインなしで口座開設された場合は不要です。詳しくはネット銀行側にお問合せください。</a></li><li><a href="FAQ-0068.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座開設時に印鑑を必要としないネット銀行を登録する場合、口座振替依頼書の捺印はどうしたらいいですか？</a></li><li><a href="FAQ-0058.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引落ができなかったと通知と振込請求案内のメールが届きました。次回引落時に引落してもらえませんか？</a></li><li><a href="FAQ-0202.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月28日です。28日が土・日や祝日の際は翌金融機関営業日が引落日となります。前営業日までに引落金額以上の口座残高となるようご留意ください。</a></li><li><a href="FAQ-0059.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月の銀行引落しはいつですか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">変更手続き</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0205.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい。親権者又は代理人の口座であれば可能でございます。口座振替依頼書下部に契約者情報を記入の上お手続きください。</a></li><li><a href="FAQ-0215.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>下記『お部屋番号変更フォーム』よりお手続きをお願いします。
+https://sunrise-net-s.cms2.jp/changeroom.html</a></li><li><a href="FAQ-0214.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>各種お手続きページ内の『変更申請（お客様情報/契約プラン）』よりお手続きをお願いします。https://sunrise-net-s.cms2.jp/contact_list/alteration.html</a></li><li><a href="FAQ-0062.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>契約者以外の銀行口座を引落口座として登録することはできますか？</a></li><li><a href="FAQANOTHER-0010.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>携帯番号やメールアドレスが変更になった場合はどうすればよいですか？</a></li><li><a href="FAQ-0072.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>途中で部屋が変わるかもしれませんが、どうすればよいのでしょうか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">払込票払い</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0067.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>払込取扱票での支払い方法を教えてください。</a></li><li><a href="FAQ-0053.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>払込取扱票にて指定された支払期日が過ぎてしまいました。支払い期日が過ぎた後はどのように支払えばよいのでしょうか？</a></li><li><a href="FAQ-0196.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>期日が過ぎてもお支払いは可能です。但し督促料金が発生している場合は追加のお支払いが必要です。詳しくは弊社カスタマーサポートデスクまでお問い合わせください。</a></li><li><a href="FAQ-0210.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>＜ゆうちょ銀行ATMでの方法＞
+
+---払込取扱票での送金の場合---
+1.「ご送金」を選択します。
+2.「払込書でのご送金」を選択します。
+3.「払込書」を入れます。払込書に住所氏名、会員IDをご記入の上、払込書を入れてください。
+
+---ゆうちょ口座間での送金の場合---
+1.「ゆうちょ口座へのご送金」を選択します。
+2.「通帳、またはカード」を入れます。
+3.「記号番号」を選択します。
+4. 記号に「00150-3」を入力します。
+5. 番号に「611077」を入力します。
+6. 金額を入力してください。
+7. 最後に確認を押せば手続きは完了します。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">接続の基本とトラブルシューティング</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0036.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>寮内ネットからSun-Net光への切り替えを検討しています。いまレンタルの無線ルーターを利用していますが、そのまま利用することはできますか？</a></li><li><a href="FAQ-0179.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月200円（税抜）/220円（税込）の料金にてレンタル可能です。尚、光回線ご利用にあたってはレンタル無線ルーターの初期化及び設定を行う必要があります。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">料金支払</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0203.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>お申込時に実家請求希望欄にチェックをお願い致します。</a></li><li><a href="FAQ-0206.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい。親権者又は代理人のクレジットカードであれば可能でございます。</a></li><li><a href="FAQ-0204.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>コンビニエンスストアでのお支払いには対応しておりません。コンビニエンスストア設置のATMからのお支払い操作をおねがいします。</a></li><li><a href="FAQ-0061.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>コンビニエンスストアで支払う事はできますか？</a></li><li><a href="FAQ-0195.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>以下、いずれかの金融機関宛てにお願いします。
+※お振込み時にご自身の会員ID番号をご入力ください。
+
+1.ゆうちょ銀行（Japan Post Bank）
+　口座記号番号　00150-3-611077
+　加入者名	株式会社サンライズ
+
+2.三菱UFJ銀行/0005（Mitsubishi UFJ bank）
+　浅草橋支店/069（Asakusabashi Branch）
+　普通預金
+　口座番号　0912502
+　口座名義　株式会社サンライズ
+
+3.りそな銀行/0010（Resona bank）
+　秋葉原支店/275（Akihabara Branch）
+　普通預金
+　口座番号　2069388
+　口座名義　株式会社サンライズ</a></li><li><a href="FAQANOTHER-0008.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>利用料金の振込先を教えてください。</a></li><li><a href="FAQ-0063.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>契約者以外のクレジットカードでの支払いは可能ですか？</a></li><li><a href="FAQ-0060.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>料金支払は親に任せたいのですが、どのようにすればよいのでしょうか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">未分類</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0176.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>NTT東西の提供エリアにより違いがあります。同一エリア内でのお引越しの場合は移転手続きを行うことで引き続きご利用可能です。
+・光引越事務手数料・・・3,300円
+・光引越時工事費用・・・4,950円
+お引越し先の建物構造等によりご提供できない場合もありますのでご了承ください。
+尚、NTT西エリアから東エリアへとエリアをまたぐお引越しの場合はご解約手続きおよび新規回線申込が必要です。詳細につきましてはお手数ですが下記までお問合せください。
+
+フリーダイヤル：0120-336-326
+メールアドレス：sales@sunrise-net.co.jp</a></li><li><a href="FAQ-0029.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Net光の契約期間中に長期留学に行くことになりました。留学期間中サービスを停止することはできますか？</a></li><li><a href="FAQ-0175.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Net光は、回線契約とプロバイダ契約をセットにしたサービスですので別途プロバイダ契約を行う必要はありません。</a></li><li><a href="FAQ-0033.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Net光契約期間中に引っ越すことになった場合、引越し先でもサービスの継続利用は可能ですか？</a></li><li><a href="FAQ-0208.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Visa、Mastercard、JCB、American Express、Diners Clubの国際ブランドに対応しています。</a></li><li><a href="FAQ-0207.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>いいえ。指定することができません。日本国内の金融機関の口座をご指定ください。</a></li><li><a href="FAQ-0173.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>まずはお住まいのご住所にてシステム確認を行います。オーナー様への許可に関しては建物によりまちまちではありますが弊社で開通までのご連絡をとる場合もございますのでまずはお気軽にご相談ください。※建物の構造やオーナー様のご意向、NTTサービスの地域的な問題等によりご提供できない場合がございます。</a></li><li><a href="FAQ-0209.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>カード発行会社や諸条件によりお使いいただけない場合がございます。詳しくはお客様のカード発行会社までお尋ねください。</a></li><li><a href="FAQ-0172.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>サービスの一時停止は可能ですが停止期間中においてもインターネット利用料金は発生します。Sun-Net光サービスお申込前に今後のご予定について弊社までご相談ください。</a></li><li><a href="FAQ-0066.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>デビット機能付きクレジットカードは利用できますか？</a></li><li><a href="FAQ-0032.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>プロバイダ契約は必要ですか？</a></li><li><a href="FAQ-0030.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>マンション管理会社よりインターネットを開通する際はオーナーの許可が必要と言われました。このような場合でも利用することはできますか？</a></li><li><a href="FAQ-0073.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>会員IDを忘れてしまいました。</a></li><li><a href="FAQ-0065.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>利用できるクレジットカードについて教えてください。</a></li><li><a href="FAQ-0182.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>建物の設備として高品質のインターネットが備わっているのであれば居室でのインターネット利用においては弊社サービスへの変更はおすすめいたしません。引越し先での生活がスタートした後、インターネットの速度等にご不満がありましたらSun-Net光への切り替えをおすすめいたします。</a></li><li><a href="FAQ-0162.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>弊社カスタマーサポートまでお問合せください。</a></li><li><a href="FAQ-0064.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引落口座について日本国外の銀行を指定することはできますか？</a></li><li><a href="FAQ-0039.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>無料インターネット付き物件に引っ越すことになりました。この場合はSun-Net光へ変更しないほうがいいですか？</a></li>
+            </ul>
+        </div>
+        </div></section><section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>SIMカード</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">SIMサービス</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0147.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>1ヶ月単位でのご契約が可能です。ご都合のよい契約期間をお選びください。</a></li><li><a href="FAQ-0003.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>1年間は寮にいる予定がありますが2年目に寮に住むか未定です。2年目はまた再契約になりますか？手続きはどのようにすればよいのでしょうか？</a></li><li><a href="FAQ-0148.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>お引越し先では引き続き『Sun-Net光』のご利用（プラン変更）が可能です。※一部建物を除く
+以下ページをご確認ください。
+http://www.sunrise-net.ne.jp/sunnethikari.html
+プラン変更をされない場合は解約はご解約月の前月末日までに弊社ホームページよりお手続きが必要です。お電話やメールによる解約受付は行っておりません。解約金として月額料金相当の解約金が発生いたしますのでご了承ください。</a></li><li><a href="FAQ-0149.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい、可能です。但し購入プランの方がレンタルプランに比べて月額料金の設定を低くしておりますので今後のご利用予定期間と比較しご検討ください。ご希望の際はプラン変更フォームよりお手続きをおねがいします。※別途無線ルーターの送料が発生いたします。</a></li><li><a href="FAQ-0006.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ルーター購入プランで契約しておいて、途中からレンタルプランに変更することはできますか？</a></li><li><a href="FAQ-0146.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>契約期間に空白がなければ2年目以降は継続でのご案内となります。継続の際の手数料は発生致しません。契約期間に空白がある場合は再入会扱いとなります。</a></li><li><a href="FAQ-0005.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>退寮等でサービスを辞めたい場合、どのような手続きが必要ですか？</a></li><li><a href="FAQ-0004.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>部屋でネットが必要かまだわからないので、夏までの契約にしたいのですが可能ですか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">Sun-Net光</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0142.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Netの公式ウェブサイトやSNSアカウントで最新の障害情報を確認できます。大規模な障害の場合は、メールでも通知されます。</a></li><li><a href="FAQ-0139.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-Netサービスでは通常、データ使用量に制限はありません。ただし、過度な使用や不正利用は避けてください。</a></li><li><a href="FAQ-0109.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットの使用量に制限はありますか？</a></li><li><a href="FAQ-0112.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットの障害情報はどこで確認できますか？</a></li><li><a href="FAQ-0114.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネットサービスを解約したい場合、どうすればよいですか？</a></li><li><a href="FAQ-0110.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>インターネット料金の支払い方法を変更したいです。可能ですか？</a></li><li><a href="FAQ-0113.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>サポートの営業時間外に問題が発生した場合、どうすればよいですか？</a></li><li><a href="FAQ-0111.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引っ越しする予定です。インターネットサービスはどうなりますか？</a></li><li><a href="FAQ-0141.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引っ越し先がSun-Netのサービス提供エリア内であれば、移転手続きが可能です。早めにSun-Netサポートに連絡して、必要な手続きを確認してください。</a></li><li><a href="FAQ-0140.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>支払い方法の変更は可能です。Sun-Netカスタマーサポートに連絡し、希望する支払い方法をお伝えください。</a></li><li><a href="FAQ-0143.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>緊急の場合は、Sun-Netの公式ウェブサイトのヘルプセンターやFAQを参照してください。翌営業日にサポートに連絡することもできます。</a></li><li><a href="FAQ-0144.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>解約希望の場合は、Sun-Netカスタマーサポートに連絡してください。解約手続きや必要書類、機器の返却方法などについてご案内いたします。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">クレジットカード</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0055.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>クレジットカードの領収書はもらえませんか？</a></li><li><a href="FAQ-0199.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>再度こちらからクレジット情報を入力して頂くURLをメールでお送り致します。⇒info@sunrise-net.co.jpまでクレジットURL希望・名前をご記入の上メールをお願いします</a></li><li><a href="FAQ-0200.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月10日前後です。但し決済システムによる都合や年末年始、GWなど長期休暇及び長期祝日の際は変更する場合がございますのでご了承ください。</a></li><li><a href="FAQ-0057.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月のクレジットカード決済はいつ頃になりますか？</a></li><li><a href="FAQ-0056.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>途中から別のクレジットカードにしたい場合はどうすればいいですか？</a></li><li><a href="FAQ-0198.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>領収書の発行には対応しておりません。カード会社発行の明細にてご確認をお願いします。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">クレジットカード払い</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0197.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>お申込み情報到着後1週間以内に指定のメールアドレス宛に届きます。アクセス有効期限がありますので期限内の手続きをお願いします。期限切れの際は弊社までお問合せください。
+
+クレジット支払手続きのメールは株式会社ゼウス（https://www.cardservice.co.jp/）のシステムを通じて配信されます。
+
+●件名：[ZEUS]お支払手続きご案内メール
+●差出人：mailinfo@cardservice.co.jp</a></li><li><a href="FAQ-0054.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>クレジットカード決済のメールはいつごろ届きますか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">口座振替</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0213.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Sun-NetHP内の『お申込・各種お手続き』ページ内の『【会員様向け】口座振替依頼書ダウンロード』をご利用ください。
+http://www.sunrise-net.ne.jp/contact_list.html
+印刷し、必要事項に記入・捺印の上、お客様保管用の複写を取った上で弊社までご郵送ください。
+郵送での発送をご希望の場合は書類再送費用として220円をご請求いたします。郵送希望のお客様は下記メールアドレス宛に、お問合せください。
+info@sunrise-net.co.jp　</a></li><li><a href="FAQ-0201.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>再引き落とし（再振替）は受付しておりません。支払い期日までにお振込みいただくようおねがいします。</a></li><li><a href="FAQ-0212.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>再提出のご案内書類にて不備理由が明記されています。よくある不備内容は以下の項目です。
+
+・お届け印のもれ、相違、不鮮明
+・他人名義口座記入
+・預金者名の字体相違、フリガナもれ
+・金融機関名・支店名・口座番号の相違
+・口座番号不明瞭
+・インターネットバンキング手続きの登録未完了
+
+※記入内容を間違えた場合は、二重線で訂正を入れお届け印を押してください。
+※ご印鑑は鮮明に確認がとれる状態に押印ください。不鮮明（にじみ、かすみ等）であれば枠外に追加で押印ください。</a></li><li><a href="FAQ-0069.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座振替依頼書の手続きをしても内容に不備があり再提出の通知が届きます。どのようにすればよいのでしょうか？</a></li><li><a href="FAQ-0070.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座振替依頼書を紛失してしまいました。どうすればいいでしょうか？</a></li><li><a href="FAQ-0211.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座開設時にサインを必要としたネット銀行の場合は捺印欄にサインをおねがいします。捺印・サインなしで口座開設された場合は不要です。詳しくはネット銀行側にお問合せください。</a></li><li><a href="FAQ-0068.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>口座開設時に印鑑を必要としないネット銀行を登録する場合、口座振替依頼書の捺印はどうしたらいいですか？</a></li><li><a href="FAQ-0058.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引落ができなかったと通知と振込請求案内のメールが届きました。次回引落時に引落してもらえませんか？</a></li><li><a href="FAQ-0202.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月28日です。28日が土・日や祝日の際は翌金融機関営業日が引落日となります。前営業日までに引落金額以上の口座残高となるようご留意ください。</a></li><li><a href="FAQ-0059.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>毎月の銀行引落しはいつですか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">変更手続き</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0205.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい。親権者又は代理人の口座であれば可能でございます。口座振替依頼書下部に契約者情報を記入の上お手続きください。</a></li><li><a href="FAQ-0215.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>下記『お部屋番号変更フォーム』よりお手続きをお願いします。
+https://sunrise-net-s.cms2.jp/changeroom.html</a></li><li><a href="FAQ-0214.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>各種お手続きページ内の『変更申請（お客様情報/契約プラン）』よりお手続きをお願いします。https://sunrise-net-s.cms2.jp/contact_list/alteration.html</a></li><li><a href="FAQ-0062.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>契約者以外の銀行口座を引落口座として登録することはできますか？</a></li><li><a href="FAQANOTHER-0010.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>携帯番号やメールアドレスが変更になった場合はどうすればよいですか？</a></li><li><a href="FAQ-0072.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>途中で部屋が変わるかもしれませんが、どうすればよいのでしょうか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">払込票払い</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0067.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>払込取扱票での支払い方法を教えてください。</a></li><li><a href="FAQ-0053.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>払込取扱票にて指定された支払期日が過ぎてしまいました。支払い期日が過ぎた後はどのように支払えばよいのでしょうか？</a></li><li><a href="FAQ-0196.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>期日が過ぎてもお支払いは可能です。但し督促料金が発生している場合は追加のお支払いが必要です。詳しくは弊社カスタマーサポートデスクまでお問い合わせください。</a></li><li><a href="FAQ-0210.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>＜ゆうちょ銀行ATMでの方法＞
+
+---払込取扱票での送金の場合---
+1.「ご送金」を選択します。
+2.「払込書でのご送金」を選択します。
+3.「払込書」を入れます。払込書に住所氏名、会員IDをご記入の上、払込書を入れてください。
+
+---ゆうちょ口座間での送金の場合---
+1.「ゆうちょ口座へのご送金」を選択します。
+2.「通帳、またはカード」を入れます。
+3.「記号番号」を選択します。
+4. 記号に「00150-3」を入力します。
+5. 番号に「611077」を入力します。
+6. 金額を入力してください。
+7. 最後に確認を押せば手続きは完了します。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">料金支払</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0203.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>お申込時に実家請求希望欄にチェックをお願い致します。</a></li><li><a href="FAQ-0206.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>はい。親権者又は代理人のクレジットカードであれば可能でございます。</a></li><li><a href="FAQ-0204.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>コンビニエンスストアでのお支払いには対応しておりません。コンビニエンスストア設置のATMからのお支払い操作をおねがいします。</a></li><li><a href="FAQ-0061.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>コンビニエンスストアで支払う事はできますか？</a></li><li><a href="FAQ-0195.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>以下、いずれかの金融機関宛てにお願いします。
+※お振込み時にご自身の会員ID番号をご入力ください。
+
+1.ゆうちょ銀行（Japan Post Bank）
+　口座記号番号　00150-3-611077
+　加入者名	株式会社サンライズ
+
+2.三菱UFJ銀行/0005（Mitsubishi UFJ bank）
+　浅草橋支店/069（Asakusabashi Branch）
+　普通預金
+　口座番号　0912502
+　口座名義　株式会社サンライズ
+
+3.りそな銀行/0010（Resona bank）
+　秋葉原支店/275（Akihabara Branch）
+　普通預金
+　口座番号　2069388
+　口座名義　株式会社サンライズ</a></li><li><a href="FAQANOTHER-0008.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>利用料金の振込先を教えてください。</a></li><li><a href="FAQ-0063.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>契約者以外のクレジットカードでの支払いは可能ですか？</a></li><li><a href="FAQ-0060.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>料金支払は親に任せたいのですが、どのようにすればよいのでしょうか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">未分類</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0208.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Visa、Mastercard、JCB、American Express、Diners Clubの国際ブランドに対応しています。</a></li><li><a href="FAQ-0207.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>いいえ。指定することができません。日本国内の金融機関の口座をご指定ください。</a></li><li><a href="FAQ-0209.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>カード発行会社や諸条件によりお使いいただけない場合がございます。詳しくはお客様のカード発行会社までお尋ねください。</a></li><li><a href="FAQ-0066.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>デビット機能付きクレジットカードは利用できますか？</a></li><li><a href="FAQ-0073.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>会員IDを忘れてしまいました。</a></li><li><a href="FAQ-0065.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>利用できるクレジットカードについて教えてください。</a></li><li><a href="FAQ-0162.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>弊社カスタマーサポートまでお問合せください。</a></li><li><a href="FAQ-0064.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引落口座について日本国外の銀行を指定することはできますか？</a></li>
+            </ul>
+        </div>
+        </div></section><section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>SIM</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">SIMサービス</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQANOTHER-0015.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>SIMカードを破損してしまった。どうすればいいでしょうか？</a></li><li><a href="FAQ-0220.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>再発行になりますので、新たに発行費用と送料が必要です。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">SIM設定</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQANOTHER-0014.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>APN設定ができない場合はどうすればいいでしょうか？</a></li><li><a href="FAQ-0219.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ご入力時の不要なスペースや大文字・小文字の入力違いはございませんか？今一度ご確認をおねがいします。
+http://www.sunrise-net.ne.jp/service/simapnsettings.html
+解決しない場合は弊社カスタマーデスクまでお問合せください。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">未分類</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQSIM-0020.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>SIMロックされている端末でも利用できますか？</a></li><li><a href="FAQSIM-0226.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>after making a payment with your credit card</a></li><li><a href="FAQSIM-0028.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>eSIMから物理SIMに変更できますか？</a></li><li><a href="FAQSIM-0016.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>eSIMと物理SIMの違いは何ですか？</a></li><li><a href="FAQSIM-0029.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>eSIMのQRコードが読み取れません。</a></li><li><a href="FAQSIM-0021.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>eSIMの申し込みから開通までの流れを教えてください。</a></li><li><a href="FAQSIM-0030.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>eSIMを設定した後、通信ができません。</a></li><li><a href="FAQSIM-0222.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>you can use our eSIM service by signing up for a new eSIM plan. Please note that this will incur a separate eSIM issuance fee of 3</a></li><li><a href="FAQSIM-0045.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>you will need to get a new activation code. An eSIM can only be active on one device at a time</a></li><li><a href="FAQSIM-0017.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>どちらのSIMを選べばよいですか？</a></li><li><a href="FAQSIM-0032.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>スマートフォンを紛失した場合、どうすればよいですか？</a></li><li><a href="FAQSIM-0025.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>デュアルSIMとは何ですか？</a></li><li><a href="FAQSIM-0018.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>利用料金やプランに違いはありますか？</a></li><li><a href="FAQSIM-0023.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>機種変更する際はどうすればよいですか？</a></li><li><a href="FAQSIM-0031.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>海外でも利用できますか？</a></li><li><a href="FAQSIM-0027.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>物理SIMからeSIMに変更できますか？</a></li><li><a href="FAQSIM-0022.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>物理SIMは申し込みから何日で届きますか？</a></li><li><a href="FAQSIM-0019.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>自分のスマートフォンがeSIMに対応しているか確認する方法は？</a></li><li><a href="FAQSIM-0024.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>誤ってeSIMプロファイルを削除してしまいました。</a></li><li><a href="FAQSIM-0026.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>音声通話とデータ通信を別々のSIMに設定できますか？</a></li>
+            </ul>
+        </div>
+        </div></section><section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>SM</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">SIMサービス</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0186.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>2つのサービスの契約期間が異なる場合は各サービス毎にお申込ください。毎月払いでは複数サービスを合算したご請求となります。尚、中途解約の際はそれぞれのサービスにて1ヶ月前の連絡が必要です。</a></li><li><a href="FAQ-0051.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Androidのスマートフォンを利用したいのですが、SIMロック端末かどうか確認する方法はありますか？</a></li><li><a href="FAQ-0194.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Androidスマートフォンの場合、機種によってSIMロックが解除されているかを確認する方法はまちまちです。
+
+『設定』『デバイス情報（端末情報）』『SIMカードステータス』『SIMロックステータス』
+
+『許可されています』→ロックが解除されています。
+
+上記の方法で、SIMロックステータスが確認できない場合は、ご購入の販売店やご契約の通信事業者にご確認ください。</a></li><li><a href="FAQ-0050.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>IPHONEを利用したいのですが、SIMロック端末かどうか確認する方法はありますか？</a></li><li><a href="FAQ-0047.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>SIMカードのギガ数を変更したいのですがどのようにすればいいですか？</a></li><li><a href="FAQ-0048.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>SIMカードの容量超過後はインターネットは使えるのでしょうか？</a></li><li><a href="FAQANOTHER-0007.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>SIMカードを紛失しました。どうすればいいですか？</a></li><li><a href="FAQ-0193.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>■SIMロック解除状況の確認手段（IOS14以降）
+
+?『設定』アイコン→『一般』→『情報』の順にタップ
+
+?ページ中部の「SIMロック」欄を確認
+
+“SIMロックなし“と表示されているか確認してください。
+
+SIMロックと表示されている場合はSun-NetのSIMカードを利用することはできません。ご利用にあたってはご契約中の通信会社へのSIMロック解除申請が必要です。
+
+また、SIMカード挿入後に表示されたメッセージで確認することができます。
+
+「SIMがロックされています」
+「アクティベーションが必要です」
+「このiPhoneに挿入したSIMカードはサポートされていないようです。iPhoneをアクティベーションするには、サポートされている電話会社の互換性のあるSIMカードしか使用することはできません。」</a></li><li><a href="FAQ-0187.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>できません。日本国内のみのサービスです。</a></li><li><a href="FAQ-0190.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>容量変更手数料として605円発生します。月に1度のみ変更が可能です。適用は変更希望月の翌月からとなります。※一部容量の変更ができないタイプのSIMプランもございます。</a></li><li><a href="FAQ-0043.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>寮内ネットもSIMサービスも使いたいです。それぞれ契約期間を指定することはできますか？支払いも別々にできますか？また各サービスを解約する際はどうすればいいですか？</a></li><li><a href="FAQ-0184.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>弊社まで必ずお問合せください。利用停止の処理を行います。
+併せて警察機関へ紛失・盗難の届け出をお願いします。
+SIMカード（端末等）を拾った第三者からの不正利用を防止する為お客さまご自身で端末ロックをお願いします。
+なお、利用停止後にSIMカードを再発行します。停止中の月額料金についても請求対象です。※カードの再発行費用及び送料を別途請求します。</a></li><li><a href="FAQ-0044.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>海外でSun-NetのSIMカードを使うことはできますか？</a></li><li><a href="FAQ-0191.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>速度が最大200kpbsまで落ちますがご利用は可能です。但し動画視聴など様々なコンテンツは快適にご利用いただけなくなります。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">SIM設定</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0192.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>E-SIMによる提供プランはございません。E-SIMのみ利用可能な端末ではSun-NetのSIMカードを利用することはできません。</a></li><li><a href="FAQ-0049.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>E-SIMのプランはありますか？</a></li><li><a href="FAQ-0042.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>SIMフリー端末と思っていましたが、そうではなかったのか利用できません。どうしたら良いでしょうか？</a></li><li><a href="FAQ-0185.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>お客様ご自身でロック解除の手続きをお願いします。</a></li><li><a href="FAQ-0183.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>ご利用いただけます。ただしNTT DOCOMOの端末ではテザリング機能を利用出来ない場合がありますのでご注意ください。</a></li><li><a href="FAQ-0040.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>解約したドコモのiphoneはつかえますか？</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">SMS</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0046.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>SMSは使えますか？送信数などに制限はありますか？</a></li><li><a href="FAQ-0189.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>SMS機能付きSIMカード及び音声SIMカードは利用することはできます。データ通信のみのSIMカードではSMSは利用できません。一定回数・量以上の国内SMSは有料となる場合があります。また国際SMSに関する送信・受信についても一部有料となります。詳しくは希望するSIMプランの説明をご確認ください。</a></li>
+            </ul>
+        </div>
+        
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">接続の基本とトラブルシューティング</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0188.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>LTEベストエフォート下り150Mbps(上り50Mbps)になります。通信制限は1ヶ月制限になります。容量を超えた後は速度制限がかかり当月末までの通信速度が最大200kbpsまで低下します。</a></li><li><a href="FAQ-0045.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>SIMカードの通信速度はどのくらいですか？通信制限はありますか？</a></li>
+            </ul>
+        </div>
+        </div></section><section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>その他</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">未分類</h3>
+            <ul class="space-y-0.5">
+                <li><a href="MAIL-001.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-001.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-002.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-003.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-004.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-005.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-006.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-007.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-008.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-009.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-010.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-011.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-012.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-013.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-014.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-015.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-016.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-017.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-018.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-019.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-020.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-021.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-022.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-023.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-024.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="NEWS-025.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li><li><a href="FAQANOTHER-0002.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>1年間は寮にいる予定がありますが2年目に寮に住むか未定です。再契約になりますか？</a></li><li><a href="FAQANOTHER-0017.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>Android OSのMACアドレスはどこで確認できますか？</a></li><li><a href="FAQ-0078.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>SIMカードを破損してしまった。どうすればいいでしょうか？</a></li><li><a href="FAQ-0041.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>SIMカードを紛失しました。どうすればいいですか？</a></li><li><a href="FAQANOTHER-0016.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>iPhone/iPadのMACアドレスはどこで確認できますか？</a></li><li><a href="FAQANOTHER-0012.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>スマホのWiFiが使えません。</a></li><li><a href="FAQANOTHER-0013.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>パソコンのWiFiが使えません。</a></li><li><a href="FAQANOTHER-0003.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>夏までの契約にしたいのですが可能ですか？</a></li><li><a href="FAQANOTHER-0004.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>引越し先の物件でインターネットは必要なら自分で契約するように言われました。利用できますか？</a></li><li><a href="FAQANOTHER-0009.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>支払期日が過ぎた後はどうすればよいですか？</a></li><li><a href="FAQ-0083.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>無題のコンテンツ</a></li><li><a href="FAQANOTHER-0006.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>解約したドコモのiPhoneは使えますか？</a></li><li><a href="FAQANOTHER-0011.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>途中で部屋が変わるかもしれませんが、どうすればよいでしょうか？</a></li><li><a href="FAQANOTHER-0005.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>長期留学中サービスを停止することはできますか？</a></li>
+            </ul>
+        </div>
+        </div></section><section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>お支払い方法</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">未分類</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0052.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>利用料金の振込先を教えてください。</a></li>
+            </ul>
+        </div>
+        </div></section><section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>各種申請手続き</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">未分類</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0071.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>携帯番号やメールアドレスが変更になった場合はどうすればよいですか？</a></li>
+            </ul>
+        </div>
+        </div></section><section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>トラブルシューティング/SIMカード</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">未分類</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0077.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span>APN設定ができない場合はどうすればいいでしょうか？</a></li>
+            </ul>
+        </div>
+        </div></section><section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>トラブルシューティング/Sun-Net光</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">未分類</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0079.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li>
+            </ul>
+        </div>
+        </div></section><section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>トラブルシューティング/Sun-Netモバイル</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">未分類</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0080.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li>
+            </ul>
+        </div>
+        </div></section><section class="mb-20"><h2 class="flex items-center text-2xl font-bold text-slate-900 mb-8 manga-font"><span class="w-4 h-8 bg-blue-500 mr-4 skew-x-[-15deg] rounded-sm"></span>各種APN設定情報/SIMカード</h2><div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl p-6 border-2 border-slate-50 hover:border-blue-100 hover:shadow-xl transition duration-500">
+            <h3 class="text-lg font-bold text-blue-600 mb-5 pb-3 border-b border-slate-100">未分類</h3>
+            <ul class="space-y-0.5">
+                <li><a href="FAQ-0084.html" class="block py-2.5 px-2 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition truncate"><span class="mr-2 text-blue-300">●</span></a></li>
+            </ul>
+        </div>
+        </div></section>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-24 relative overflow-hidden">
+        <!-- Footer mascot decorate -->
+        <div class="absolute top-1/2 right-12 -translate-y-1/2 opacity-10 pointer-events-none scale-150 rotate-12">
+             <img src="images/mascot_wifi.png" class="w-96 h-96 object-contain grayscale invert">
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-4 text-center relative z-10">
+            <div class="mb-12">
+                 <img src="images/sunnet_logo_orig.png" alt="Sun-Net" class="h-10 mx-auto brightness-0 invert opacity-40">
+            </div>
+            <p class="mb-2 text-sm font-medium">&copy; 2026 Sun-Net Inc. All rights reserved.</p>
+            <p class="text-xs text-slate-600 tracking-tighter">Sun-Net FAQ is powered by ANTIGRAVITY / Manga Edition</p>
+        </div>
+    </footer>
+
+    <script>
+    const searchInput = document.getElementById('search-input');
+    const suggestBox = document.getElementById('suggest-box');
+    const searchArea = document.getElementById('search-results-area');
+    const searchList = document.getElementById('search-results-list');
+    const searchTitle = document.getElementById('search-results-title');
+    const searchNoResults = document.getElementById('search-no-results');
+    const mainContent = document.getElementById('main-content');
+
+    function normalizeText(text) {
+        return text.normalize('NFKC').toLowerCase()
+            .replace(/[ぁ-ゖ]/g, function(s) {
+                return String.fromCharCode(s.charCodeAt(0) + 0x60);
+            });
+    }
+
+    function highlightText(text, query) {
+        if (!query) return text;
+        const normalizedText = normalizeText(text);
+        const normalizedQuery = normalizeText(query);
+        let result = '';
+        let lastIdx = 0;
+        let idx = normalizedText.indexOf(normalizedQuery);
+
+        while (idx !== -1) {
+            result += text.substring(lastIdx, idx);
+            const match = text.substring(idx, idx + normalizedQuery.length);
+            result += `<span class="bg-blue-100 text-blue-700 font-bold px-1 rounded-sm">${match}</span>`;
+            lastIdx = idx + normalizedQuery.length;
+            idx = normalizedText.indexOf(normalizedQuery, lastIdx);
+        }
+        result += text.substring(lastIdx);
+        return result;
+    }
+
+    searchInput.addEventListener('input', (e) => {
+        const rawInput = e.target.value.trim();
+        const query = normalizeText(rawInput);
+        
+        if (query.length < 1) {
+            suggestBox.style.display = 'none';
+            searchArea.classList.add('hidden');
+            mainContent.style.display = 'block';
+            return;
+        }
+
+        const results = SEARCH_INDEX.filter(item => {
+            return item.normalized.includes(query) || 
+                   item.tags.some(t => normalizeText(t).includes(query));
+        });
+
+        // Show suggestions (Max 8)
+        suggestBox.innerHTML = '';
+        if (results.length > 0) {
+            results.slice(0, 8).forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'px-8 py-3.5 hover:bg-slate-50 hover:text-blue-600 cursor-pointer transition flex items-center group';
+                div.innerHTML = `<svg class="w-4 h-4 mr-4 text-slate-300 group-hover:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg><span class="font-medium">${highlightText(item.question, rawInput)}</span>`;
+                div.onclick = () => { window.location.href = `${item.id}.html`; };
+                suggestBox.appendChild(div);
+            });
+            suggestBox.classList.remove('hidden');
+            suggestBox.style.display = 'block';
+        } else {
+            suggestBox.style.display = 'none';
+        }
+
+        searchList.innerHTML = '';
+        searchArea.classList.remove('hidden');
+        mainContent.style.display = 'none';
+
+        if (results.length > 0) {
+            searchTitle.innerHTML = `<span class="w-3 h-3 bg-blue-600 rounded-full mr-3 animate-ping"></span>検索結果: ${results.length}件`;
+            searchNoResults.classList.add('hidden');
+            results.forEach(item => {
+                const li = document.createElement('li');
+                const highlighted = highlightText(item.question, rawInput);
+                li.innerHTML = `<a class="block bg-white p-6 rounded-2xl hover:bg-blue-50 transition border border-transparent hover:border-blue-100" href="${item.id}.html"><div class="flex items-start"><div class="font-black text-blue-500 font-manga mr-4 text-xl">Q.</div><div class="font-bold text-slate-800 text-lg">${highlighted}</div></div></a>`;
+                searchList.appendChild(li);
+            });
+        } else {
+            searchTitle.textContent = '検索結果';
+            searchList.innerHTML = '';
+            searchNoResults.classList.remove('hidden');
+        }
+    });
+
+    // Close suggest box on click outside
+    document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !suggestBox.contains(e.target)) {
+            suggestBox.style.display = 'none';
+        }
+    });
+
+    // Handle Enter key
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            suggestBox.style.display = 'none';
+        }
+    });
+    </script>
+</body>
+</html>

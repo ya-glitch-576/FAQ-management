@@ -1,0 +1,171 @@
+import json
+
+# Read JSON source
+with open('faq_source.json', 'r', encoding='utf-8') as f:
+    source_data = json.load(f)
+
+# Define the base structure of data.js
+faq_data = {
+    "title": {
+        "ja": "Sun-Net FAQボット",
+        "en": "Sun-Net FAQ Bot"
+    },
+    "initialStepId": "start",
+    "steps": {
+        "start": {
+            "id": "start",
+            "question": {
+                "ja": "SUN-Netサポートデスクへようこそ！ご用件を教えてください。",
+                "en": "Welcome to SUN-Net Support Desk! How can we help you?"
+            },
+            "options": [
+                { "label": { "ja": "インターネットがつながらない・遅い", "en": "Internet is not connecting / slow" }, "nextId": "cat_trouble" },
+                { "label": { "ja": "契約・お支払い・手続きについて", "en": "Contract / Payment / Procedures" }, "nextId": "cat_admin" },
+                { "label": { "ja": "サービス案内（新規・変更）", "en": "Service Information (New / Change)" }, "nextId": "cat_info" },
+                { "label": { "ja": "解決しないのでオペレーターに相談", "en": "Talk to an operator" }, "nextId": "operator_chat_form" }
+            ]
+        },
+        "cat_trouble": {
+            "id": "cat_trouble",
+            "question": { "ja": "どのサービスでお困りですか？", "en": "Which service are you having trouble with?" },
+            "options": [
+                { "label": { "ja": "寮内ネット", "en": "Dorm Net" }, "nextId": "cat_dorm_trouble" },
+                { "label": { "ja": "Sun-Net光", "en": "Sun-Net Hikari" }, "nextId": "cat_hikari_trouble" },
+                { "label": { "ja": "SIMカード", "en": "SIM Card" }, "nextId": "cat_sim_trouble" }
+            ]
+        },
+        "cat_admin": {
+            "id": "cat_admin",
+            "question": { "ja": "どのような手続きについてですか？", "en": "What kind of procedure is it?" },
+            "options": [
+                { "label": { "ja": "お支払い方法", "en": "Payment Methods" }, "nextId": "cat_payment" },
+                { "label": { "ja": "各種申請・変更", "en": "Applications / Changes" }, "nextId": "cat_admin_proc" }
+            ]
+        },
+        "cat_info": {
+            "id": "cat_info",
+            "question": { "ja": "ご希望のサービスを選んでください。", "en": "Please select the service." },
+            "options": [
+                { "label": { "ja": "寮内ネット案内", "en": "Dorm Net Info" }, "nextId": "cat_dorm_info" },
+                { "label": { "ja": "Sun-Net光案内", "en": "Sun-Net Hikari Info" }, "nextId": "cat_hikari_info" },
+                { "label": { "ja": "SIMサービス案内", "en": "SIM Service Info" }, "nextId": "cat_sim_info" }
+            ]
+        },
+        # Operator form placeholder
+        "operator_chat_form": {
+            "id": "operator_chat_form",
+            "type": "input_form",
+            "question": {
+                "ja": "オペレーターにお繋ぎします。以下の情報をご入力ください。",
+                "en": "Connecting you to an operator. Please provide the following details."
+            },
+            "fields": [
+                { "id": "user_name", "label": { "ja": "お名前", "en": "Your Name" }, "type": "text", "required": true },
+                { "id": "member_id", "label": { "ja": "会員ID (任意)", "en": "Member ID (Optional)" }, "type": "text", "required": false }
+            ],
+            "submit_label": { "ja": "チャットを開始する", "en": "Start Chat" }
+        }
+    }
+}
+
+# Categorization mapping
+# We'll create intermediary categories for each service/tag
+categories = {
+    "cat_dorm_trouble": [],
+    "cat_hikari_trouble": [],
+    "cat_sim_trouble": [],
+    "cat_payment": [],
+    "cat_admin_proc": [],
+    "cat_dorm_info": [],
+    "cat_hikari_info": [],
+    "cat_sim_info": []
+}
+
+for item in source_data['items']:
+    sid = item['id']
+    q_ja = item['question']
+    a_ja = item['answer']
+    service = item.get('service')
+    tags = item.get('tags') or []
+
+    # Create the solution step
+    faq_data['steps'][sid] = {
+        "id": sid,
+        "type": "solution",
+        "show_contact": True,
+        "question": { "ja": q_ja, "en": q_ja },  # Fallback to JA for EN
+        "content": {
+            "text": { "ja": a_ja, "en": a_ja },
+        },
+        "options": [
+            { "label": { "ja": "有人チャットで相談する", "en": "Chat with an operator" }, "nextId": "operator_chat_form" },
+            { "label": { "ja": "トップに戻る", "en": "Back to Top" }, "action": "reset" }
+        ]
+    }
+
+    # Rough classification logic
+    added = False
+    if "お支払" in q_ja or "払い" in q_ja or any("支払い" in t for t in tags):
+        categories["cat_payment"].append(sid)
+        added = True
+    
+    if service == "寮内ネット":
+        if "案内" in q_ja or "申込" in q_ja or "利用できますか" in q_ja:
+            categories["cat_dorm_info"].append(sid)
+        else:
+            categories["cat_dorm_trouble"].append(sid)
+        added = True
+    elif service == "Sun-Net光":
+        if "案内" in q_ja or "申込" in q_ja:
+            categories["cat_hikari_info"].append(sid)
+        else:
+            categories["cat_hikari_trouble"].append(sid)
+        added = True
+    elif service == "SIMカード" or service == "SIM" or "SIM" in q_ja:
+        if "案内" in q_ja or "申込" in q_ja:
+            categories["cat_sim_info"].append(sid)
+        else:
+            categories["cat_sim_trouble"].append(sid)
+        added = True
+    
+    if not added:
+        if "変更" in q_ja or "手続" in q_ja or any("手続き" in t for t in tags):
+            categories["cat_admin_proc"].append(sid)
+        else:
+            # Drop into dorm trouble as a catch-all if no category found
+            categories["cat_dorm_trouble"].append(sid)
+
+# Generate the intermediate category steps
+for cid, item_ids in categories.items():
+    if not item_ids:
+        # Add a dummy option if empty
+        faq_data['steps'][cid] = {
+            "id": cid,
+            "question": { "ja": "該当する項目が見つかりませんでした。", "en": "No items found." },
+            "options": [{ "label": { "ja": "トップに戻る", "en": "Back to Top" }, "action": "reset" }]
+        }
+        continue
+
+    # Limit options per page to avoid UI clutter (max 8)
+    # If more than 8, we could paginate, but for a demo, we'll take the first 8
+    best_ids = item_ids[:8]
+    
+    faq_data['steps'][cid] = {
+        "id": cid,
+        "question": { "ja": "具体的な質問を選んでください。", "en": "Please select a specific question." },
+        "options": [
+            { "label": { "ja": faq_data['steps'][iid]['question']['ja'], "en": faq_data['steps'][iid]['question']['en'] }, "nextId": iid }
+            for iid in best_ids
+        ] + [
+            { "label": { "ja": "解決しないのでオペレーターに相談", "en": "Talk to an operator" }, "nextId": "operator_chat_form" },
+            { "label": { "ja": "トップに戻る", "en": "Back to Top" }, "action": "reset" }
+        ]
+    }
+
+# Write to data.js
+with open('data.js', 'w', encoding='utf-8') as f:
+    f.write("// FAQデータの定義 (JSONソース統合版)\n")
+    f.write("const FAQ_DATA = ")
+    json.dump(faq_data, f, ensure_ascii=False, indent=2)
+    f.write(";")
+print("Successfully generated data.js")

@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> - Sun-Net FAQ</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sunnet: {
+                            DEFAULT: '#2563eb',
+                            light: '#3b82f6',
+                            dark: '#1d4ed8',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'Noto Sans JP', 'sans-serif'],
+                        'manga': ['Dela Gothic One', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        .manga-font { font-family: 'Dela Gothic One', cursive; }
+        .text-outline {
+            text-shadow: 
+                -2px -2px 0 #fff,  
+                 2px -2px 0 #fff,
+                -2px  2px 0 #fff,
+                 2px  2px 0 #fff,
+                 3px  3px 0 rgba(0,0,0,0.2);
+        }
+        .google-shadow {
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+        }
+        .google-shadow:focus-within {
+            box-shadow: 0 1px 8px rgba(32,33,36,0.35);
+        }
+        .mascot-left { transform: scaleX(-1) scale(2.0); }
+        .mascot-right { transform: scale(1.5); }
+        
+        .mascot-blend { mix-blend-mode: multiply; }
+        
+        @keyframes float-left {
+            0%, 100% { transform: translateY(0px) scaleX(-1) scale(2.0); }
+            50% { transform: translateY(-20px) scaleX(-1) scale(2.0); }
+        }
+        
+        @keyframes float-right {
+            0%, 100% { transform: translateY(0px) scale(1.5); }
+            50% { transform: translateY(-15px) scale(1.5); }
+        }
+
+        .animate-float-left { animation: float-left 4s ease-in-out infinite; }
+        .animate-float-right { animation: float-right 3.5s ease-in-out infinite; }
+        
+        @media (max-width: 1024px) {
+            .mascot-left { transform: scaleX(-1) scale(1.2); }
+            .mascot-right { transform: scale(0.8); }
+            .animate-float-left, .animate-float-right { animation: none; }
+        }
+    </style>
+
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
+    <header class="bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg mb-8">
+        <div class="max-w-3xl mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="h-8">
+                <a href="index.html" class="block h-full transition">
+                    <img src="images/sunnet_logo_orig.png" alt="Sun-Net" class="h-full brightness-0 invert object-contain">
+                </a>
+            </h1>
+            <a href="index.html" class="text-sm bg-white/20 hover:bg-white/30 px-4 py-2 rounded-full transition">
+                &larr; Top
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 pb-12">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border-2 border-slate-100">
+            <div class="p-6 sm:p-8">
+                <div class="flex justify-end gap-2 mb-6">
+                    <button onclick="toggleLang('ja')" id="btn-ja" class="px-3 py-1 rounded-lg text-sm font-bold bg-blue-50 text-blue-600 border border-blue-200">JP</button>
+                    <button onclick="toggleLang('en')" id="btn-en" class="px-3 py-1 rounded-lg text-sm text-slate-500 hover:bg-slate-100 border border-transparent">EN</button>
+                </div>
+
+                <div id="content-ja">
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-800 border-l-8 border-blue-500 pl-4 mb-8 leading-tight">
+                        
+                    </h2>
+                    <div class="prose prose-slate max-w-none text-base sm:text-lg leading-relaxed text-slate-700">
+                        タイトル	分類	質問	回答
+                    </div>
+                </div>
+
+                <div id="content-en" style="display: none;">
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-800 border-l-8 border-blue-500 pl-4 mb-8 leading-tight">
+                        
+                    </h2>
+                    <div class="prose prose-slate max-w-none text-base sm:text-lg leading-relaxed text-slate-700">
+                        タイトル	分類	質問	回答
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-slate-50 border-t border-slate-100 p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="text-center sm:text-left">
+                    <p class="font-bold text-xl text-slate-800 mb-2">解決しましたか？</p>
+                    <p class="text-slate-500 text-sm">解決しない場合は、いつでもチャットやメールでお問い合わせください。</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <img src="images/mascot_tab.png" alt="Mascot" class="w-16 h-16 object-contain hover:rotate-12 transition duration-300">
+                    <img src="images/mascot_thumbsup.png" alt="Mascot" class="w-16 h-16 object-contain hover:-rotate-12 transition duration-300">
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="index.html" class="inline-flex items-center text-blue-600 font-bold hover:gap-3 transition-all duration-300">
+                <span class="mr-2">&larr;</span> FAQトップへ戻る
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-12 mt-12 text-slate-500">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <p class="mb-4 text-sm font-sans">&copy; 2026 Sun-Net Inc.</p>
+        </div>
+    </footer>
+
+    <script>
+    function toggleLang(lang) {
+        document.getElementById('content-ja').style.display = lang === 'ja' ? 'block' : 'none';
+        document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
+        
+        const btnJa = document.getElementById('btn-ja');
+        const btnEn = document.getElementById('btn-en');
+        const activeClass = "px-3 py-1 rounded-lg text-sm font-bold bg-blue-50 text-blue-600 border border-blue-200";
+        const inactiveClass = "px-3 py-1 rounded-lg text-sm text-slate-500 hover:bg-slate-100 border border-transparent";
+        
+        if (lang === 'ja') {
+            btnJa.className = activeClass;
+            btnEn.className = inactiveClass;
+        } else {
+            btnJa.className = inactiveClass;
+            btnEn.className = activeClass;
+        }
+    }
+    </script>
+</body>
+</html>
