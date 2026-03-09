@@ -7,7 +7,7 @@
       "service": "寮内ネット",
       "section": null,
       "question": "MACアドレスはどのようなものですか？",
-      "answer": "ネットワーク機器等に付いている固有の識別番号です。有線LANのほかに、無線LANやスマートフォン、プリンターなどにもMACアドレスが割り当てられています。\n MACアドレスは12桁の16進数で「00-00-00-XX-XX-XX」と表される。前半6桁がメーカー固有のアドレスで、後半6桁が製品個々のアドレスとなります。物理アドレスやWiFiアドレス等と表示される場合があります。",
+      "answer": "ネットワーク機器等に付いている固有の識別番号です。有線LANのほかに、無線LANやスマートフォン、プリンターなどにもMACアドレスが割り当てられています\nMACアドレスは12桁の16進数で「00-00-00-XX-XX-XX」と表される。前半6桁がメーカー固有のアドレスで、後半6桁が製品個々のアドレスです。物理アドレスやWiFiアドレス等と表示される場合があります。",
       "tags": [
         "MACアドレス",
         "物理アドレス"
@@ -22,11 +22,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": false,
-      "answer_en": "ネットワーク機器等に付いている固有の識別番号です。有線LANのほかに、無線LANやスマートフォン、プリンターなどにもMACアドレスが割り当てられています。\n MACアドレスは12桁の16進数で「00-00-00-XX-XX-XX」と表される。前半6桁がメーカー固有のアドレスで、後半6桁が製品個々のアドレスとなります。物理アドレスやWiFiアドレス等と表示される場合があります。",
-      "category_en": "Contract & Service",
-      "question_en": "MACアドレスはどのようなものですか？"
+      "answer_en": "A MAC address is a unique identifier assigned to network devices such as laptops, smartphones, and printers. It is a 12-digit hexadecimal number (e.g., 00-00-00-XX-XX-XX), where the first 6 digits identify the manufacturer and the last 6 digits identify the specific device.",
+      "category_en": "MAC Address Registration",
+      "question_en": "What is a MAC address?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0002",
@@ -49,11 +50,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": false,
-      "answer_en": "はい。可能です。MACアドレスを物理アドレスやフィジカルアドレス（physical address）と呼ぶ場合もあります。又、端末によりMACアドレスの名称が異なる場合があります。IOSの場合はWiFiアドレス、Androidの場合はWiFiMACアドレスと表示されます。Windows製品とAPPLE製品でも名称が異なります。",
-      "category_en": "Contract & Service",
-      "question_en": "WiFiアドレスをMACアドレスとして申請できますか？"
+      "answer_en": "Yes, you can. A MAC address may also be referred to as a physical address or Wi-Fi address depending on the device. Please note that the label may vary by device model.",
+      "category_en": "MAC Address Registration",
+      "question_en": "Can I use my Wi-Fi address as my MAC address?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0003",
@@ -61,7 +63,7 @@
       "service": "寮内ネット",
       "section": null,
       "question": "登録中の端末（MACアドレス）を忘れてしまいました。",
-      "answer": "弊社カスタマーサポートまでお問合せください。",
+      "answer": "弊社カスタマーサポートまでお問い合わせください。",
       "tags": [
         "MACアドレス"
       ],
@@ -75,11 +77,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": false,
-      "answer_en": "弊社カスタマーサポートまでお問合せください。",
-      "category_en": "Contract & Service",
-      "question_en": "登録中の端末（MACアドレス）を忘れてしまいました。"
+      "answer_en": "Please contact our Customer Support team for assistance.",
+      "category_en": "MAC Address Registration",
+      "question_en": "I forgot which device (MAC address) I registered. What should I do?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0004",
@@ -87,13 +90,11 @@
       "service": "寮内ネット",
       "section": null,
       "question": "iphone/ipadのMACアドレスの確認方法を教えてください。",
-      "answer": "1. ホーム画面で「設定」アプリを開きます。\n 2. 「一般」をタップします。\n 3. 「情報」を選択します。\n 4. 「Wi-Fiアドレス」の横に表示されている値が、iPhoneの物理アドレス（MACアドレス）です。",
+      "answer": "1. ホーム画面で「設定」アプリを開きます\n2. 「一般」をタップします\n3. 「情報」を選択します\n4. 「Wi-Fiアドレス」の横に表示されている値が、iPhoneの物理アドレス（MACアドレス）です。",
       "tags": [
         "MACアドレス",
-        "寮内ネット",
-        "iphone",
-        "ipad",
-        "MACアドレス|寮内ネット|iphone|ipad"
+        "iPhone",
+        "iPad"
       ],
       "meta": {
         "iconType": null,
@@ -105,11 +106,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": false,
-      "answer_en": "1. ホーム画面で「設定」アプリを開きます。\n 2. 「一般」をタップします。\n 3. 「情報」を選択します。\n 4. 「Wi-Fiアドレス」の横に表示されている値が、iPhoneの物理アドレス（MACアドレス）です。",
-      "category_en": "Contract & Service",
-      "question_en": "iphone/ipadのMACアドレスの確認方法を教えてください。"
+      "answer_en": "1. Open the \"Settings\" app on your home screen.\n2. Tap \"General.\"\n3. Select \"About.\"\n4. The value shown next to \"Wi-Fi Address\" is your iPhone's MAC address (physical address).",
+      "category_en": "MAC Address Registration",
+      "question_en": "How do I find the MAC address on my iPhone or iPad?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0005",
@@ -117,12 +119,10 @@
       "service": "寮内ネット",
       "section": null,
       "question": "Android OSのMACアドレスの確認方法を教えてください。",
-      "answer": "※AndroidはOSのバージョンやメーカーよって表示手順が異なります。詳しくはインターネット検索にてお調べください\n 1.端末のWiFiを「有効」にします。\n 2. ホーム画面で「設定」アプリを開きます。\n 3. 「端末情報」を選択します。\n 4. 「端末の状態」をタップします。\n 5. 「WiFi-MACアドレス」が、Androidデバイスの物理アドレス（MACアドレス）です。",
+      "answer": "※AndroidはOSのバージョンやメーカーよって表示手順が異なります。詳しくはインターネット検索にてお調べください\n 1.端末のWiFiを「有効」にします\n2. ホーム画面で「設定」アプリを開きます\n3. 「端末情報」を選択します\n4. 「端末の状態」をタップします\n5. 「WiFi-MACアドレス」が、Androidデバイスの物理アドレス（MACアドレス）です。",
       "tags": [
         "MACアドレス",
-        "寮内ネット",
-        "Android",
-        "MACアドレス|寮内ネット|Android"
+        "Android"
       ],
       "meta": {
         "iconType": null,
@@ -134,22 +134,22 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": false,
-      "answer_en": "※AndroidはOSのバージョンやメーカーよって表示手順が異なります。詳しくはインターネット検索にてお調べください\n 1.端末のWiFiを「有効」にします。\n 2. ホーム画面で「設定」アプリを開きます。\n 3. 「端末情報」を選択します。\n 4. 「端末の状態」をタップします。\n 5. 「WiFi-MACアドレス」が、Androidデバイスの物理アドレス（MACアドレス）です。",
-      "category_en": "Contract & Service",
-      "question_en": "Android OSのMACアドレスの確認方法を教えてください。"
+      "answer_en": "Note: Steps may vary depending on your Android OS version and manufacturer. Please search online for instructions specific to your device.\n1. Enable Wi-Fi on your device.\n2. Open the \"Settings\" app.\n3. Tap \"About Phone\" (or \"Device Information\").\n4. Look for \"Wi-Fi MAC Address\" or \"Physical Address.\"",
+      "category_en": "MAC Address Registration",
+      "question_en": "How do I find the MAC address on my Android device?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0006",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "自分の住んでいる学生寮で『寮内ネット』は利用できますか？",
-      "answer": "Sun-Netサービスが学生寮全体で導入されている場合ご利用いただけます。ご自身の学生寮のご利用可否についてはお手数ですが下記までお問合せください。\n フリーダイヤル：0120-336-326\n メールアドレス：sales@sunrise-net.co.jp",
+      "question": "学生寮で寮内ネットは利用できますか？",
+      "answer": "Sun-Netサービスが学生寮全体で導入されている場合ご利用いただけます。ご自身の学生寮のご利用可否についてはお手数ですが下記までお問い合わせください\nフリーダイヤル：0120-336-326\n メールアドレス：sales@sunrise-net.co.jp",
       "tags": [
-        "申込",
-        "寮内ネット"
+        "申込"
       ],
       "meta": {
         "iconType": null,
@@ -161,22 +161,22 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "Sun-Netサービスが学生寮全体で導入されている場合ご利用いただけます。ご自身の学生寮のご利用可否についてはお手数ですが下記までお問合せください。\n フリーダイヤル：0120-336-326\n メールアドレス：sales@sunrise-net.co.jp",
-      "category_en": "Contract & Service",
-      "question_en": "自分の住んでいる学生寮で『寮内ネット』は利用できますか？"
+      "answer_en": "The service is available if Sun-Net has been deployed in your dormitory. Please contact us to confirm availability at your specific dormitory.\nToll-free: 0120-336-326\nEmail: info@sunrise-net.co.jp",
+      "category_en": "Contract & Billing",
+      "question_en": "Is the dormitory internet service available at my student dormitory?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0007",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "1年間は寮にいる予定がありますが2年目に寮に住むか未定です。2年目はまた再契約になりますか？手続きはどのようにすればよいのでしょうか？",
-      "answer": "契約期間に空白がなければ2年目以降は継続でのご案内となります。継続の際の手数料は発生致しません。契約期間に空白がある場合は再入会扱いとなります。",
+      "question": "2年目も継続利用する場合、再契約は必要ですか？手続き方法も教えてください。",
+      "answer": "契約期間に空白がなければ2年目以降は継続でご案内します。継続の際の手数料は発生いたしません。契約期間に空白がある場合は再入会扱いです。",
       "tags": [
-        "継続",
-        "寮内ネット"
+        "継続"
       ],
       "meta": {
         "iconType": null,
@@ -188,11 +188,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "契約期間に空白がなければ2年目以降は継続でのご案内となります。継続の際の手数料は発生致しません。契約期間に空白がある場合は再入会扱いとなります。",
-      "category_en": "Contract & Service",
-      "question_en": "1年間は寮にいる予定がありますが2年目に寮に住むか未定です。2年目はまた再契約になりますか？手続きはどのようにすればよいのでしょうか？"
+      "answer_en": "If there is no gap in your contract period, your service will continue automatically from the second year onward with no renewal fee. If there is a gap, you will need to re-enroll as a new member.",
+      "category_en": "Contract & Billing",
+      "question_en": "Do I need to renew my contract for the second year? How do I do it?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0008",
@@ -202,8 +203,7 @@
       "question": "部屋でネットが必要かまだわからないので、夏までの契約にしたいのですが可能ですか？",
       "answer": "1ヶ月単位でのご契約が可能です。ご都合のよい契約期間をお選びください。",
       "tags": [
-        "申込",
-        "寮内ネット"
+        "申込"
       ],
       "meta": {
         "iconType": null,
@@ -215,11 +215,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "1ヶ月単位でのご契約が可能です。ご都合のよい契約期間をお選びください。",
-      "category_en": "Contract & Service",
-      "question_en": "部屋でネットが必要かまだわからないので、夏までの契約にしたいのですが可能ですか？"
+      "answer_en": "Yes, contracts are available on a month-by-month basis. Please choose the contract period that suits your needs.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I sign up for a short-term contract until summer?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0009",
@@ -227,10 +228,9 @@
       "service": "寮内ネット",
       "section": null,
       "question": "退寮等でサービスを辞めたい場合、どのような手続きが必要ですか？",
-      "answer": "お引越し先では引き続き『Sun-Net光』のご利用（プラン変更）が可能です。※一部建物を除く\n 以下ページをご確認ください。\n http://www.sunrise-net.ne.jp/sunnethikari.html\n プラン変更をされない場合は解約はご解約月の前月末日までに弊社ホームページよりお手続きが必要です。お電話やメールによる解約受付は行っておりません。解約金として月額料金相当の解約金が発生いたしますのでご了承ください。",
+      "answer": "お引越し先では引き続き『Sun-Net光』のご利用（プラン変更）が可能です。※一部建物を除く\n 以下ページをご確認ください\nhttp://www.sunrise-net.ne.jp/sunnethikari.html\n プラン変更をされない場合は解約はご解約月の前月末日までに弊社ホームページよりお手続きが必要です。お電話やメールによる解約受付は行っておりません。解約金として月額料金相当の解約金が発生いたしますのでご了承ください。",
       "tags": [
-        "解約手続き",
-        "寮内ネット"
+        "解約手続き"
       ],
       "meta": {
         "iconType": null,
@@ -242,11 +242,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "お引越し先では引き続き『Sun-Net光』のご利用（プラン変更）が可能です。※一部建物を除く\n 以下ページをご確認ください。\n http://www.sunrise-net.ne.jp/sunnethikari.html\n プラン変更をされない場合は解約はご解約月の前月末日までに弊社ホームページよりお手続きが必要です。お電話やメールによる解約受付は行っておりません。解約金として月額料金相当の解約金が発生いたしますのでご了承ください。",
-      "category_en": "Contract & Service",
-      "question_en": "退寮等でサービスを辞めたい場合、どのような手続きが必要ですか？"
+      "answer_en": "After moving out, you may continue using Sun-Net Hikari at your new address (plan change required; some buildings may not be eligible). Please refer to the following page for details: http://www.sunrise-net.ne.jp/sunnethikari\nTo cancel, please contact our Customer Support team.",
+      "category_en": "Contract & Billing",
+      "question_en": "What do I need to do to cancel my service when I move out?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0010",
@@ -254,10 +255,9 @@
       "service": "寮内ネット",
       "section": null,
       "question": "ルーター購入プランで契約しておいて、途中からレンタルプランに変更することはできますか？",
-      "answer": "はい、可能です。但し購入プランの方がレンタルプランに比べて月額料金の設定を低くしておりますので今後のご利用予定期間と比較しご検討ください。ご希望の際はプラン変更フォームよりお手続きをおねがいします。※別途無線ルーターの送料が発生いたします。",
+      "answer": "はい、可能です。但し購入プランの方がレンタルプランに比べて月額料金の設定を低くしておりますので今後のご利用予定期間と比較しご検討ください。ご希望の際はプラン変更フォームよりお手続きをお願いします。※別途無線ルーターの送料が発生いたします。",
       "tags": [
-        "変更手続き",
-        "寮内ネット"
+        "変更手続き"
       ],
       "meta": {
         "iconType": null,
@@ -269,11 +269,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "はい、可能です。但し購入プランの方がレンタルプランに比べて月額料金の設定を低くしておりますので今後のご利用予定期間と比較しご検討ください。ご希望の際はプラン変更フォームよりお手続きをおねがいします。※別途無線ルーターの送料が発生いたします。",
-      "category_en": "Contract & Service",
-      "question_en": "ルーター購入プランで契約しておいて、途中からレンタルプランに変更することはできますか？"
+      "answer_en": "Yes, you can switch mid-contract. However, please note that the purchase plan has a lower monthly fee than the rental plan. We recommend comparing the plans based on your expected usage period. To switch, please use the Plan Change Form.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I switch from a router purchase plan to a rental plan mid-contract?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0011",
@@ -281,10 +282,9 @@
       "service": "寮内ネット",
       "section": null,
       "question": "自分で購入した無線ルーターを利用することはできますか？",
-      "answer": "無線ルータのご使用に関してシステム運営上、一律弊社ルータに限らせて頂いており、無線ルーターを含むお持ち込み機器の利用はご遠慮頂いております。",
+      "answer": "無線ルータのご使用に関してシステム運営上、一律弊社ルータに限らせていただいており、無線ルーターを含むお持ち込み機器の利用はご遠慮いただいております。",
       "tags": [
-        "無線ルーター",
-        "寮内ネット"
+        "無線ルーター"
       ],
       "meta": {
         "iconType": null,
@@ -296,19 +296,20 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "無線ルータのご使用に関してシステム運営上、一律弊社ルータに限らせて頂いており、無線ルーターを含むお持ち込み機器の利用はご遠慮頂いております。",
-      "category_en": "Contract & Service",
-      "question_en": "自分で購入した無線ルーターを利用することはできますか？"
+      "answer_en": "For system management reasons, only routers provided by Sun-Net are permitted. Please refrain from using your own wireless router or any other personal networking equipment.",
+      "category_en": "Service Information",
+      "question_en": "Can I use my own wireless router?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0012",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "Iphoneを3台所有しています。登録することはできますか？",
-      "answer": "同系統端末の登録は2台までとなります。尚、契約者所有の端末のみ対象です。3台目以降の登録を希望される場合は別途誓約書をご提出いただきます。",
+      "question": "iPhoneを3台所有しています。登録することはできますか？",
+      "answer": "同系統端末の登録は2台までです。尚、契約者所有の端末のみ対象です。3台目以降の登録を希望される場合は別途誓約書をご提出いただきます。",
       "tags": [
         "MACアドレス"
       ],
@@ -322,11 +323,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": false,
-      "answer_en": "同系統端末の登録は2台までとなります。尚、契約者所有の端末のみ対象です。3台目以降の登録を希望される場合は別途誓約書をご提出いただきます。",
-      "category_en": "Contract & Service",
-      "question_en": "Iphoneを3台所有しています。登録することはできますか？"
+      "answer_en": "Up to 2 devices of the same type (e.g., iPhones) can be registered. Only devices owned by the account holder are eligible. To register a third device of the same type, a separate written agreement is required.",
+      "category_en": "MAC Address Registration",
+      "question_en": "I have three iPhones. Can I register all of them?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0013",
@@ -348,21 +350,25 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": false,
-      "answer_en": "個人契約となり、ご利用は契約者が所有する端末に限ります。ご契約者以外の端末に関する登録及び利用はご遠慮いただいております。",
-      "category_en": "Contract & Service",
-      "question_en": "友人の端末でMACアドレスの登録を行いたいのですが可能ですか？"
+      "answer_en": "This is a personal contract, and only devices owned by the account holder may be registered. Registration and use of devices belonging to other individuals is not permitted.",
+      "category_en": "MAC Address Registration",
+      "question_en": "Can I register my friend's device under my account?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0014",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "教育実習で2年目の夏は寮を離れますがどのようにするのがいいのでしょうか？",
-      "answer": "まずは1年間でお申込頂き、教育実習が決まるまでは最小単位でのご継続手続きをおすすめしております。尚、寮内ネットサービスに限り、大学公認での一時離寮で且つ弊社契約期間内に同じ寮に戻る予定がある場合は一時休止扱いが可能です。詳しくはカスタマーデスクまでお問合せください。",
+      "question": "長期不在の場合、契約はどうすればよいですか？",
+      "answer": "1年間でお申込いただき、教育実習が決まるまでは最小単位でのご継続手続きをおすすめしております。尚、寮内ネットサービスに限り、大学公認での一時離寮で且つ弊社契約期間内に同じ寮に戻る予定がある場合は一時休止扱いが可能です。詳しくはカスタマーデスクまでお問い合わせください。",
       "tags": [
-        "寮内ネット"
+        "休止",
+        "一時停止",
+        "契約期間",
+        "長期不在"
       ],
       "meta": {
         "iconType": null,
@@ -374,11 +380,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "まずは1年間でお申込頂き、教育実習が決まるまでは最小単位でのご継続手続きをおすすめしております。尚、寮内ネットサービスに限り、大学公認での一時離寮で且つ弊社契約期間内に同じ寮に戻る予定がある場合は一時休止扱いが可能です。詳しくはカスタマーデスクまでお問合せください。",
-      "category_en": "Contract & Service",
-      "question_en": "教育実習で2年目の夏は寮を離れますがどのようにするのがいいのでしょうか？"
+      "answer_en": "We recommend starting with a 1-year contract and renewing on a minimum-period basis until your schedule is confirmed. Please note that for the dormitory internet service only, a temporary suspension may be available if you are on an officially approved leave of absence from your university and plan to return to the same dormitory within your contract period. Please contact Customer Support for details.",
+      "category_en": "Contract & Billing",
+      "question_en": "What should I do with my contract if I will be away for an extended period?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0015",
@@ -386,9 +393,13 @@
       "service": "寮内ネット",
       "section": null,
       "question": "夏、冬、春休みと帰省することがあります。その期間の料金はどのような扱いになりますか？",
-      "answer": "ご契約期間中となりますのでご利用料金として発生します。",
+      "answer": "ご契約期間中のため、ご利用料金が発生します。",
       "tags": [
-        "寮内ネット"
+        "帰省",
+        "料金",
+        "休止",
+        "契約期間",
+        "長期不在"
       ],
       "meta": {
         "iconType": null,
@@ -400,19 +411,20 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "ご契約期間中となりますのでご利用料金として発生します。",
-      "category_en": "Contract & Service",
-      "question_en": "夏、冬、春休みと帰省することがあります。その期間の料金はどのような扱いになりますか？"
+      "answer_en": "Charges apply throughout your contract period, including during vacation breaks.",
+      "category_en": "Contract & Billing",
+      "question_en": "Will I be charged during summer, winter, and spring breaks when I go home?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0016",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "留学予定がありますが時期は未定です。どのように契約期間を定めればよいのでしょうか？",
-      "answer": "まずは短期契約期間にてお申込頂き、留学期間が決まるまでは最小単位でのご継続手続きをおすすめしております。尚、寮内ネットサービスに限り、大学公認の留学で且つ帰国後、弊社契約期間内に同じ寮に戻る予定がある場合は一時休止扱いが可能です。詳しくはカスタマーデスクまでお問合せください。",
+      "question": "留学予定があり時期が未定の場合、契約期間はどう設定すればよいですか？",
+      "answer": "短期契約期間でお申込いただき、留学期間が決まるまでは最小単位でのご継続手続きをおすすめしております。尚、寮内ネットサービスに限り、大学公認の留学で且つ帰国後、弊社契約期間内に同じ寮に戻る予定がある場合は一時休止扱いが可能です。詳しくはカスタマーデスクまでお問い合わせください。",
       "tags": [
         "クレジットカード払い"
       ],
@@ -426,11 +438,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "まずは短期契約期間にてお申込頂き、留学期間が決まるまでは最小単位でのご継続手続きをおすすめしております。尚、寮内ネットサービスに限り、大学公認の留学で且つ帰国後、弊社契約期間内に同じ寮に戻る予定がある場合は一時休止扱いが可能です。詳しくはカスタマーデスクまでお問合せください。",
-      "category_en": "Contract & Service",
-      "question_en": "留学予定がありますが時期は未定です。どのように契約期間を定めればよいのでしょうか？"
+      "answer_en": "We recommend signing up for a short-term contract and renewing on a minimum-period basis until your study abroad dates are confirmed. For the dormitory internet service only, a temporary suspension may be available for university-approved study abroad programs if you plan to return to the same dormitory within your contract period. Please contact Customer Support for details.",
+      "category_en": "Contract & Billing",
+      "question_en": "How do I set my contract period if my study abroad dates are not yet confirmed?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0017",
@@ -453,11 +466,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "購入プランの方がレンタルプランに比べて月額利用料金を低く設定しています。継続して2年以上ご利用の予定がある場合は購入プランがおすすめです。尚、一部プランを除きいずれのプランにおいてもインターネット品質に大きな違いはありません。",
-      "category_en": "Contract & Service",
-      "question_en": "WiFiプラス/レンタルプランと購入プランの違いを教えてください。"
+      "answer_en": "The purchase plan has a lower monthly fee than the rental plan. If you plan to use the service for 2 or more years, the purchase plan is recommended. Both plans include the same internet service quality (except for some plans).",
+      "category_en": "Service Information",
+      "question_en": "What is the difference between the Wi-Fi Plus rental plan and the purchase plan?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0018",
@@ -479,11 +493,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "LANケーブルを用いた接続方式です。一般的に無線接続に比べて通信や電波状況が安定しています。ご利用いただくにはLAN端子対応の機器及びMACアドレスの登録が必要です。未対応機器の場合有線LANアダプター（MACアドレスの登録が必要）を利用することにより接続が可能です。",
-      "category_en": "Contract & Service",
-      "question_en": "有線LAN（有線接続）の意味を教えてください。"
+      "answer_en": "A wired LAN (wired connection) uses a LAN cable to connect to the internet. It generally provides more stable speeds and signal quality than a wireless connection. A LAN-compatible device and MAC address registration are required. If your device does not have a LAN port, a LAN adapter is available for purchase.",
+      "category_en": "Service Information",
+      "question_en": "What is a wired LAN (wired connection)?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0019",
@@ -491,7 +506,7 @@
       "service": "寮内ネット",
       "section": null,
       "question": "無線ルーターを買い替えたいのですが可能ですか？",
-      "answer": "WiFiプラス購入プランご加入の場合は可能です。無線ルーター代金及び送料のご請求となります。",
+      "answer": "WiFiプラス購入プランご加入の場合は可能です。無線ルーター代金および送料が発生します。",
       "tags": [
         "無線ルーター",
         "サービス内容"
@@ -506,11 +521,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "WiFiプラス購入プランご加入の場合は可能です。無線ルーター代金及び送料のご請求となります。",
-      "category_en": "Contract & Service",
-      "question_en": "無線ルーターを買い替えたいのですが可能ですか？"
+      "answer_en": "Yes, replacement is available for Wi-Fi Plus purchase plan subscribers. The cost of the new router and shipping fees will apply.",
+      "category_en": "Service Information",
+      "question_en": "Can I replace my wireless router with a new one?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0020",
@@ -534,11 +550,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "弊社からお送りする無線ルーターに付属のLANケーブルがついています。WiFi接続のみご利用の場合はご用意いただく必要はありません。有線LAN接続をご希望の場合や無線ルーターの設置場所を変更される場合はご用意ください。※弊社でもLANケーブルの販売を行っております。",
-      "category_en": "Contract & Service",
-      "question_en": "LANケーブルは必要ですか？"
+      "answer_en": "The wireless router we ship includes a LAN cable. If you only use Wi-Fi, you do not need to prepare one. However, if you use a wired LAN connection or need to reposition the router, an additional LAN cable may be required.",
+      "category_en": "Service Information",
+      "question_en": "Do I need a LAN cable?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0027",
@@ -548,7 +565,8 @@
       "question": "スマートフォンのWi-Fi接続ができません。",
       "answer": "スマートフォンのWi-Fi設定で「プライベートアドレス」や「ランダムMACアドレス」機能がONになっている場合、OFFにしてみてください。",
       "tags": [
-        "デバイス別の設定と問題解決"
+        "端末設定",
+        "デバイス設定"
       ],
       "meta": {
         "iconType": null,
@@ -560,11 +578,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "端末設定",
       "is_popular": false,
-      "answer_en": "If 'Private Address' or 'Random MAC Address' features are ON in your smartphone's Wi-Fi settings, please try turning them OFF.",
-      "category_en": "Troubleshooting",
-      "question_en": "スマートフォンのWi-Fi接続ができません。"
+      "answer_en": "If \"Private Address\" or \"Random MAC Address\" features are ON in your smartphone's Wi-Fi settings, please try turning them OFF.",
+      "category_en": "Device Settings",
+      "question_en": "My smartphone cannot connect to Wi-Fi. What should I do?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0028",
@@ -574,7 +593,8 @@
       "question": "ゲーム機のインターネット接続設定方法を教えてください。",
       "answer": "ゲーム機の種類によって異なりますが、一般的にはネットワーク設定からWi-Fiを選択し、SSIDとパスワードを入力します。詳細な手順はガイドブックを参照してください。",
       "tags": [
-        "デバイス別の設定と問題解決"
+        "端末設定",
+        "デバイス設定"
       ],
       "meta": {
         "iconType": 31,
@@ -586,21 +606,23 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "端末設定",
       "is_popular": false,
-      "answer_en": "ゲーム機の種類によって異なりますが、一般的にはネットワーク設定からWi-Fiを選択し、SSIDとパスワードを入力します。詳細な手順はガイドブックを参照してください。",
-      "category_en": "Troubleshooting",
-      "question_en": "ゲーム機のインターネット接続設定方法を教えてください。"
+      "answer_en": "The setup process varies by game console, but generally you can connect by going to Network Settings, selecting Wi-Fi, and entering the SSID and password. Please refer to the guidebook for detailed instructions for your specific console.",
+      "category_en": "Device Settings",
+      "question_en": "How do I set up an internet connection on my game console?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0029",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "セキュリティソフトがインターネット接続を妨げていませんか？",
+      "question": "セキュリティソフトがインターネット接続に影響することはありますか？",
       "answer": "セキュリティソフトの設定を確認し、必要に応じて一時的に無効にしてみてください。接続できた場合は、セキュリティソフトの設定を見直してください。",
       "tags": [
-        "デバイス別の設定と問題解決"
+        "端末設定",
+        "デバイス設定"
       ],
       "meta": {
         "iconType": null,
@@ -612,11 +634,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "端末設定",
       "is_popular": false,
-      "answer_en": "セキュリティソフトの設定を確認し、必要に応じて一時的に無効にしてみてください。接続できた場合は、セキュリティソフトの設定を見直してください。",
-      "category_en": "Troubleshooting",
-      "question_en": "セキュリティソフトがインターネット接続を妨げていませんか？"
+      "answer_en": "Please check your security software settings and try temporarily disabling it. If the connection works after disabling it, review and adjust your security software settings accordingly.",
+      "category_en": "Device Settings",
+      "question_en": "Can security software affect my internet connection?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0030",
@@ -626,7 +649,8 @@
       "question": "インターネットを介して家電を操作したいです。可能ですか？",
       "answer": "スマートホーム機器の利用は可能です。ただし、セキュリティには十分注意し、各機器のセットアップ方法に従ってください。不明点はメーカーサポートにお問い合わせください。",
       "tags": [
-        "デバイス別の設定と問題解決"
+        "端末設定",
+        "デバイス設定"
       ],
       "meta": {
         "iconType": null,
@@ -638,21 +662,25 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "端末設定",
       "is_popular": false,
-      "answer_en": "スマートホーム機器の利用は可能です。ただし、セキュリティには十分注意し、各機器のセットアップ方法に従ってください。不明点はメーカーサポートにお問い合わせください。",
-      "category_en": "Troubleshooting",
-      "question_en": "インターネットを介して家電を操作したいです。可能ですか？"
+      "answer_en": "Yes, smart home devices can be used on our network. Please follow the setup instructions for each device and take appropriate security precautions. For device-specific questions, please contact the manufacturer's support.",
+      "category_en": "Device Settings",
+      "question_en": "Can I control home appliances over the internet?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0035",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "スマホのWiFiがつかえません。",
-      "answer": "【iPhoneの場合】\n ”プライベートアドレス設定”を「オフ」してください。\n ※プライベートアドレス設定が\n 不明な場合は下記サイトを参考にしてください。\n https://support.apple.com/ja-jp/guide/iphone/iph6b324bb33/ios\n \n 【android端末の場合】\n ※android10に関してですが、初期設定でMACアドレスが1つのアドレスに固定されていない設定になっております。\n インターネットに接続するためには、固定MACアドレスに設定していただく必要がございますので、\n 以下の手順で設定をお願いいたします。\n \n 1）「設定」をタップ\n 2）「ネットワークとインターネット」をタップ\n 3）「WI-FI」をタップ\n 4）現在使用しているWIFIをタップ\n 5）「詳細設定」をタップ\n 6）「プライバシー」をタップ\n 7）”ランダムなMACを使用する”から、”デバイスのMACを使用する”に変更\n 8）「保存」をタップ",
+      "question": "スマートフォンのWi-Fiが使えません。",
+      "answer": "【iPhoneの場合】\n ”プライベートアドレス設定”を「オフ」してください\n※プライベートアドレス設定が\n 不明な場合は下記サイトを参考にしてください\nhttps://support.apple.com/ja-jp/guide/iphone/iph6b324bb33/ios\n \n 【android端末の場合】\n ※android10に関してですが、初期設定でMACアドレスが1つのアドレスに固定されていない設定になっております\nインターネットに接続するためには、固定MACアドレスに設定していただく必要がございますので、\n 以下の手順で設定をお願いいたします\n\n 1）「設定」をタップ\n 2）「ネットワークとインターネット」をタップ\n 3）「WI-FI」をタップ\n 4）現在使用しているWIFIをタップ\n 5）「詳細設定」をタップ\n 6）「プライバシー」をタップ\n 7）”ランダムなMACを使用する”から、”デバイスのMACを使用する”に変更\n 8）「保存」をタップ",
       "tags": [
-        "寮内ネット"
+        "WiFi",
+        "接続できない",
+        "スマートフォン",
+        "トラブル"
       ],
       "meta": {
         "iconType": null,
@@ -664,11 +692,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "接続トラブル",
       "is_popular": false,
-      "answer_en": "【iPhoneの場合】\n ”プライベートアドレス設定”を「オフ」してください。\n ※プライベートアドレス設定が\n 不明な場合は下記サイトを参考にしてください。\n https://support.apple.com/ja-jp/guide/iphone/iph6b324bb33/ios\n \n 【android端末の場合】\n ※android10に関してですが、初期設定でMACアドレスが1つのアドレスに固定されていない設定になっております。\n インターネットに接続するためには、固定MACアドレスに設定していただく必要がございますので、\n 以下の手順で設定をお願いいたします。\n \n 1）「設定」をタップ\n 2）「ネットワークとインターネット」をタップ\n 3）「WI-FI」をタップ\n 4）現在使用しているWIFIをタップ\n 5）「詳細設定」をタップ\n 6）「プライバシー」をタップ\n 7）”ランダムなMACを使用する”から、”デバイスのMACを使用する”に変更\n 8）「保存」をタップ",
-      "category_en": "Troubleshooting",
-      "question_en": "スマホのWiFiがつかえません。"
+      "answer_en": "■ For iPhone users:\nTurn off the \"Private Address\" setting.\nIf you are unsure how to do this, please refer to: https://support.apple.com\n\n■ For Android users:\nDisable the \"Random MAC Address\" or \"Use Random MAC\" setting in your Wi-Fi settings.\n\nIf the issue persists after adjusting these settings, please contact our Customer Support team.",
+      "category_en": "Connection Troubleshooting",
+      "question_en": "My smartphone's Wi-Fi is not working. How do I fix it?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0036",
@@ -676,8 +705,14 @@
       "service": "寮内ネット",
       "section": null,
       "question": "WindowsのパソコンのWiFiが使えません。",
-      "answer": "弊社のインターネットに接続するためには、固定MACアドレスに設定していただく必要がございます。 \n 以下の手順で設定をお願いいたします。\n \n 1）「設定」 をクリック\n 2）「ネットワークとインターネット」 をクリック\n 3）「WI-FI」 をクリック\n 4）「ランダムなハードウェアアドレスを使う」をスイッチをクリックし、オフにします。",
-      "tags": [],
+      "answer": "弊社のインターネットに接続するためには、固定MACアドレスに設定していただく必要がございます。 \n 以下の手順で設定をお願いいたします\n\n 1）「設定」 をクリック\n 2）「ネットワークとインターネット」 をクリック\n 3）「WI-FI」 をクリック\n 4）「ランダムなハードウェアアドレスを使う」をスイッチをクリックし、オフにします。",
+      "tags": [
+        "WiFi",
+        "接続できない",
+        "Windows",
+        "パソコン",
+        "トラブル"
+      ],
       "meta": {
         "iconType": null,
         "partsType": 2,
@@ -688,11 +723,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "接続トラブル",
       "is_popular": false,
-      "answer_en": "弊社のインターネットに接続するためには、固定MACアドレスに設定していただく必要がございます。 \n 以下の手順で設定をお願いいたします。\n \n 1）「設定」 をクリック\n 2）「ネットワークとインターネット」 をクリック\n 3）「WI-FI」 をクリック\n 4）「ランダムなハードウェアアドレスを使う」をスイッチをクリックし、オフにします。",
-      "category_en": "Troubleshooting",
-      "question_en": "WindowsのパソコンのWiFiが使えません。"
+      "answer_en": "To connect to our internet service, you need to configure a fixed MAC address on your Windows PC. Please follow these steps:\n1. Click \"Settings.\"\n2. Go to \"Network & Internet.\"\n3. Select \"Wi-Fi\" and click on your connection.\n4. Turn off \"Random hardware addresses.\"\nAfter updating the setting, please submit a new MAC address registration.",
+      "category_en": "Connection Troubleshooting",
+      "question_en": "My Windows PC cannot connect to Wi-Fi. How do I fix it?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0037",
@@ -702,7 +738,8 @@
       "question": "Wi-Fiの電波が弱い部屋があります。対策はありますか？",
       "answer": "Wi-Fi中継器やメッシュWi-Fiシステムの導入を検討してください。ただし、導入前にSun-Netサポートに相談することをおすすめします。",
       "tags": [
-        "ネットワークのパフォーマンスと最適化"
+        "通信速度",
+        "最適化"
       ],
       "meta": {
         "iconType": null,
@@ -714,11 +751,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "通信速度・品質",
       "is_popular": false,
-      "answer_en": "Wi-Fi中継器やメッシュWi-Fiシステムの導入を検討してください。ただし、導入前にSun-Netサポートに相談することをおすすめします。",
-      "category_en": "Troubleshooting",
-      "question_en": "Wi-Fiの電波が弱い部屋があります。対策はありますか？"
+      "answer_en": "Consider using a Wi-Fi range extender or mesh Wi-Fi system. We recommend consulting Sun-Net support before purchasing to ensure compatibility.",
+      "category_en": "Speed & Quality",
+      "question_en": "The Wi-Fi signal is weak in my room. What can I do?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0038",
@@ -728,7 +766,8 @@
       "question": "インターネットの速度を測定したいです。どうすればよいですか？",
       "answer": "オンラインの速度測定サービス（例：Speedtest.net）を利用できます。測定結果に疑問がある場合は、Sun-Netサポートにお問い合わせください。",
       "tags": [
-        "ネットワークのパフォーマンスと最適化"
+        "通信速度",
+        "最適化"
       ],
       "meta": {
         "iconType": null,
@@ -740,11 +779,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "通信速度・品質",
       "is_popular": false,
-      "answer_en": "オンラインの速度測定サービス（例：Speedtest.net）を利用できます。測定結果に疑問がある場合は、Sun-Netサポートにお問い合わせください。",
-      "category_en": "Troubleshooting",
-      "question_en": "インターネットの速度を測定したいです。どうすればよいですか？"
+      "answer_en": "You can use an online speed test service such as Speedtest.net. If you have questions about your results, please contact Sun-Net support.",
+      "category_en": "Speed & Quality",
+      "question_en": "How do I test my internet speed?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0039",
@@ -754,7 +794,8 @@
       "question": "ルーターのファームウェアを更新する必要がありますか？",
       "answer": "ファームウェアの更新は、セキュリティや性能の向上のため重要です。定期的に確認し、更新することをお勧めします。更新方法はルーターの取扱説明書を参照してください。",
       "tags": [
-        "ネットワークのパフォーマンスと最適化"
+        "通信速度",
+        "最適化"
       ],
       "meta": {
         "iconType": null,
@@ -766,11 +807,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "通信速度・品質",
       "is_popular": false,
-      "answer_en": "ファームウェアの更新は、セキュリティや性能の向上のため重要です。定期的に確認し、更新することをお勧めします。更新方法はルーターの取扱説明書を参照してください。",
-      "category_en": "Troubleshooting",
-      "question_en": "ルーターのファームウェアを更新する必要がありますか？"
+      "answer_en": "Keeping your router's firmware up to date is important for security and performance improvements. Check for updates regularly and apply them as needed. Please refer to your router's manual for update instructions.",
+      "category_en": "Speed & Quality",
+      "question_en": "Do I need to update my router's firmware?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0040",
@@ -780,7 +822,8 @@
       "question": "複数のデバイスを同時に使用すると、速度が遅くなりますか？",
       "answer": "デバイスの数が増えると、帯域幅が分散されるため速度が低下する可能性があります。重要なタスクを行う際は、他のデバイスの使用を控えることをお勧めします。",
       "tags": [
-        "ネットワークのパフォーマンスと最適化"
+        "通信速度",
+        "最適化"
       ],
       "meta": {
         "iconType": 21,
@@ -792,11 +835,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "通信速度・品質",
       "is_popular": false,
-      "answer_en": "デバイスの数が増えると、帯域幅が分散されるため速度が低下する可能性があります。重要なタスクを行う際は、他のデバイスの使用を控えることをお勧めします。",
-      "category_en": "Troubleshooting",
-      "question_en": "複数のデバイスを同時に使用すると、速度が遅くなりますか？"
+      "answer_en": "Yes, speed may decrease as more devices share the available bandwidth. When performing important tasks, try reducing the number of connected devices to improve performance.",
+      "category_en": "Speed & Quality",
+      "question_en": "Does using multiple devices at the same time slow down the internet?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0045",
@@ -818,11 +862,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "利用開始・接続方法",
       "is_popular": false,
-      "answer_en": "ルーターが初期化される為SSIDが変更されます。プライマリSSID（例：aterm~~）を選択し、ルーター裏面に記載されているパスワードを入力してください。",
-      "category_en": "Troubleshooting",
-      "question_en": "ルーターのリセットボタンを押してしまいました。どうすればよいですか？"
+      "answer_en": "Pressing the reset button will restore the router to its factory settings and change the SSID. Select the primary SSID (e.g., \"aterm~~\") and enter the password printed on the back of the router.",
+      "category_en": "Getting Started",
+      "question_en": "I accidentally pressed the reset button on my router. What should I do?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0046",
@@ -844,11 +889,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "利用開始・接続方法",
       "is_popular": false,
-      "answer_en": "通常は自動取得で問題ありませんが、手動設定が必要な場合は、デバイスのネットワーク設定から「IPアドレスを手動で設定する」を選択し、必要な情報を入力します。",
-      "category_en": "Troubleshooting",
-      "question_en": "IPアドレスの設定方法を教えてください。"
+      "answer_en": "In most cases, automatic (DHCP) settings will work without any issues. If manual configuration is required, go to your device's network settings, select \"Configure IP Manually,\" and enter the necessary information.",
+      "category_en": "Getting Started",
+      "question_en": "How do I configure my IP address settings?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0047",
@@ -870,11 +916,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "利用開始・接続方法",
       "is_popular": false,
-      "answer_en": "デバイスのネットワーク設定から「DNSサーバーのアドレスを手動で設定する」を選択し、Sun-Netから提供されたDNSサーバーアドレスを入力してください。",
-      "category_en": "Troubleshooting",
-      "question_en": "DNSサーバーの設定方法を教えてください。"
+      "answer_en": "Go to your device's network settings, select \"Configure DNS Manually,\" and enter the DNS server address provided by Sun-Net.",
+      "category_en": "Getting Started",
+      "question_en": "How do I configure my DNS server settings?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0048",
@@ -896,11 +943,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "利用開始・接続方法",
       "is_popular": false,
-      "answer_en": "Sun-Netサービスでのまたは居住地域でのIPv6対応状況については、カスタマーサポートにお問い合わせください。利用可能な場合、設定方法をご案内いたします。",
-      "category_en": "Troubleshooting",
-      "question_en": "IPv6は利用できますか？"
+      "answer_en": "IPv6 availability depends on your Sun-Net service plan and location. Please contact Customer Support to check availability. If supported, we will provide setup instructions.",
+      "category_en": "Getting Started",
+      "question_en": "Is IPv6 supported?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0053",
@@ -908,7 +956,7 @@
       "service": "寮内ネット",
       "section": null,
       "question": "申込時点ではノートパソコンを持っていませんが申し込むことはできますか？",
-      "answer": "はい。お申込は可能です。ノートパソコンが届きましたらMACアドレスをお調べいただき下記フォームよりMACアドレス申請をおねがいします。\n https://sunrise-net-s.cms2.jp/contact_list/mac_application_add.html",
+      "answer": "はい。お申込は可能です。ノートパソコンが届きましたらMACアドレスをお調べいただき下記フォームよりMACアドレス申請をお願いします\nhttps://sunrise-net-s.cms2.jp/contact_list/mac_application_add.html",
       "tags": [
         "申込"
       ],
@@ -922,18 +970,19 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "はい。お申込は可能です。ノートパソコンが届きましたらMACアドレスをお調べいただき下記フォームよりMACアドレス申請をおねがいします。\n https://sunrise-net-s.cms2.jp/contact_list/mac_application_add.html",
-      "category_en": "Contract & Service",
-      "question_en": "申込時点ではノートパソコンを持っていませんが申し込むことはできますか？"
+      "answer_en": "Yes, you can sign up in advance. Once your laptop arrives, please find its MAC address and submit a MAC address registration request using the form below:\nhttps://sunrise-net-s.cms2.jp/contact_list/mac_application",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I sign up even if I do not have a laptop yet?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0054",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "レンタルしていた無線ルーターはいつまでに返却すればよいのでしょうか？",
+      "question": "レンタル無線ルーターの返却期限はいつですか？",
       "answer": "ご契約終了後1週間以内までにお願いします。契約終了期間前にご退寮・お引越し等ございましたら事前にご返却ください。",
       "tags": [
         "無線ルーター",
@@ -949,11 +998,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "ご契約終了後1週間以内までにお願いします。契約終了期間前にご退寮・お引越し等ございましたら事前にご返却ください。",
-      "category_en": "Contract & Service",
-      "question_en": "レンタルしていた無線ルーターはいつまでに返却すればよいのでしょうか？"
+      "answer_en": "Please return the rental router within one week of your contract end date. If you move out or relocate before your contract ends, please return it in advance.",
+      "category_en": "Contract & Billing",
+      "question_en": "What is the deadline for returning the rental wireless router?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0055",
@@ -961,7 +1011,7 @@
       "service": "寮内ネット",
       "section": null,
       "question": "無線ルーターの返却を忘れ、契約終了後1週間が経過しました。どうすればいいでしょうか？",
-      "answer": "まずは弊社までお問合せを頂きお早目にご返却ください。ご返却がない場合は無線ルーター相当額の弁償金の請求となりますのでご注意ください。",
+      "answer": "弊社までお問い合わせいただき、お早めにご返却ください。ご返却がない場合は無線ルーター相当額の弁償金を請求いたしますのでご注意ください。",
       "tags": [
         "無線ルーター",
         "レンタル品"
@@ -976,11 +1026,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "まずは弊社までお問合せを頂きお早目にご返却ください。ご返却がない場合は無線ルーター相当額の弁償金の請求となりますのでご注意ください。",
-      "category_en": "Contract & Service",
-      "question_en": "無線ルーターの返却を忘れ、契約終了後1週間が経過しました。どうすればいいでしょうか？"
+      "answer_en": "Please contact us as soon as possible and return the router promptly. If the router is not returned, you may be charged a replacement fee equivalent to the router's value.",
+      "category_en": "Contract & Billing",
+      "question_en": "I forgot to return the router and it has been over a week since my contract ended. What should I do?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0056",
@@ -988,7 +1039,7 @@
       "service": "寮内ネット",
       "section": null,
       "question": "無線ルーターの返却方法について教えてください。",
-      "answer": "■ご返却先\n \n 株式会社 サンライズ\n 〒103-0004 東京都中央区東日本橋2-14-1 DKK東日本橋ビル4F\n \n 無線ルータの箱又は袋の中に弊社住所印字済みの伝票がございましたら\n そちらをお使いください。\n \n 伝票がない場合はお手数ですがお近くのコンビニエンス等で返却いただきますようお願い致します。\n （※伝票のいずれかに会員ID番号をお書きください）\n ご返却時の送料はお客様負担となりますのでご了承ください。",
+      "answer": "■ご返却先\n \n 株式会社 サンライズ\n 〒103-0004 東京都中央区東日本橋2-14-1 DKK東日本橋ビル4F\n \n 無線ルータの箱又は袋の中に弊社住所印字済みの伝票がございましたら\n そちらをお使いください\n\n 伝票がない場合はお手数ですがお近くのコンビニエンス等で返却いただきますようお願いいたします\n（※伝票のいずれかに会員ID番号をお書きください）\n ご返却時の送料はお客様負担となりますのでご了承ください。",
       "tags": [
         "無線ルーター",
         "レンタル品"
@@ -1003,11 +1054,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "■ご返却先\n \n 株式会社 サンライズ\n 〒103-0004 東京都中央区東日本橋2-14-1 DKK東日本橋ビル4F\n \n 無線ルータの箱又は袋の中に弊社住所印字済みの伝票がございましたら\n そちらをお使いください。\n \n 伝票がない場合はお手数ですがお近くのコンビニエンス等で返却いただきますようお願い致します。\n （※伝票のいずれかに会員ID番号をお書きください）\n ご返却時の送料はお客様負担となりますのでご了承ください。",
-      "category_en": "Contract & Service",
-      "question_en": "無線ルーターの返却方法について教えてください。"
+      "answer_en": "■ Return address:\nSunrise Co., Ltd.\n2-14-1 Higashi-Nihonbashi, Chuo-ku, Tokyo 103-0004\nDKK Higashi-Nihonbashi Building 4F\n\nIf a prepaid return label is included in the router's box or bag, please use it.\nIf no label is included, please ship the router at your own expense using a trackable shipping method.",
+      "category_en": "Contract & Billing",
+      "question_en": "How do I return the wireless router?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0057",
@@ -1017,7 +1069,8 @@
       "question": "インターネットに接続できません。どうすればよいですか？",
       "answer": "まず、ルーターの電源が入っているか確認してください。次に、Wi-FiのSSIDとパスワードが正しいか確認します。それでも接続できない場合は、デバイスを再起動してみてください。",
       "tags": [
-        "接続の基本とトラブルシューティング"
+        "接続方法",
+        "トラブルシューティング"
       ],
       "meta": {
         "iconType": null,
@@ -1029,11 +1082,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "接続トラブル",
       "is_popular": false,
       "answer_en": "First, check if the router is powered on. Next, verify that the Wi-Fi SSID and password are correct. If you still cannot connect, try restarting your device.",
-      "category_en": "Troubleshooting",
-      "question_en": "I cannot connect to the internet. What should I do?"
+      "category_en": "Connection Troubleshooting",
+      "question_en": "How do I fix the internet connection issue?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0058",
@@ -1043,7 +1097,8 @@
       "question": "Wi-Fiのパスワードがわかりません。どうすればよいですか？",
       "answer": "Wi-Fiパスワード（暗号化キー）は通常、ルーターの裏面や底面に記載されています。見つからない場合は、Sun-Netサポートに連絡してください。",
       "tags": [
-        "接続の基本とトラブルシューティング"
+        "接続方法",
+        "トラブルシューティング"
       ],
       "meta": {
         "iconType": null,
@@ -1055,11 +1110,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "接続トラブル",
       "is_popular": false,
       "answer_en": "The Wi-Fi password (encryption key) is usually located on the back or bottom of the router. If you cannot find it, please contact Sun-Net support.",
-      "category_en": "Troubleshooting",
-      "question_en": "I don't know the Wi-Fi password. What should I do?"
+      "category_en": "Connection Troubleshooting",
+      "question_en": "Where can I find my Wi-Fi password?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0059",
@@ -1069,7 +1125,8 @@
       "question": "インターネット速度が遅いです。改善方法はありますか？",
       "answer": "ルーターを再起動したり、ルーターに近づいたりしてみてください。他のデバイスの使用状況も確認し、必要に応じてネットワークの設定を最適化してください。",
       "tags": [
-        "接続の基本とトラブルシューティング"
+        "接続方法",
+        "トラブルシューティング"
       ],
       "meta": {
         "iconType": null,
@@ -1081,11 +1138,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "通信速度・品質",
       "is_popular": false,
       "answer_en": "Try restarting the router or moving closer to it. Also, check the usage status of other devices and optimize network settings if necessary.",
-      "category_en": "Troubleshooting",
-      "question_en": "The internet speed is slow. Is there a way to improve it?"
+      "category_en": "Speed & Quality",
+      "question_en": "Why is my internet speed slow, and how can I improve it?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0060",
@@ -1095,7 +1153,8 @@
       "question": "ルーターの「ACTIVE」ランプが点灯しません。どうすればよいですか？",
       "answer": "ルーターが「BR（ブリッジ）」モードになっているか確認してください。側面や底面のスイッチを確認し、必要に応じて切り替えてから電源を入れ直してください。",
       "tags": [
-        "接続の基本とトラブルシューティング"
+        "接続方法",
+        "トラブルシューティング"
       ],
       "meta": {
         "iconType": null,
@@ -1107,11 +1166,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "接続トラブル",
       "is_popular": false,
-      "answer_en": "ルーターが「BR（ブリッジ）」モードになっているか確認してください。側面や底面のスイッチを確認し、必要に応じて切り替えてから電源を入れ直してください。",
-      "category_en": "Troubleshooting",
-      "question_en": "ルーターの「ACTIVE」ランプが点灯しません。どうすればよいですか？"
+      "answer_en": "Please check whether the router is in \"BR (Bridge)\" mode. Check the switch on the side or bottom of the router, toggle it if necessary, and restart the router.",
+      "category_en": "Connection Troubleshooting",
+      "question_en": "The \"ACTIVE\" light on my router is not on. What should I do?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0061",
@@ -1121,7 +1181,8 @@
       "question": "インターネットが突然切断されます。原因は何でしょうか？",
       "answer": "ルーターの位置、電波干渉、ファームウェアの古さなどが考えられます。ルーターの再起動や位置の変更、最新のファームウェアへの更新を試してみてください。",
       "tags": [
-        "接続の基本とトラブルシューティング"
+        "接続方法",
+        "トラブルシューティング"
       ],
       "meta": {
         "iconType": null,
@@ -1133,19 +1194,20 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "接続トラブル",
       "is_popular": true,
       "answer_en": "Possible causes include router placement, radio interference, or outdated firmware. Try restarting the router, changing its position, or updating to the latest firmware.",
-      "category_en": "Troubleshooting",
-      "question_en": "The internet is suddenly disconnected. What is the cause?"
+      "category_en": "Connection Troubleshooting",
+      "question_en": "Why does my internet keep disconnecting?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0067",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "相部屋になり、部屋には既にSun-Netの無線ルータが置いてありました。無線ルーターの返却は必要ですか？",
-      "answer": "ご契約中の方が同室にいるかご確認ください。無線ルーターは個人貸出となりますのでご契約者毎にそれぞれお使いください。その際分配に使用するHUBが必要な場合は弊社よりレンタル品としてお送りしますのでお問合せください。同室にご契約者がいない場合は、前契約者様がご返却されていない可能性がございますので、お手数ですが弊社までお問合せください。",
+      "question": "相部屋に既存の無線ルーターがある場合、返却は必要ですか？",
+      "answer": "ご契約中の方が同室にいるかご確認ください。無線ルーターは個人貸出のためご契約者毎にそれぞれお使いください。その際分配に使用するHUBが必要な場合は弊社よりレンタル品としてお送りしますのでお問い合わせください。同室にご契約者がいない場合は、前契約者様がご返却されていない可能性がございますので、お手数ですが弊社までお問い合わせください。",
       "tags": [
         "相部屋"
       ],
@@ -1159,11 +1221,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "ご契約中の方が同室にいるかご確認ください。無線ルーターは個人貸出となりますのでご契約者毎にそれぞれお使いください。その際分配に使用するHUBが必要な場合は弊社よりレンタル品としてお送りしますのでお問合せください。同室にご契約者がいない場合は、前契約者様がご返却されていない可能性がございますので、お手数ですが弊社までお問合せください。",
-      "category_en": "Contract & Service",
-      "question_en": "相部屋になり、部屋には既にSun-Netの無線ルータが置いてありました。無線ルーターの返却は必要ですか？"
+      "answer_en": "Please check whether your roommate is also a Sun-Net subscriber. Each router is issued per individual contract, so each subscriber should use their own router. If you need a HUB to share the connection, please contact us — we can provide a rental HUB. If your roommate is not a subscriber, please return the extra router.",
+      "category_en": "Contract & Billing",
+      "question_en": "My roommate already has a router. Do I still need to return mine?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0068",
@@ -1171,7 +1234,7 @@
       "service": "寮内ネット",
       "section": null,
       "question": "相部屋でHUBは誰が返却するのでしょうか？",
-      "answer": "個人貸出となりますので、ご契約者様にてご返却ください。",
+      "answer": "個人貸出のため、ご契約者様にてご返却ください。",
       "tags": [
         "相部屋"
       ],
@@ -1185,19 +1248,20 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "個人貸出となりますので、ご契約者様にてご返却ください。",
-      "category_en": "Contract & Service",
-      "question_en": "相部屋でHUBは誰が返却するのでしょうか？"
+      "answer_en": "Since the HUB is issued per individual contract, each account holder is responsible for returning their own HUB.",
+      "category_en": "Contract & Billing",
+      "question_en": "Who is responsible for returning the HUB in a shared room?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0069",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "相部屋で、無線ルータが2台あり、それぞれが契約者です。差込口が足りないのですがどうすればいいでしょうか？",
-      "answer": "分配に使用するHUBが必要な場合は弊社よりレンタル品としてお送りしますのでお問合せください。",
+      "question": "相部屋で無線ルーターが2台ある場合、差込口が足りません。どうすればよいですか？",
+      "answer": "分配に使用するHUBが必要な場合は弊社よりレンタル品としてお送りしますのでお問い合わせください。",
       "tags": [
         "相部屋"
       ],
@@ -1211,21 +1275,24 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "分配に使用するHUBが必要な場合は弊社よりレンタル品としてお送りしますのでお問合せください。",
-      "category_en": "Contract & Service",
-      "question_en": "相部屋で、無線ルータが2台あり、それぞれが契約者です。差込口が足りないのですがどうすればいいでしょうか？"
+      "answer_en": "If you need a HUB to share the connection between two routers, please contact us. We can provide a rental HUB.",
+      "category_en": "Contract & Billing",
+      "question_en": "There are not enough ports for two routers in my shared room. What should I do?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0070",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "物理（MAC）アドレスとは何ですか？なぜ登録が必要なのですか？",
+      "question": "MACアドレス（物理アドレス）とは何ですか？登録が必要な理由も教えてください。",
       "answer": "物理アドレスは、ネットワークデバイスを識別するための固有の番号です。Sun-Netでは、セキュリティと管理のために各デバイスのMACアドレスの登録が必要です。",
       "tags": [
-        "物理アドレス（MACアドレス）と登録"
+        "物理アドレス",
+        "MACアドレス",
+        "MAC登録"
       ],
       "meta": {
         "iconType": null,
@@ -1237,11 +1304,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": true,
-      "answer_en": "A physical address is a unique number used to identify a network device. At Sun-Net, registration of each device's MAC address is required for security and management.",
-      "category_en": "Contract & Service",
-      "question_en": "What is a physical (MAC) address? Why is registration required?"
+      "answer_en": "A MAC address (physical address) is a unique identifier assigned to a network device. At Sun-Net, registration of each device's MAC address is required for security and management.",
+      "category_en": "MAC Address Registration",
+      "question_en": "What is a MAC address (physical address), and why do I need to register it?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0071",
@@ -1251,7 +1319,9 @@
       "question": "物理アドレスの確認方法を教えてください。",
       "answer": "デバイスによって異なりますが、一般的にはWindows PCの場合、コマンドプロンプトで「getmac /v」と入力します。Mac OSの場合は「システム環境設定」→「ネットワーク」から確認できます。",
       "tags": [
-        "物理アドレス（MACアドレス）と登録"
+        "物理アドレス",
+        "MACアドレス",
+        "MAC登録"
       ],
       "meta": {
         "iconType": 36,
@@ -1263,11 +1333,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": false,
-      "answer_en": "It varies by device, but generally for a Windows PC, type 'getmac /v' in the command prompt. For Mac OS, check under 'System Preferences' -> 'Network'.",
-      "category_en": "Contract & Service",
-      "question_en": "How can I check the physical address?"
+      "answer_en": "The method varies by device, but generally for a Windows PC, type 'getmac /v' in the command prompt. For Mac OS, check under 'System Preferences' -> 'Network'.",
+      "category_en": "MAC Address Registration",
+      "question_en": "How do I find my MAC address?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0072",
@@ -1277,7 +1348,9 @@
       "question": "新しいデバイスを購入しました。どうすればよいですか？",
       "answer": "新しいデバイスの物理アドレスを確認し、MACアドレス追加フォームよりお手続きください。https://sunrise-net-s.cms2.jp/contact_list/mac_application_add.html",
       "tags": [
-        "物理アドレス（MACアドレス）と登録"
+        "物理アドレス",
+        "MACアドレス",
+        "MAC登録"
       ],
       "meta": {
         "iconType": null,
@@ -1289,11 +1362,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": false,
       "answer_en": "Check the physical address of the new device and follow the procedures via the MAC address addition form: https://sunrise-net-s.cms2.jp/contact_list/mac_application_add.html",
-      "category_en": "Contract & Service",
-      "question_en": "I bought a new device. What should I do?"
+      "category_en": "MAC Address Registration",
+      "question_en": "I purchased a new device. How do I register it?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0073",
@@ -1301,9 +1375,11 @@
       "service": "寮内ネット",
       "section": null,
       "question": "登録できるデバイスの数に制限はありますか？",
-      "answer": "基本的に5台まで登録可能です。6台目以降は1台につき月額220円（税込）で追加登録できます。同系統端末の登録は2台までとなります。",
+      "answer": "基本的に5台まで登録可能です。6台目以降は1台につき月額220円（税込）で追加登録できます。同系統端末の登録は2台までです。",
       "tags": [
-        "物理アドレス（MACアドレス）と登録"
+        "物理アドレス",
+        "MACアドレス",
+        "MAC登録"
       ],
       "meta": {
         "iconType": null,
@@ -1315,26 +1391,25 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": false,
-      "answer_en": "Basically, up to 5 devices can be registered. From the 6th device onwards, additional registration is possible for 220 yen (tax included) per month per device.",
-      "category_en": "Contract & Service",
-      "question_en": "Is there a limit to the number of devices that can be registered?"
+      "answer_en": "Up to 5 devices can be registered. From the 6th device onwards, additional registration is possible for 220 yen (tax included) per month per device.",
+      "category_en": "MAC Address Registration",
+      "question_en": "Is there a limit on how many devices I can register?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0078",
       "source": "FAQ",
       "service": "寮内ネット",
       "section": null,
-      "question": "インターネットがつながらない場合、まず最初に確認すべきことは何ですか？",
-      "answer": "1)契約期間内ですか？ご契約期間終了後はインターネットの利用ができません。\n 2)端末のMACアドレスの申請はお済ですか？申請がない場合インターネットのご利用はできません。\n 3)無線ルーターは正しく設置されていますか？LANケーブルがしっかり刺さっているかどうか確認しましょう。",
+      "question": "インターネットに接続できない場合、最初に確認すべきことは何ですか？",
+      "answer": "1)契約期間内ですか？ご契約期間終了後はインターネットの利用ができません\n2)端末のMACアドレスの申請はお済ですか？申請がない場合インターネットのご利用はできません\n3)無線ルーターは正しく設置されていますか？LANケーブルがしっかり刺さっているかどうか確認しましょう。",
       "tags": [
         "無線ルーター",
         "LANケーブル",
         "MACアドレス",
-        "契約期間",
-        "寮内ネット",
-        "無線ルーター|LANケーブル|MACアドレス|契約期間|寮内ネット"
+        "契約期間"
       ],
       "meta": {
         "iconType": null,
@@ -1346,20 +1421,25 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "接続トラブル",
       "is_popular": false,
-      "answer_en": "1)契約期間内ですか？ご契約期間終了後はインターネットの利用ができません。\n 2)端末のMACアドレスの申請はお済ですか？申請がない場合インターネットのご利用はできません。\n 3)無線ルーターは正しく設置されていますか？LANケーブルがしっかり刺さっているかどうか確認しましょう。",
-      "category_en": "Troubleshooting",
-      "question_en": "インターネットがつながらない場合、まず最初に確認すべきことは何ですか？"
+      "answer_en": "1) Is your contract still active? Internet access is not available after the contract end date.\n2) Have you registered your device's MAC address? Internet access requires MAC address registration.\n3) Is your router properly set up? Make sure the router is powered on and the ACTIVE light is lit.\nIf you have checked all of the above and still cannot connect, please contact our Customer Support team.",
+      "category_en": "Connection Troubleshooting",
+      "question_en": "What should I check first if I cannot connect to the internet?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0079",
       "source": "FAQ",
-      "service": "寮内ネット",
+      "service": "寮内ネット,Sun-Net光",
       "section": null,
-      "question": "通信するデータの上限はありますか？",
+      "question": "データ通信量に上限・制限はありますか？",
       "answer": "Sun-Netサービスでは通常、データ使用量に制限はありません。ただし、過度な使用や不正利用は避けてください。",
-      "tags": [],
+      "tags": [
+        "データ上限",
+        "通信量",
+        "制限"
+      ],
       "meta": {
         "iconType": 74,
         "partsType": null,
@@ -1368,22 +1448,26 @@
         "youtubeHeight": 0,
         "originalLine": 79
       },
-      "service_tag_a": "寮内ネット",
+      "service_tag_a": "寮内ネット,Sun-Net光",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "Sun-Netサービスでは通常、データ使用量に制限はありません。ただし、過度な使用や不正利用は避けてください。",
-      "category_en": "Troubleshooting",
-      "question_en": "通信するデータの上限はありますか？"
+      "answer_en": "Sun-Net services do not have a data usage cap under normal use. However, excessive use or unauthorized activity is prohibited.",
+      "category_en": "Service Information",
+      "question_en": "Is there a data usage limit or cap?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0080",
       "source": "FAQ",
-      "service": "寮内ネット",
+      "service": "寮内ネット,Sun-Net光",
       "section": null,
-      "question": "現在の支払い方法を変更することはできますか？",
+      "question": "支払い方法を変更することはできますか？",
       "answer": "支払い方法の変更は可能です。Sun-Netカスタマーサポートに連絡し、希望する支払い方法をお伝えください。",
-      "tags": [],
+      "tags": [
+        "支払い方法",
+        "変更手続き"
+      ],
       "meta": {
         "iconType": 74,
         "partsType": null,
@@ -1392,13 +1476,14 @@
         "youtubeHeight": 0,
         "originalLine": 80
       },
-      "service_tag_a": "寮内ネット",
+      "service_tag_a": "寮内ネット,Sun-Net光",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "支払い方法の変更は可能です。Sun-Netカスタマーサポートに連絡し、希望する支払い方法をお伝えください。",
-      "category_en": "Troubleshooting",
-      "question_en": "現在の支払い方法を変更することはできますか？"
+      "answer_en": "Yes, you can change your payment method. Please contact Sun-Net Customer Support and let us know your preferred payment method.",
+      "category_en": "Contract & Billing",
+      "question_en": "How do I change my payment method?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0081",
@@ -1406,8 +1491,12 @@
       "service": "寮内ネット",
       "section": null,
       "question": "入寮予定の学生寮でSun-Netを利用できますか？",
-      "answer": "Sun-Netサービスが学生寮全体で導入されている場合ご利用いただけます。ご自身の学生寮のご利用可否についてはお手数ですが下記までお問合せください。\n フリーダイヤル：0120-336-326\n メールアドレス：sales@sunrise-net.co.jp",
-      "tags": [],
+      "answer": "Sun-Netサービスが学生寮全体で導入されている場合ご利用いただけます。ご自身の学生寮のご利用可否についてはお手数ですが下記までお問い合わせください\nフリーダイヤル：0120-336-326\n メールアドレス：sales@sunrise-net.co.jp",
+      "tags": [
+        "エリア確認",
+        "利用可能",
+        "申込"
+      ],
       "meta": {
         "iconType": 60,
         "partsType": 2,
@@ -1418,11 +1507,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "Sun-Netサービスが学生寮全体で導入されている場合ご利用いただけます。ご自身の学生寮のご利用可否についてはお手数ですが下記までお問合せください。\n フリーダイヤル：0120-336-326\n メールアドレス：sales@sunrise-net.co.jp",
-      "category_en": "Troubleshooting",
-      "question_en": "入寮予定の学生寮でSun-Netを利用できますか？"
+      "answer_en": "The service is available if Sun-Net has been deployed in your dormitory. Please contact us to confirm availability at your specific dormitory.\nToll-free: 0120-336-326\nEmail: info@sunrise-net.co.jp",
+      "category_en": "Contract & Billing",
+      "question_en": "Is Sun-Net available at the dormitory I am moving into?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0083",
@@ -1431,7 +1521,11 @@
       "section": null,
       "question": "最短での契約期間を教えてください。",
       "answer": "1ヶ月単位でのご契約が可能です。ご都合のよい契約期間をお選びください。",
-      "tags": [],
+      "tags": [
+        "契約期間",
+        "最短",
+        "申込"
+      ],
       "meta": {
         "iconType": null,
         "partsType": 2,
@@ -1442,53 +1536,12 @@
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
-      "category": "トラブル・接続設定",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "1ヶ月単位でのご契約が可能です。ご都合のよい契約期間をお選びください。",
-      "category_en": "Troubleshooting",
-      "question_en": "最短での契約期間を教えてください。"
-    },
-    {
-      "id": "FAQ-0111",
-      "source": "FAQ",
-      "service": "Sun-Net光",
-      "section": null,
-      "question": "インターネットの使用量に制限はありますか？",
-      "answer": "Sun-Netサービスでは通常、データ使用量に制限はありません。ただし、過度な使用や不正利用は避けてください。",
-      "tags": [
-        "Sun-Net光"
-      ],
-      "meta": {
-        "source": "CSV_IMPORT"
-      },
-      "service_tag_a": "Sun-Net光",
-      "service_tag_b": null,
-      "category": "契約・サービス内容",
-      "is_popular": false,
-      "answer_en": "Sun-Netサービスでは通常、データ使用量に制限はありません。ただし、過度な使用や不正利用は避けてください。",
-      "category_en": "Contract & Service",
-      "question_en": "インターネットの使用量に制限はありますか？"
-    },
-    {
-      "id": "FAQ-0112",
-      "source": "FAQ",
-      "service": "Sun-Net光",
-      "section": null,
-      "question": "インターネット料金の支払い方法を変更したいです。可能ですか？",
-      "answer": "支払い方法の変更は可能です。Sun-Netカスタマーサポートに連絡し、希望する支払い方法をお伝えください。",
-      "tags": [
-        "Sun-Net光"
-      ],
-      "meta": {
-        "source": "CSV_IMPORT"
-      },
-      "service_tag_a": "Sun-Net光",
-      "service_tag_b": null,
-      "category": "契約・サービス内容",
-      "is_popular": false,
-      "answer_en": "支払い方法の変更は可能です。Sun-Netカスタマーサポートに連絡し、希望する支払い方法をお伝えください。",
-      "category_en": "Contract & Service",
-      "question_en": "インターネット料金の支払い方法を変更したいです。可能ですか？"
+      "answer_en": "Contracts are available on a month-by-month basis. Please choose the contract period that suits your needs.",
+      "category_en": "Contract & Billing",
+      "question_en": "What is the minimum contract period?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0113",
@@ -1498,18 +1551,22 @@
       "question": "引っ越しする予定です。インターネットサービスはどうなりますか？",
       "answer": "引っ越し先がSun-Netのサービス提供エリア内であれば、移転手続きが可能です。早めにSun-Netサポートに連絡して、必要な手続きを確認してください。",
       "tags": [
-        "Sun-Net光"
+        "引越し",
+        "移転",
+        "解約",
+        "継続"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "引っ越し先がSun-Netのサービス提供エリア内であれば、移転手続きが可能です。早めにSun-Netサポートに連絡して、必要な手続きを確認してください。",
-      "category_en": "Contract & Service",
-      "question_en": "引っ越しする予定です。インターネットサービスはどうなりますか？"
+      "answer_en": "If your new address is within the Sun-Net service area, you can transfer your service. Please contact Sun-Net support as early as possible to confirm the process.",
+      "category_en": "Contract & Billing",
+      "question_en": "I am planning to move. What happens to my internet service?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0114",
@@ -1519,18 +1576,21 @@
       "question": "インターネットの障害情報はどこで確認できますか？",
       "answer": "Sun-Netの公式ウェブサイトやSNSアカウントで最新の障害情報を確認できます。大規模な障害の場合は、メールでも通知されます。",
       "tags": [
-        "Sun-Net光"
+        "障害情報",
+        "メンテナンス",
+        "確認方法"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "接続トラブル",
       "is_popular": false,
-      "answer_en": "Sun-Netの公式ウェブサイトやSNSアカウントで最新の障害情報を確認できます。大規模な障害の場合は、メールでも通知されます。",
-      "category_en": "Contract & Service",
-      "question_en": "インターネットの障害情報はどこで確認できますか？"
+      "answer_en": "You can check the latest service outage information on the Sun-Net official website and social media accounts. For major outages, you will also be notified by email.",
+      "category_en": "Connection Troubleshooting",
+      "question_en": "Where can I check for internet service outage information?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0115",
@@ -1540,18 +1600,22 @@
       "question": "サポートの営業時間外に問題が発生した場合、どうすればよいですか？",
       "answer": "緊急の場合は、Sun-Netの公式ウェブサイトのヘルプセンターやFAQを参照してください。翌営業日にサポートに連絡することもできます。",
       "tags": [
-        "Sun-Net光"
+        "サポート",
+        "営業時間",
+        "緊急",
+        "問い合わせ"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "接続トラブル",
       "is_popular": false,
-      "answer_en": "緊急の場合は、Sun-Netの公式ウェブサイトのヘルプセンターやFAQを参照してください。翌営業日にサポートに連絡することもできます。",
-      "category_en": "Contract & Service",
-      "question_en": "サポートの営業時間外に問題が発生した場合、どうすればよいですか？"
+      "answer_en": "For urgent issues, please refer to the Help Center or FAQ on the Sun-Net official website. You can also contact support on the next business day.",
+      "category_en": "Connection Troubleshooting",
+      "question_en": "What should I do if I have an issue outside of support hours?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0116",
@@ -1561,26 +1625,29 @@
       "question": "インターネットサービスを解約したい場合、どうすればよいですか？",
       "answer": "解約希望の場合は、Sun-Netカスタマーサポートに連絡してください。解約手続きや必要書類、機器の返却方法などについてご案内いたします。",
       "tags": [
-        "Sun-Net光"
+        "解約",
+        "解約手続き",
+        "手続き"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "解約希望の場合は、Sun-Netカスタマーサポートに連絡してください。解約手続きや必要書類、機器の返却方法などについてご案内いたします。",
-      "category_en": "Contract & Service",
-      "question_en": "インターネットサービスを解約したい場合、どうすればよいですか？"
+      "answer_en": "To cancel your service, please contact Sun-Net Customer Support. We will guide you through the cancellation process, required documents, and equipment return procedures.",
+      "category_en": "Contract & Billing",
+      "question_en": "How do I cancel my internet service?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0117",
       "source": "FAQ",
       "service": "Sun-Net光",
       "section": null,
-      "question": "引越し先の物件ではインターネットは必要なら自分で契約してくださいと言われました。Sun-Net光を利用することはできますか？",
-      "answer": "お引越し先のご住所をお伺いの上、建物のインターネット設備状況や開通工事発生の有無や開通可能日をお調べすることができます。まずはお気軽に弊社までお問合せください。",
+      "question": "引越し先でSun-Net光を新たに申し込むことはできますか？",
+      "answer": "お引越し先のご住所をお伺いの上、建物のインターネット設備状況や開通工事発生の有無や開通可能日をお調べすることができます。お気軽に弊社までお問い合わせください。",
       "tags": [
         "エリア判定"
       ],
@@ -1589,30 +1656,37 @@
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "利用開始・接続方法",
       "is_popular": false,
-      "answer_en": "お引越し先のご住所をお伺いの上、建物のインターネット設備状況や開通工事発生の有無や開通可能日をお調べすることができます。まずはお気軽に弊社までお問合せください。",
-      "category_en": "Contract & Service",
-      "question_en": "引越し先の物件ではインターネットは必要なら自分で契約してくださいと言われました。Sun-Net光を利用することはできますか？"
+      "answer_en": "Yes, you can apply. Please provide your new address and we will check the internet infrastructure, whether installation work is required, and the earliest available activation date. Feel free to contact us for more details.",
+      "category_en": "Getting Started",
+      "question_en": "Can I sign up for Sun-Net Hikari at my new address after moving?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0118",
       "source": "FAQ",
       "service": "Sun-Net光",
       "section": null,
-      "question": "マンション管理会社よりインターネットを開通する際はオーナーの許可が必要と言われました。このような場合でも利用することはできますか？",
-      "answer": "まずはお住まいのご住所にてシステム確認を行います。オーナー様への許可に関しては建物によりまちまちではありますが弊社で開通までのご連絡をとる場合もございますのでまずはお気軽にご相談ください。※建物の構造やオーナー様のご意向、NTTサービスの地域的な問題等によりご提供できない場合がございます。",
-      "tags": [],
+      "question": "オーナーの許可が必要な物件でも申し込むことはできますか？",
+      "answer": "お住まいのご住所にてシステム確認を行います。オーナー様への許可に関しては建物によりまちまちではありますが弊社で開通までのご連絡をとる場合もございますのでお気軽にご相談ください。※建物の構造やオーナー様のご意向、NTTサービスの地域的な問題等によりご提供できない場合がございます。",
+      "tags": [
+        "オーナー許可",
+        "マンション",
+        "申込",
+        "審査"
+      ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "利用開始・接続方法",
       "is_popular": false,
-      "answer_en": "まずはお住まいのご住所にてシステム確認を行います。オーナー様への許可に関しては建物によりまちまちではありますが弊社で開通までのご連絡をとる場合もございますのでまずはお気軽にご相談ください。※建物の構造やオーナー様のご意向、NTTサービスの地域的な問題等によりご提供できない場合がございます。",
-      "category_en": "Contract & Service",
-      "question_en": "マンション管理会社よりインターネットを開通する際はオーナーの許可が必要と言われました。このような場合でも利用することはできますか？"
+      "answer_en": "We will first check the system availability at your address. Depending on the building, we may contact the owner directly on your behalf to obtain permission. Please note that service may not be available in some cases due to building structure, owner preferences, or regional NTT service limitations. Please feel free to consult us.",
+      "category_en": "Getting Started",
+      "question_en": "Can I apply even if my property requires the owner's permission?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0119",
@@ -1620,20 +1694,24 @@
       "service": "Sun-Net光",
       "section": null,
       "question": "現在、別の会社の光サービスを利用していますがSun-Net光に申込することはできますか？",
-      "answer": "●NTT東、西日本が提供する光回線をご契約中の場合→転用手続きによりご利用が可能です。\n ●他社光コラボレーション事業者の光回線をご利用の場合→事業者変更手続きによりご利用が可能です。\n ※プロバイダ契約については上記手続きによる切替ができませんのでお客様ご自身で解約手続きを行っていただく必要があります。\n ※NTT東、西または光コラボレーション事業者が提供する光回線以外のサービスをご利用中の場合は、新規申込としてSun-Net光のご提供となります。",
+      "answer": "■NTT東、西日本が提供する光回線をご契約中の場合→転用手続きによりご利用いただけます\n■他社光コラボレーション事業者の光回線をご利用の場合→事業者変更手続きによりご利用いただけます\n※プロバイダ契約については上記手続きによる切替ができませんのでお客様ご自身で解約手続きを行っていただく必要があります\n※NTT東、西または光コラボレーション事業者が提供する光回線以外のサービスをご利用中の場合は、新規申込としてSun-Net光のご提供となります。",
       "tags": [
-        "SIMサービス"
+        "乗り換え",
+        "他社",
+        "切り替え",
+        "申込"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "利用開始・接続方法",
       "is_popular": false,
-      "answer_en": "●NTT東、西日本が提供する光回線をご契約中の場合→転用手続きによりご利用が可能です。\n ●他社光コラボレーション事業者の光回線をご利用の場合→事業者変更手続きによりご利用が可能です。\n ※プロバイダ契約については上記手続きによる切替ができませんのでお客様ご自身で解約手続きを行っていただく必要があります。\n ※NTT東、西または光コラボレーション事業者が提供する光回線以外のサービスをご利用中の場合は、新規申込としてSun-Net光のご提供となります。",
-      "category_en": "Contract & Service",
-      "question_en": "現在、別の会社の光サービスを利用していますがSun-Net光に申込することはできますか？"
+      "answer_en": "■ If you are currently subscribed to NTT East or West fiber optic service: You can switch via a transfer (tenyo) procedure.\n■ If you are using another fiber optic reseller (hikari collaboration): You can switch via a provider change (jigyosha-henko) procedure.\nNote: Your current ISP contract cannot be transferred through these procedures. You will need to cancel it separately.\nFor other types of internet connections, a new contract will be required.",
+      "category_en": "Getting Started",
+      "question_en": "Can I switch to Sun-Net Hikari from another fiber optic provider?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0120",
@@ -1642,182 +1720,222 @@
       "section": null,
       "question": "プロバイダ契約は必要ですか？",
       "answer": "Sun-Net光は、回線契約とプロバイダ契約をセットにしたサービスですので別途プロバイダ契約を行う必要はありません。",
-      "tags": [],
+      "tags": [
+        "プロバイダ",
+        "契約",
+        "サービス内容"
+      ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "Sun-Net光は、回線契約とプロバイダ契約をセットにしたサービスですので別途プロバイダ契約を行う必要はありません。",
-      "category_en": "Contract & Service",
-      "question_en": "プロバイダ契約は必要ですか？"
+      "answer_en": "Sun-Net Hikari bundles the fiber optic line and ISP service together, so no separate ISP contract is needed.",
+      "category_en": "Service Information",
+      "question_en": "Do I need to sign up for a separate ISP contract?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0121",
       "source": "FAQ",
       "service": "Sun-Net光",
       "section": null,
-      "question": "Sun-Net光の契約期間中に長期留学に行くことになりました。留学期間中サービスを停止することはできますか？",
+      "question": "契約期間中に長期留学する場合、サービスを一時停止できますか？",
       "answer": "サービスの一時停止は可能ですが停止期間中においてもインターネット利用料金は発生します。Sun-Net光サービスお申込前に今後のご予定について弊社までご相談ください。",
-      "tags": [],
+      "tags": [
+        "一時停止",
+        "休止",
+        "留学",
+        "長期不在"
+      ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "サービスの一時停止は可能ですが停止期間中においてもインターネット利用料金は発生します。Sun-Net光サービスお申込前に今後のご予定について弊社までご相談ください。",
-      "category_en": "Contract & Service",
-      "question_en": "Sun-Net光の契約期間中に長期留学に行くことになりました。留学期間中サービスを停止することはできますか？"
+      "answer_en": "Yes, a temporary suspension is available. However, monthly internet charges will still apply during the suspension period. We recommend consulting us before signing up if you have upcoming plans that may affect your service.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I put my service on hold during a long-term study abroad?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0122",
       "source": "FAQ",
       "service": "Sun-Net光",
       "section": null,
-      "question": "Sun-Net光契約期間中に引っ越すことになった場合、引越し先でもサービスの継続利用は可能ですか？",
-      "answer": "NTT東西の提供エリアにより違いがあります。同一エリア内でのお引越しの場合は移転手続きを行うことで引き続きご利用可能です。\n ・光引越事務手数料・・・3,300円\n ・光引越時工事費用・・・4,950円\n お引越し先の建物構造等によりご提供できない場合もありますのでご了承ください。\n 尚、NTT西エリアから東エリアへとエリアをまたぐお引越しの場合はご解約手続きおよび新規回線申込が必要です。詳細につきましてはお手数ですが下記までお問合せください。\n \n フリーダイヤル：0120-336-326\n メールアドレス：sales@sunrise-net.co.jp",
-      "tags": [],
+      "question": "契約期間中に引越しした場合、引越し先で継続利用できますか？",
+      "answer": "NTT東西の提供エリアにより違いがあります。同一エリア内でのお引越しの場合は移転手続きを行うことで引き続きご利用可能です\n・光引越事務手数料・・・3,300円\n ・光引越時工事費用・・・4,950円\n お引越し先の建物構造等によりご提供できない場合もありますのでご了承ください\n尚、NTT西エリアから東エリアへとエリアをまたぐお引越しの場合はご解約手続きおよび新規回線申込が必要です。詳細につきましてはお手数ですが下記までお問い合わせください\n\n フリーダイヤル：0120-336-326\n メールアドレス：sales@sunrise-net.co.jp",
+      "tags": [
+        "引越し",
+        "移転",
+        "継続",
+        "サービス継続"
+      ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "NTT東西の提供エリアにより違いがあります。同一エリア内でのお引越しの場合は移転手続きを行うことで引き続きご利用可能です。\n ・光引越事務手数料・・・3,300円\n ・光引越時工事費用・・・4,950円\n お引越し先の建物構造等によりご提供できない場合もありますのでご了承ください。\n 尚、NTT西エリアから東エリアへとエリアをまたぐお引越しの場合はご解約手続きおよび新規回線申込が必要です。詳細につきましてはお手数ですが下記までお問合せください。\n \n フリーダイヤル：0120-336-326\n メールアドレス：sales@sunrise-net.co.jp",
-      "category_en": "Contract & Service",
-      "question_en": "Sun-Net光契約期間中に引っ越すことになった場合、引越し先でもサービスの継続利用は可能ですか？"
+      "answer_en": "This depends on the NTT East/West service area. If you are moving within the same area, you can continue your service by completing a relocation procedure.\n- Relocation administrative fee: ¥3,300\n- Relocation installation fee: ¥4,950 (if applicable)\nPlease contact us for details based on your specific situation.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I continue using the service at my new address after moving?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0123",
       "source": "FAQ",
       "service": "Sun-Net光",
       "section": null,
-      "question": "寮内ネットからSun-Net光への切り替えを検討しています。接続するためにはMACアドレスの申請は必要ですか？",
+      "question": "寮内ネットからSun-Net光へ切り替える際、MACアドレスの申請は必要ですか？",
       "answer": "Sun-Net光サービスではMACアドレスの申請は必要ありません。ご利用においては個人所有端末等の制限なくご自由に接続可能です。",
       "tags": [
-        "Sun-Net光"
+        "切り替え",
+        "MACアドレス",
+        "乗り換え",
+        "申請"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "MACアドレス登録",
       "is_popular": false,
-      "answer_en": "Sun-Net光サービスではMACアドレスの申請は必要ありません。ご利用においては個人所有端末等の制限なくご自由に接続可能です。",
-      "category_en": "Contract & Service",
-      "question_en": "寮内ネットからSun-Net光への切り替えを検討しています。接続するためにはMACアドレスの申請は必要ですか？"
+      "answer_en": "MAC address registration is not required for Sun-Net Hikari. There are no restrictions on the number or type of personal devices you can connect.",
+      "category_en": "MAC Address Registration",
+      "question_en": "Do I need to register my MAC address when switching from dormitory internet to Sun-Net Hikari?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0124",
       "source": "FAQ",
       "service": "Sun-Net光",
       "section": null,
-      "question": "寮内ネットからSun-Net光への切り替えを検討しています。利用台数の制限はありますか？毎月の通信量の上限はありますか？",
+      "question": "寮内ネットからSun-Net光へ切り替える場合、利用台数や通信量に上限はありますか？",
       "answer": "Sun-Net光では利用台数の制限はありません。但し一般的には同時にインターネット接続をする端末が多いほど速度は遅くなりますのでご注意ください。毎月の通信量上限は設けておらず使い放題のサービスです。",
       "tags": [
-        "Sun-Net光"
+        "切り替え",
+        "利用台数",
+        "通信量",
+        "データ上限"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "Sun-Net光では利用台数の制限はありません。但し一般的には同時にインターネット接続をする端末が多いほど速度は遅くなりますのでご注意ください。毎月の通信量上限は設けておらず使い放題のサービスです。",
-      "category_en": "Contract & Service",
-      "question_en": "寮内ネットからSun-Net光への切り替えを検討しています。利用台数の制限はありますか？毎月の通信量の上限はありますか？"
+      "answer_en": "There is no device limit with Sun-Net Hikari. However, please note that connecting more devices simultaneously may reduce internet speed. There is no monthly data cap — the service is unlimited.",
+      "category_en": "Service Information",
+      "question_en": "Are there limits on the number of devices or data usage when switching to Sun-Net Hikari?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0125",
       "source": "FAQ",
       "service": "Sun-Net光",
       "section": null,
-      "question": "寮内ネットからSun-Net光への切り替えを検討しています。いまレンタルの無線ルーターを利用していますが、そのまま利用することはできますか？",
+      "question": "寮内ネットからSun-Net光へ切り替える場合、レンタルの無線ルーターはそのまま使えますか？",
       "answer": "毎月200円（税抜）/220円（税込）の料金にてレンタル可能です。尚、光回線ご利用にあたってはレンタル無線ルーターの初期化及び設定を行う必要があります。",
       "tags": [
+        "切り替え",
+        "無線ルーター",
         "レンタル品",
-        "Sun-Net光"
+        "レンタル"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "毎月200円（税抜）/220円（税込）の料金にてレンタル可能です。尚、光回線ご利用にあたってはレンタル無線ルーターの初期化及び設定を行う必要があります。",
-      "category_en": "Contract & Service",
-      "question_en": "寮内ネットからSun-Net光への切り替えを検討しています。いまレンタルの無線ルーターを利用していますが、そのまま利用することはできますか？"
+      "answer_en": "Yes, you can continue renting your router at ¥200/month (ex. tax) / ¥220/month (inc. tax). Please note that the router will need to be reset and reconfigured for use with the fiber optic connection.",
+      "category_en": "Service Information",
+      "question_en": "Can I keep using my rental router after switching to Sun-Net Hikari?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0126",
       "source": "FAQ",
       "service": "Sun-Net光",
       "section": null,
-      "question": "寮内ネットからSun-Net光への切り替えを検討しています。いまSun-Netで購入した無線ルーターを利用していますが、そのまま利用することはできますか？",
+      "question": "寮内ネットからSun-Net光へ切り替える場合、購入済みの無線ルーターはそのまま使えますか？",
       "answer": "はい、ご利用可能です。光回線ご利用にあたっては無線ルーターの初期化及び設定を行う必要があります。",
       "tags": [
-        "Sun-Net光"
+        "切り替え",
+        "無線ルーター",
+        "機器",
+        "持ち込み"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "はい、ご利用可能です。光回線ご利用にあたっては無線ルーターの初期化及び設定を行う必要があります。",
-      "category_en": "Contract & Service",
-      "question_en": "寮内ネットからSun-Net光への切り替えを検討しています。いまSun-Netで購入した無線ルーターを利用していますが、そのまま利用することはできますか？"
+      "answer_en": "Yes, you can continue using your purchased router. Please note that it will need to be reset and reconfigured for use with the fiber optic connection.",
+      "category_en": "Service Information",
+      "question_en": "Can I keep using my purchased router after switching to Sun-Net Hikari?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0127",
       "source": "FAQ",
       "service": "Sun-Net光",
       "section": null,
-      "question": "寮内ネットからSun-Net光への切り替えを検討しています。無線ルーターはSun-Net指定のものを利用しなければならないのでしょうか？",
-      "answer": "弊社指定無線ルーター以外のご利用も可能でございますが、設定についてはお客様ご自身で行っていただきます。無線ルーターの設定サポートについては弊社では対応できかねますので各メーカーにお問い合わせください。",
+      "question": "寮内ネットからSun-Net光へ切り替える場合、無線ルーターはSun-Net指定品が必要ですか？",
+      "answer": "弊社指定無線ルーター以外のご利用も可能ですが、設定についてはお客様ご自身で行っていただきます。無線ルーターの設定サポートについては弊社では対応できかねますので各メーカーにお問い合わせください。",
       "tags": [
-        "Sun-Net光"
+        "切り替え",
+        "無線ルーター",
+        "指定機器",
+        "レンタル"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "弊社指定無線ルーター以外のご利用も可能でございますが、設定についてはお客様ご自身で行っていただきます。無線ルーターの設定サポートについては弊社では対応できかねますので各メーカーにお問い合わせください。",
-      "category_en": "Contract & Service",
-      "question_en": "寮内ネットからSun-Net光への切り替えを検討しています。無線ルーターはSun-Net指定のものを利用しなければならないのでしょうか？"
+      "answer_en": "You are not required to use a Sun-Net approved router. However, configuration must be done by the customer. Sun-Net does not provide setup support for non-approved routers. Please contact the router manufacturer for assistance.",
+      "category_en": "Service Information",
+      "question_en": "Do I need to use a Sun-Net approved router for Sun-Net Hikari?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0128",
       "source": "FAQ",
       "service": "Sun-Net光",
       "section": null,
-      "question": "無料インターネット付き物件に引っ越すことになりました。この場合はSun-Net光へ変更しないほうがいいですか？",
+      "question": "無料インターネット付き物件への引越し後もSun-Net光を継続すべきですか？",
       "answer": "建物の設備として高品質のインターネットが備わっているのであれば居室でのインターネット利用においては弊社サービスへの変更はおすすめいたしません。引越し先での生活がスタートした後、インターネットの速度等にご不満がありましたらSun-Net光への切り替えをおすすめいたします。",
       "tags": [
-        "Sun-Net光"
+        "引越し",
+        "無料インターネット",
+        "変更",
+        "解約"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "建物の設備として高品質のインターネットが備わっているのであれば居室でのインターネット利用においては弊社サービスへの変更はおすすめいたしません。引越し先での生活がスタートした後、インターネットの速度等にご不満がありましたらSun-Net光への切り替えをおすすめいたします。",
-      "category_en": "Contract & Service",
-      "question_en": "無料インターネット付き物件に引っ越すことになりました。この場合はSun-Net光へ変更しないほうがいいですか？"
+      "answer_en": "If the building already provides high-quality internet as a facility, we do not recommend switching to our service for in-room use. However, if you find the provided internet to be insufficient after moving in, feel free to contact us to explore your options.",
+      "category_en": "Contract & Billing",
+      "question_en": "Should I keep Sun-Net Hikari after moving to a property with free internet?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0142",
@@ -1825,7 +1943,7 @@
       "service": "SIMサービス",
       "section": null,
       "question": "SIMカードを紛失しました。どうすればいいですか？",
-      "answer": "弊社まで必ずお問合せください。\n 併せて警察機関へ紛失・盗難の届け出をお願いします。\n SIMカード（端末等）を拾った第三者からの不正利用を防止する為お客さまご自身で端末ロックをお願いします。\n なお、利用停止後にSIMカードを再発行します。停止中の月額料金についても請求対象です。※カードの再発行費用及び送料を別途請求します。",
+      "answer": "弊社まで必ずお問い合わせください\n併せて警察機関へ紛失・盗難の届け出をお願いします\nSIMカード（端末等）を拾った第三者からの不正利用を防止する為お客さまご自身で端末ロックをお願いします\nなお、利用停止後にSIMカードを再発行します。停止中の月額料金についても請求対象です。※カードの再発行費用及び送料を別途請求します。",
       "tags": [
         "SIM",
         "紛失"
@@ -1835,54 +1953,59 @@
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "弊社まで必ずお問合せください。\n 併せて警察機関へ紛失・盗難の届け出をお願いします。\n SIMカード（端末等）を拾った第三者からの不正利用を防止する為お客さまご自身で端末ロックをお願いします。\n なお、利用停止後にSIMカードを再発行します。停止中の月額料金についても請求対象です。※カードの再発行費用及び送料を別途請求します。",
-      "category_en": "Contract & Service",
-      "question_en": "SIMカードを紛失しました。どうすればいいですか？"
+      "answer_en": "Please contact us immediately.\nAlso, please file a lost property or theft report with your local police station.\nTo prevent unauthorized use by a third party who may have found your SIM card, please lock your device remotely.\nNote: You will still be charged during the period before the SIM card is suspended.",
+      "category_en": "Contract & Billing",
+      "question_en": "I lost my SIM card. What should I do?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0143",
       "source": "FAQ",
       "service": "SIMサービス",
       "section": null,
-      "question": "SIMフリー端末と思っていましたが、そうではなかったのか利用できません。どうしたら良いでしょうか？",
-      "answer": "お客様ご自身でロック解除の手続きをお願いします。",
+      "question": "SIMロックが原因でSIMカードが利用できない場合はどうすればよいですか？",
+      "answer": "お客様ご自身でSIMロック解除の手続きをお願いします。\nSIMロック解除はご契約中（または以前ご契約）の通信会社へお申し込みください。\n各社のマイページや店舗窓口から手続きが可能です。\n解除後、改めてSIMカードを挿入してご利用ください。",
       "tags": [
-        "SIM設定"
+        "APN設定"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "接続トラブル",
       "is_popular": false,
-      "answer_en": "お客様ご自身でロック解除の手続きをお願いします。",
-      "category_en": "Contract & Service",
-      "question_en": "SIMフリー端末と思っていましたが、そうではなかったのか利用できません。どうしたら良いでしょうか？"
+      "answer_en": "Please contact your current or previous mobile carrier to request a SIM unlock.\nYou can apply through each carrier's online account portal or at a store.\nOnce unlocked, reinsert the SIM card and follow the setup steps.",
+      "category_en": "Connection Troubleshooting",
+      "question_en": "My SIM card is not working due to a SIM lock. How do I fix it?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0144",
       "source": "FAQ",
       "service": "SIMサービス",
       "section": null,
-      "question": "寮内ネットもSIMサービスも使いたいです。それぞれ契約期間を指定することはできますか？支払いも別々にできますか？また各サービスを解約する際はどうすればいいですか？",
-      "answer": "2つのサービスの契約期間が異なる場合は各サービス毎にお申込ください。毎月払いでは複数サービスを合算したご請求となります。尚、中途解約の際はそれぞれのサービスにて1ヶ月前の連絡が必要です。",
+      "question": "寮内ネットとSIMサービスを併用する場合、契約・支払い・解約はそれぞれ別々に行えますか？",
+      "answer": "2つのサービスの契約期間が異なる場合は各サービス毎にお申込ください。毎月払いでは複数サービスを合算してご請求します。尚、中途解約の際はそれぞれのサービスにて1ヶ月前の連絡が必要です。",
       "tags": [
-        "SIMサービス",
-        "寮内ネット"
+        "複数契約",
+        "契約期間",
+        "支払い方法",
+        "解約"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "2つのサービスの契約期間が異なる場合は各サービス毎にお申込ください。毎月払いでは複数サービスを合算したご請求となります。尚、中途解約の際はそれぞれのサービスにて1ヶ月前の連絡が必要です。",
-      "category_en": "Contract & Service",
-      "question_en": "寮内ネットもSIMサービスも使いたいです。それぞれ契約期間を指定することはできますか？支払いも別々にできますか？また各サービスを解約する際はどうすればいいですか？"
+      "answer_en": "If the two services have different contract periods, please apply for each separately. If billed monthly, charges for multiple services will be combined into a single invoice. Note that each service requires 1 month's notice for mid-term cancellation.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I manage the contracts, payments, and cancellations for dormitory internet and SIM service separately?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0145",
@@ -1892,40 +2015,45 @@
       "question": "海外でSun-NetのSIMカードを使うことはできますか？",
       "answer": "できません。日本国内のみのサービスです。",
       "tags": [
-        "SIMサービス"
+        "海外利用",
+        "ローミング",
+        "SIMカード"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "サービス内容",
       "is_popular": false,
-      "answer_en": "できません。日本国内のみのサービスです。",
-      "category_en": "Contract & Service",
-      "question_en": "海外でSun-NetのSIMカードを使うことはできますか？"
+      "answer_en": "No. Sun-Net SIM cards are for use in Japan only.",
+      "category_en": "Service Information",
+      "question_en": "Can I use my Sun-Net SIM card overseas?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0146",
       "source": "FAQ",
       "service": "SIMサービス",
       "section": null,
-      "question": "IPHONEを利用したいのですが、SIMロック端末かどうか確認する方法はありますか？",
-      "answer": "■SIMロック解除状況の確認手段（IOS14以降）\n \n ?『設定』アイコン→『一般』→『情報』の順にタップ\n \n ?ページ中部の「SIMロック」欄を確認\n \n “SIMロックなし“と表示されているか確認してください。\n \n SIMロックと表示されている場合はSun-NetのSIMカードを利用することはできません。ご利用にあたってはご契約中の通信会社へのSIMロック解除申請が必要です。\n \n また、SIMカード挿入後に表示されたメッセージで確認することができます。\n \n 「SIMがロックされています」\n 「アクティベーションが必要です」\n 「このiPhoneに挿入したSIMカードはサポートされていないようです。iPhoneをアクティベーションするには、サポートされている電話会社の互換性のあるSIMカードしか使用することはできません。」",
+      "question": "iPhoneを利用したいのですが、SIMロック端末かどうか確認する方法はありますか？",
+      "answer": "■SIMロック解除状況の確認手段（IOS14以降）\n \n 『設定』アイコン→『一般』→『情報』の順にタップ\nページ中部の「SIMロック」欄を確認\n \n “SIMロックなし“と表示されているか確認してください\n\n SIMロックと表示されている場合はSun-NetのSIMカードを利用することはできません。ご利用にあたってはご契約中の通信会社へのSIMロック解除申請が必要です\n\n また、SIMカード挿入後に表示されたメッセージで確認することができます\n\n 「SIMがロックされています」\n 「アクティベーションが必要です」\n 「このiPhoneに挿入したSIMカードはサポートされていないようです。iPhoneをアクティベーションするには、サポートされている電話会社の互換性のあるSIMカードしか使用することはできません。」",
       "tags": [
-        "SIMサービス",
-        "ロック解除"
+        "ロック解除",
+        "iPhone",
+        "SIMロック"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "利用開始・接続方法",
       "is_popular": false,
-      "answer_en": "■SIMロック解除状況の確認手段（IOS14以降）\n \n ?『設定』アイコン→『一般』→『情報』の順にタップ\n \n ?ページ中部の「SIMロック」欄を確認\n \n “SIMロックなし“と表示されているか確認してください。\n \n SIMロックと表示されている場合はSun-NetのSIMカードを利用することはできません。ご利用にあたってはご契約中の通信会社へのSIMロック解除申請が必要です。\n \n また、SIMカード挿入後に表示されたメッセージで確認することができます。\n \n 「SIMがロックされています」\n 「アクティベーションが必要です」\n 「このiPhoneに挿入したSIMカードはサポートされていないようです。iPhoneをアクティベーションするには、サポートされている電話会社の互換性のあるSIMカードしか使用することはできません。」",
-      "category_en": "Contract & Service",
-      "question_en": "IPHONEを利用したいのですが、SIMロック端末かどうか確認する方法はありますか？"
+      "answer_en": "■ How to check SIM lock status on iOS 14 or later:\n1. Go to \"Settings\" → \"General\" → \"About.\"\n2. Scroll to find the \"SIM Lock\" entry.\n3. If it shows \"No SIM Restrictions,\" your iPhone is unlocked and compatible with our SIM.\nIf it shows \"SIM Locked,\" you will need to contact your carrier to request a SIM unlock before using our service.\nYou can also check by inserting the SIM card and looking for messages such as \"SIM Not Supported\" or \"Activation Required.\"",
+      "category_en": "Getting Started",
+      "question_en": "How do I check if my iPhone is SIM locked?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0147",
@@ -1933,21 +2061,23 @@
       "service": "SIMサービス",
       "section": null,
       "question": "Androidのスマートフォンを利用したいのですが、SIMロック端末かどうか確認する方法はありますか？",
-      "answer": "Androidスマートフォンの場合、機種によってSIMロックが解除されているかを確認する方法はまちまちです。\n \n 『設定』『デバイス情報（端末情報）』『SIMカードステータス』『SIMロックステータス』\n \n 『許可されています』→ロックが解除されています。\n \n 上記の方法で、SIMロックステータスが確認できない場合は、ご購入の販売店やご契約の通信事業者にご確認ください。",
+      "answer": "Androidスマートフォンの場合、機種によってSIMロックが解除されているかを確認する方法はまちまちです\n\n 『設定』『デバイス情報（端末情報）』『SIMカードステータス』『SIMロックステータス』\n \n 『許可されています』→ロックが解除されています\n\n 上記の方法で、SIMロックステータスが確認できない場合は、ご購入の販売店やご契約の通信事業者にご確認ください。",
       "tags": [
-        "SIMサービス",
-        "ロック解除"
+        "ロック解除",
+        "Android",
+        "SIMロック"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "利用開始・接続方法",
       "is_popular": false,
-      "answer_en": "Androidスマートフォンの場合、機種によってSIMロックが解除されているかを確認する方法はまちまちです。\n \n 『設定』『デバイス情報（端末情報）』『SIMカードステータス』『SIMロックステータス』\n \n 『許可されています』→ロックが解除されています。\n \n 上記の方法で、SIMロックステータスが確認できない場合は、ご購入の販売店やご契約の通信事業者にご確認ください。",
-      "category_en": "Contract & Service",
-      "question_en": "Androidのスマートフォンを利用したいのですが、SIMロック端末かどうか確認する方法はありますか？"
+      "answer_en": "The method to check SIM lock status varies by Android model.\nTypically: Go to \"Settings\" → \"About Phone\" (or \"Device Info\") → \"SIM Card Status\" → \"SIM Lock Status.\"\nIf you are unsure, please search online for instructions specific to your device model, or visit a carrier store for assistance.",
+      "category_en": "Getting Started",
+      "question_en": "How do I check if my Android smartphone is SIM locked?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0148",
@@ -1956,342 +2086,313 @@
       "section": null,
       "question": "SIMカードを破損してしまった。どうすればいいでしょうか？",
       "answer": "再発行になりますので、新たに発行費用と送料が必要です。",
-      "tags": [],
+      "tags": [
+        "破損",
+        "SIMカード",
+        "再発行",
+        "紛失"
+      ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "再発行になりますので、新たに発行費用と送料が必要です。",
-      "category_en": "Contract & Service",
-      "question_en": "SIMカードを破損してしまった。どうすればいいでしょうか？"
+      "answer_en": "A replacement SIM card will be issued. A reissuance fee and shipping cost will apply.",
+      "category_en": "Contract & Billing",
+      "question_en": "My SIM card is damaged. What should I do?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0149",
       "source": "FAQ",
       "service": "SIMサービス",
       "section": null,
-      "question": "解約したドコモのiphoneはつかえますか？",
-      "answer": "はいご利用いただけます。",
+      "question": "解約したドコモのiPhoneはつかえますか？",
+      "answer": "はい、ご利用いただけます。\nただし、SIMロックが解除されている必要があります。\nSIMロックの解除状況はiPhoneの「設定」→「一般」→「情報」→「SIMロック」欄でご確認ください。\n「SIMロックなし」と表示されていればご利用いただけます。",
       "tags": [
-        "SIM設定"
+        "APN設定"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
-      "category": "契約・サービス内容",
+      "category": "利用開始・接続方法",
       "is_popular": false,
-      "answer_en": "はいご利用いただけます。",
-      "category_en": "Contract & Service",
-      "question_en": "解約したドコモのiphoneはつかえますか？"
+      "answer_en": "Yes, it can be used.\nHowever, the SIM lock must be unlocked.\nTo check: Go to \"Settings\" → \"General\" → \"About\" → \"SIM Lock.\"\nIf it shows \"No SIM Restrictions,\" your iPhone is ready to use with our SIM.",
+      "category_en": "Getting Started",
+      "question_en": "Can I use my canceled Docomo iPhone with Sun-Net SIM?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0153",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "会員IDを忘れてしまいました。",
-      "answer": "弊社カスタマーサポートまでお問合せください。",
-      "tags": [],
+      "answer": "弊社カスタマーサポートまでお問い合わせください。",
+      "tags": [
+        "会員ID",
+        "ログイン",
+        "パスワード",
+        "忘れた"
+      ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
       "category": "各種お手続き",
       "is_popular": false,
-      "answer_en": "弊社カスタマーサポートまでお問合せください。",
+      "answer_en": "Please contact our Customer Support team for assistance.",
       "category_en": "Procedures",
-      "question_en": "会員IDを忘れてしまいました。"
+      "question_en": "I forgot my member ID. How can I retrieve it?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0154",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "クレジットカード決済のメールはいつごろ届きますか？",
-      "answer": "お申込み情報到着後1週間以内に指定のメールアドレス宛に届きます。アクセス有効期限がありますので期限内の手続きをお願いします。期限切れの際は弊社までお問合せください。\n \n クレジット支払手続きのメールは株式会社ゼウス（https://www.cardservice.co.jp/）のシステムを通じて配信されます。\n \n ●件名：[ZEUS]お支払手続きご案内メール\n ●差出人：mailinfo@cardservice.co.jp",
+      "answer": "お申込み情報到着後1週間以内に指定のメールアドレス宛に届きます。アクセス有効期限がありますので期限内の手続きをお願いします。期限切れの際は弊社までお問い合わせください\n\n クレジット支払手続きのメールは株式会社ゼウス（https://www.cardservice.co.jp/）のシステムを通じて配信されます\n\n ■件名：[ZEUS]お支払手続きご案内メール\n ■差出人：mailinfo@cardservice.co.jp",
       "tags": [
         "クレジットカード払い"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "お申込み情報到着後1週間以内に指定のメールアドレス宛に届きます。アクセス有効期限がありますので期限内の手続きをお願いします。期限切れの際は弊社までお問合せください。\n \n クレジット支払手続きのメールは株式会社ゼウス（https://www.cardservice.co.jp/）のシステムを通じて配信されます。\n \n ●件名：[ZEUS]お支払手続きご案内メール\n ●差出人：mailinfo@cardservice.co.jp",
-      "category_en": "Payment & Billing",
-      "question_en": "クレジットカード決済のメールはいつごろ届きますか？"
+      "answer_en": "The email will be sent to your registered email address within one week of your application being received. Please note that the link has an expiration date — complete the payment setup before it expires. If the link has expired, please contact us.",
+      "category_en": "Contract & Billing",
+      "question_en": "When will I receive the credit card payment setup email?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0155",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "クレジットカードの領収書はもらえませんか？",
       "answer": "領収書の発行には対応しておりません。カード会社発行の明細にてご確認をお願いします。",
       "tags": [
-        "クレジットカード"
+        "クレジットカード",
+        "領収書",
+        "発行",
+        "料金"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "領収書の発行には対応しておりません。カード会社発行の明細にてご確認をお願いします。",
-      "category_en": "Payment & Billing",
-      "question_en": "クレジットカードの領収書はもらえませんか？"
+      "answer_en": "We do not issue receipts. Please use the statement issued by your credit card company as proof of payment.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I get a receipt for my credit card payment?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0156",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "途中から別のクレジットカードにしたい場合はどうすればいいですか？",
-      "answer": "再度こちらからクレジット情報を入力して頂くURLをメールでお送り致します。⇒info@sunrise-net.co.jpまでクレジットURL希望・名前をご記入の上メールをお願いします",
+      "answer": "再度こちらからクレジット情報を入力していただくURLをメールでお送りいたします。→info@sunrise-net.co.jpまでクレジットURL希望・名前をご記入の上メールをお願いします",
       "tags": [
-        "クレジットカード"
+        "クレジットカード",
+        "変更手続き",
+        "支払い方法"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "再度こちらからクレジット情報を入力して頂くURLをメールでお送り致します。⇒info@sunrise-net.co.jpまでクレジットURL希望・名前をご記入の上メールをお願いします",
-      "category_en": "Payment & Billing",
-      "question_en": "途中から別のクレジットカードにしたい場合はどうすればいいですか？"
+      "answer_en": "We will send you a URL to re-enter your credit card information by email. Please send an email to info@sunrise-net.co.jp with \"Credit Card URL Request\" and your name in the message.",
+      "category_en": "Contract & Billing",
+      "question_en": "How do I switch to a different credit card for payment?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0157",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "毎月のクレジットカード決済はいつ頃になりますか？",
       "answer": "毎月10日前後です。但し決済システムによる都合や年末年始、GWなど長期休暇及び長期祝日の際は変更する場合がございますのでご了承ください。",
       "tags": [
-        "クレジットカード"
+        "クレジットカード",
+        "決済日",
+        "引落日",
+        "自動決済"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "毎月10日前後です。但し決済システムによる都合や年末年始、GWなど長期休暇及び長期祝日の際は変更する場合がございますのでご了承ください。",
-      "category_en": "Payment & Billing",
-      "question_en": "毎月のクレジットカード決済はいつ頃になりますか？"
+      "answer_en": "Payments are processed around the 10th of each month. Please note that the date may change during year-end/New Year holidays, Golden Week, or other extended public holidays due to payment system schedules.",
+      "category_en": "Contract & Billing",
+      "question_en": "When is my monthly credit card payment processed?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0158",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "利用できるクレジットカードについて教えてください。",
       "answer": "Visa、Mastercard、JCB、American Express、Diners Clubの国際ブランドに対応しています。",
-      "tags": [],
+      "tags": [
+        "クレジットカード",
+        "支払い方法",
+        "対応ブランド",
+        "VISA",
+        "Mastercard"
+      ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "Visa、Mastercard、JCB、American Express、Diners Clubの国際ブランドに対応しています。",
-      "category_en": "Payment & Billing",
-      "question_en": "利用できるクレジットカードについて教えてください。"
+      "answer_en": "We accept the following international credit card brands: Visa, Mastercard, JCB, American Express, and Diners Club.",
+      "category_en": "Contract & Billing",
+      "question_en": "Which credit card brands are accepted?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0159",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "デビット機能付きクレジットカードは利用できますか？",
       "answer": "カード発行会社や諸条件によりお使いいただけない場合がございます。詳しくはお客様のカード発行会社までお尋ねください。",
-      "tags": [],
+      "tags": [
+        "クレジットカード",
+        "デビットカード",
+        "支払い方法"
+      ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "カード発行会社や諸条件によりお使いいただけない場合がございます。詳しくはお客様のカード発行会社までお尋ねください。",
-      "category_en": "Payment & Billing",
-      "question_en": "デビット機能付きクレジットカードは利用できますか？"
-    },
-    {
-      "id": "FAQ-0160",
-      "source": "FAQ",
-      "service": "",
-      "section": null,
-      "question": "領収書を発行してもらえますか？",
-      "answer": "領収書の発行には対応しておりません。カード会社発行の明細にてご確認をお願いします。",
-      "tags": [],
-      "meta": {
-        "source": "CSV_IMPORT"
-      },
-      "service_tag_a": "ALL",
-      "service_tag_b": null,
-      "category": "料金・お支払い",
-      "is_popular": false,
-      "answer_en": "領収書の発行には対応しておりません。カード会社発行の明細にてご確認をお願いします。",
-      "category_en": "Payment & Billing",
-      "question_en": "領収書を発行してもらえますか？"
-    },
-    {
-      "id": "FAQ-0161",
-      "source": "FAQ",
-      "service": "",
-      "section": null,
-      "question": "クレジットカードを変更したい",
-      "answer": "再度こちらからクレジット情報を入力して頂くURLをメールでお送り致します。⇒info@sunrise-net.co.jpまでクレジットURL希望・名前をご記入の上メールをお願いします",
-      "tags": [],
-      "meta": {
-        "source": "CSV_IMPORT"
-      },
-      "service_tag_a": "ALL",
-      "service_tag_b": null,
-      "category": "料金・お支払い",
-      "is_popular": false,
-      "answer_en": "再度こちらからクレジット情報を入力して頂くURLをメールでお送り致します。⇒info@sunrise-net.co.jpまでクレジットURL希望・名前をご記入の上メールをお願いします",
-      "category_en": "Payment & Billing",
-      "question_en": "クレジットカードを変更したい"
-    },
-    {
-      "id": "FAQ-0162",
-      "source": "FAQ",
-      "service": "",
-      "section": null,
-      "question": "クレジットカードの自動決済日を教えてください。",
-      "answer": "毎月10日前後です。但し決済システムによる都合や年末年始、GWなど長期休暇及び長期祝日の際は変更する場合がございますのでご了承ください。",
-      "tags": [],
-      "meta": {
-        "source": "CSV_IMPORT"
-      },
-      "service_tag_a": "ALL",
-      "service_tag_b": null,
-      "category": "料金・お支払い",
-      "is_popular": false,
-      "answer_en": "毎月10日前後です。但し決済システムによる都合や年末年始、GWなど長期休暇及び長期祝日の際は変更する場合がございますのでご了承ください。",
-      "category_en": "Payment & Billing",
-      "question_en": "クレジットカードの自動決済日を教えてください。"
+      "answer_en": "Acceptance of debit cards may vary depending on the card issuer and conditions. Please check with your card issuer for details.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I use a debit card for payment?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0163",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "家族のクレジットカードは支払に利用することはできますか？",
-      "answer": "はい。親権者又は代理人のクレジットカードであれば可能でございます。",
-      "tags": [],
+      "answer": "はい。親権者又は代理人のクレジットカードであれば可能です。",
+      "tags": [
+        "クレジットカード",
+        "家族",
+        "支払い方法"
+      ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "はい。親権者又は代理人のクレジットカードであれば可能でございます。",
-      "category_en": "Payment & Billing",
-      "question_en": "家族のクレジットカードは支払に利用することはできますか？"
-    },
-    {
-      "id": "FAQ-0164",
-      "source": "FAQ",
-      "service": "",
-      "section": null,
-      "question": "対応しているクレジットカードブランドを教えてください。",
-      "answer": "Visa、Mastercard、JCB、American Express、Diners Clubの国際ブランドに対応しています。",
-      "tags": [],
-      "meta": {
-        "source": "CSV_IMPORT"
-      },
-      "service_tag_a": "ALL",
-      "service_tag_b": null,
-      "category": "料金・お支払い",
-      "is_popular": false,
-      "answer_en": "Visa、Mastercard、JCB、American Express、Diners Clubの国際ブランドに対応しています。",
-      "category_en": "Payment & Billing",
-      "question_en": "対応しているクレジットカードブランドを教えてください。"
+      "answer_en": "Yes. A credit card belonging to a parent or authorized representative is accepted.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I use a family member's credit card for payment?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0166",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
-      "question": "コンビニエンスストアで支払う事はできますか？",
-      "answer": "コンビニエンスストアでのお支払いには対応しておりません。コンビニエンスストア設置のATMからのお支払い操作をおねがいします。",
+      "question": "コンビニで支払うことはできますか？",
+      "answer": "コンビニエンスストアでのお支払いには対応しておりません。コンビニエンスストア設置のATMからのお支払い操作をお願いします。",
       "tags": [
-        "現金振込"
+        "現金振込",
+        "料金支払",
+        "コンビニ"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "コンビニエンスストアでのお支払いには対応しておりません。コンビニエンスストア設置のATMからのお支払い操作をおねがいします。",
-      "category_en": "Payment & Billing",
-      "question_en": "コンビニエンスストアで支払う事はできますか？"
+      "answer_en": "Cash payments at convenience store counters are not accepted. However, you can pay using the ATM available at convenience stores.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I pay at a convenience store?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0167",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
-      "question": "ゆうちょ銀行での振込方法が知りたい。",
-      "answer": "＜ゆうちょ銀行ATMでの方法＞\n \n ---払込取扱票での送金の場合---\n 1.「ご送金」を選択します。\n 2.「払込書でのご送金」を選択します。\n 3.「払込書」を入れます。払込書に住所氏名、会員IDをご記入の上、払込書を入れてください。\n \n ---ゆうちょ口座間での送金の場合---\n 1.「ゆうちょ口座へのご送金」を選択します。\n 2.「通帳、またはカード」を入れます。\n 3.「記号番号」を選択します。\n 4. 記号に「00150-3」を入力します。\n 5. 番号に「611077」を入力します。\n 6. 金額を入力してください。\n 7. 最後に確認を押せば手続きは完了します。",
+      "question": "ゆうちょ銀行での振込方法を教えてください。",
+      "answer": "【ゆうちょ銀行ATMでの方法】\n \n 【払込取扱票での送金の場合】\n 1.「ご送金」を選択します\n2.「払込書でのご送金」を選択します\n3.「払込書」を入れます。払込書に住所氏名、会員IDをご記入の上、払込書を入れてください\n\n 【ゆうちょ口座間での送金の場合】\n 1.「ゆうちょ口座へのご送金」を選択します\n2.「通帳、またはカード」を入れます\n3.「記号番号」を選択します\n4. 記号に「00150-3」を入力します\n5. 番号に「611077」を入力します\n6. 金額を入力してください\n7. 最後に確認を押せば手続きは完了します。",
       "tags": [
         "現金振込"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "＜ゆうちょ銀行ATMでの方法＞\n \n ---払込取扱票での送金の場合---\n 1.「ご送金」を選択します。\n 2.「払込書でのご送金」を選択します。\n 3.「払込書」を入れます。払込書に住所氏名、会員IDをご記入の上、払込書を入れてください。\n \n ---ゆうちょ口座間での送金の場合---\n 1.「ゆうちょ口座へのご送金」を選択します。\n 2.「通帳、またはカード」を入れます。\n 3.「記号番号」を選択します。\n 4. 記号に「00150-3」を入力します。\n 5. 番号に「611077」を入力します。\n 6. 金額を入力してください。\n 7. 最後に確認を押せば手続きは完了します。",
-      "category_en": "Payment & Billing",
-      "question_en": "ゆうちょ銀行での振込方法が知りたい。"
+      "answer_en": "■ At Japan Post Bank ATM:\n\n【Using a payment slip (haraikomi toriatsukaihyo)】\n1. Select \"Send Money (Okukin).\"\n2. Select \"Send via Payment Slip.\"\n3. Insert the payment slip. Fill in your name, address, and member ID, then insert it.\n\n【Transferring between Japan Post Bank accounts】\n1. Select \"Transfer to Japan Post Bank Account.\"\n2. Insert your passbook or card.\n3. Select \"Account Number (Kigo Bango).\"\n4. Enter the account symbol: 00150, account number: 3-6110.\n5. Enter the transfer amount and your member ID as the reference.",
+      "category_en": "Contract & Billing",
+      "question_en": "How do I make a payment at Japan Post Bank?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0168",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "利用料金の振込先を教えてください。",
-      "answer": "以下、いずれかの金融機関宛てにお願いします。\n ※お振込み時にご自身の会員ID番号をご入力ください。\n \n 1.ゆうちょ銀行（Japan Post Bank）\n 口座記号番号 00150-3-611077\n 加入者名 株式会社サンライズ\n \n 2.三菱UFJ銀行/0005（Mitsubishi UFJ bank）\n 浅草橋支店/069（Asakusabashi Branch）\n 普通預金\n 口座番号 0912502\n 口座名義 株式会社サンライズ\n \n 3.りそな銀行/0010（Resona bank）\n 秋葉原支店/275（Akihabara Branch）\n 普通預金\n 口座番号 2069388\n 口座名義 株式会社サンライズ",
+      "answer": "以下、いずれかの金融機関宛てにお願いします\n※お振込み時にご自身の会員ID番号をご入力ください\n\n 1.ゆうちょ銀行（Japan Post Bank）\n 口座記号番号 00150-3-611077\n 加入者名 株式会社サンライズ\n \n 2.三菱UFJ銀行/0005（Mitsubishi UFJ bank）\n 浅草橋支店/069（Asakusabashi Branch）\n 普通預金\n 口座番号 0912502\n 口座名義 株式会社サンライズ\n \n 3.りそな銀行/0010（Resona bank）\n 秋葉原支店/275（Akihabara Branch）\n 普通預金\n 口座番号 2069388\n 口座名義 株式会社サンライズ",
       "tags": [
-        "お支払"
+        "支払い方法"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "以下、いずれかの金融機関宛てにお願いします。\n ※お振込み時にご自身の会員ID番号をご入力ください。\n \n 1.ゆうちょ銀行（Japan Post Bank）\n 口座記号番号 00150-3-611077\n 加入者名 株式会社サンライズ\n \n 2.三菱UFJ銀行/0005（Mitsubishi UFJ bank）\n 浅草橋支店/069（Asakusabashi Branch）\n 普通預金\n 口座番号 0912502\n 口座名義 株式会社サンライズ\n \n 3.りそな銀行/0010（Resona bank）\n 秋葉原支店/275（Akihabara Branch）\n 普通預金\n 口座番号 2069388\n 口座名義 株式会社サンライズ",
-      "category_en": "Payment & Billing",
-      "question_en": "利用料金の振込先を教えてください。"
+      "answer_en": "Please transfer your payment to one of the following accounts.\nNote: Please enter your member ID number when making the transfer.\n\n1. Japan Post Bank\nAccount symbol and number: 00150-3-6110\nAccount name: Kabushiki Kaisha Sunrise\n\n2. Mizuho Bank, Higashi-Nihonbashi Branch\nAccount type: Ordinary\nAccount number: 1760148\nAccount name: Kabushiki Kaisha Sunrise",
+      "category_en": "Contract & Billing",
+      "question_en": "What is the bank transfer destination for my monthly fee?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0169",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "携帯番号やメールアドレスが変更になった場合はどうすればよいですか？",
       "answer": "各種お手続きページ内の『変更申請（お客様情報/契約プラン）』よりお手続きをお願いします。https://sunrise-net-s.cms2.jp/contact_list/alteration.html",
@@ -2301,187 +2402,221 @@
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "各種お手続き",
       "is_popular": false,
-      "answer_en": "各種お手続きページ内の『変更申請（お客様情報/契約プラン）』よりお手続きをお願いします。https://sunrise-net-s.cms2.jp/contact_list/alteration.html",
-      "category_en": "Payment & Billing",
-      "question_en": "携帯番号やメールアドレスが変更になった場合はどうすればよいですか？"
+      "answer_en": "Please use the \"Change Request (Customer Information / Contract Plan)\" form on the Procedures page:\nhttps://sunrise-net-s.cms2.jp/contact_list/alteration.html",
+      "category_en": "Procedures",
+      "question_en": "How do I update my phone number or email address?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0170",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
-      "question": "引落ができなかったと通知と振込請求案内のメールが届きました。次回引落時に引落してもらえませんか？",
-      "answer": "再引き落とし（再振替）は受付しておりません。支払い期日までにお振込みいただくようおねがいします。",
+      "question": "口座引落が失敗した場合、どのように支払えばよいですか？",
+      "answer": "再引き落とし（再振替）は受付しておりません。支払い期日までにお振込みいただくようお願いします。",
       "tags": [
-        "口座振替"
+        "口座振替",
+        "引落失敗",
+        "再振替",
+        "振込"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "再引き落とし（再振替）は受付しておりません。支払い期日までにお振込みいただくようおねがいします。",
-      "category_en": "Payment & Billing",
-      "question_en": "引落ができなかったと通知と振込請求案内のメールが届きました。次回引落時に引落してもらえませんか？"
+      "answer_en": "Re-debit (re-furikae) is not available. Please make a bank transfer by the payment due date.",
+      "category_en": "Contract & Billing",
+      "question_en": "What should I do if my bank direct debit fails?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0171",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "毎月の銀行引落しはいつですか？",
-      "answer": "毎月28日です。28日が土・日や祝日の際は翌金融機関営業日が引落日となります。前営業日までに引落金額以上の口座残高となるようご留意ください。",
+      "answer": "毎月28日です。28日が土・日や祝日の際は翌金融機関営業日が引落日です。前営業日までに引落金額以上の口座残高となるようご留意ください。",
       "tags": [
-        "口座振替"
+        "口座振替",
+        "引落日",
+        "28日"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "毎月28日です。28日が土・日や祝日の際は翌金融機関営業日が引落日となります。前営業日までに引落金額以上の口座残高となるようご留意ください。",
-      "category_en": "Payment & Billing",
-      "question_en": "毎月の銀行引落しはいつですか？"
+      "answer_en": "Direct debit is processed on the 28th of each month. If the 28th falls on a weekend or public holiday, the debit will be processed on the next business day. Please ensure your account balance is sufficient by the business day prior.",
+      "category_en": "Contract & Billing",
+      "question_en": "When is my monthly bank direct debit processed?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0172",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "引落口座について日本国外の銀行を指定することはできますか？",
       "answer": "いいえ。指定することができません。日本国内の金融機関の口座をご指定ください。",
-      "tags": [],
+      "tags": [
+        "口座振替",
+        "海外銀行",
+        "引落口座",
+        "外国人"
+      ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "いいえ。指定することができません。日本国内の金融機関の口座をご指定ください。",
-      "category_en": "Payment & Billing",
-      "question_en": "引落口座について日本国外の銀行を指定することはできますか？"
+      "answer_en": "No. Only bank accounts held at financial institutions in Japan are accepted for direct debit.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I use a bank account from outside Japan for direct debit?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0173",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "口座開設時に印鑑を必要としないネット銀行を登録する場合、口座振替依頼書の捺印はどうしたらいいですか？",
-      "answer": "口座開設時にサインを必要としたネット銀行の場合は捺印欄にサインをおねがいします。捺印・サインなしで口座開設された場合は不要です。詳しくはネット銀行側にお問合せください。",
+      "answer": "口座開設時にサインを必要としたネット銀行の場合は捺印欄にサインをお願いします。捺印・サインなしで口座開設された場合は不要です。詳しくはネット銀行側にお問い合わせください。",
       "tags": [
-        "口座振替"
+        "口座振替",
+        "ネット銀行",
+        "捺印",
+        "印鑑"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "口座開設時にサインを必要としたネット銀行の場合は捺印欄にサインをおねがいします。捺印・サインなしで口座開設された場合は不要です。詳しくはネット銀行側にお問合せください。",
-      "category_en": "Payment & Billing",
-      "question_en": "口座開設時に印鑑を必要としないネット銀行を登録する場合、口座振替依頼書の捺印はどうしたらいいですか？"
+      "answer_en": "If your online bank required a signature at account opening, please sign in the seal field. If no seal or signature was required at account opening, the field can be left blank. Please contact your bank directly if you are unsure.",
+      "category_en": "Contract & Billing",
+      "question_en": "What should I do about the seal on the direct debit form if my online bank does not require one?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0174",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "口座振替依頼書の手続きをしても内容に不備があり再提出の通知が届きます。どのようにすればよいのでしょうか？",
-      "answer": "再提出のご案内書類にて不備理由が明記されています。よくある不備内容は以下の項目です。\n \n ・お届け印のもれ、相違、不鮮明\n ・他人名義口座記入\n ・預金者名の字体相違、フリガナもれ\n ・金融機関名・支店名・口座番号の相違\n ・口座番号不明瞭\n ・インターネットバンキング手続きの登録未完了\n \n ※記入内容を間違えた場合は、二重線で訂正を入れお届け印を押してください。\n ※ご印鑑は鮮明に確認がとれる状態に押印ください。不鮮明（にじみ、かすみ等）であれば枠外に追加で押印ください。",
+      "answer": "再提出のご案内書類にて不備理由が明記されています。よくある不備内容は以下の項目です\n\n ・お届け印のもれ、相違、不鮮明\n ・他人名義口座記入\n ・預金者名の字体相違、フリガナもれ\n ・金融機関名・支店名・口座番号の相違\n ・口座番号不明瞭\n ・インターネットバンキング手続きの登録未完了\n \n ※記入内容を間違えた場合は、二重線で訂正を入れお届け印を押してください\n※ご印鑑は鮮明に確認がとれる状態に押印ください。不鮮明（にじみ、かすみ等）であれば枠外に追加で押印ください。",
       "tags": [
-        "口座振替"
+        "口座振替",
+        "依頼書",
+        "不備",
+        "再提出"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "再提出のご案内書類にて不備理由が明記されています。よくある不備内容は以下の項目です。\n \n ・お届け印のもれ、相違、不鮮明\n ・他人名義口座記入\n ・預金者名の字体相違、フリガナもれ\n ・金融機関名・支店名・口座番号の相違\n ・口座番号不明瞭\n ・インターネットバンキング手続きの登録未完了\n \n ※記入内容を間違えた場合は、二重線で訂正を入れお届け印を押してください。\n ※ご印鑑は鮮明に確認がとれる状態に押印ください。不鮮明（にじみ、かすみ等）であれば枠外に追加で押印ください。",
-      "category_en": "Payment & Billing",
-      "question_en": "口座振替依頼書の手続きをしても内容に不備があり再提出の通知が届きます。どのようにすればよいのでしょうか？"
+      "answer_en": "The reason for rejection is noted in the resubmission notice you received. Common reasons include:\n- Missing, incorrect, or unclear registered seal\n- Account registered under someone else's name\n- Inconsistent name format or missing furigana\n- Incorrect or missing bank name, branch name, or account number\nPlease carefully correct the identified issues and resubmit.",
+      "category_en": "Contract & Billing",
+      "question_en": "My direct debit form was rejected due to errors. How do I resubmit it correctly?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0175",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "口座振替依頼書を紛失してしまいました。どうすればいいでしょうか？",
-      "answer": "Sun-NetHP内の『お申込・各種お手続き』ページ内の『【会員様向け】口座振替依頼書ダウンロード』をご利用ください。\n http://www.sunrise-net.ne.jp/contact_list.html\n 印刷し、必要事項に記入・捺印の上、お客様保管用の複写を取った上で弊社までご郵送ください。\n 郵送での発送をご希望の場合は書類再送費用として220円をご請求いたします。郵送希望のお客様は下記メールアドレス宛に、お問合せください。\n info@sunrise-net.co.jp",
+      "answer": "Sun-NetHP内の『お申込・各種お手続き』ページ内の『【会員様向け】口座振替依頼書ダウンロード』をご利用ください\nhttp://www.sunrise-net.ne.jp/contact_list.html\n 印刷し、必要事項に記入・捺印の上、お客様保管用の複写を取った上で弊社までご郵送ください\n郵送での発送をご希望の場合は書類再送費用として220円をご請求いたします。郵送希望のお客様は下記メールアドレス宛に、お問い合わせください\ninfo@sunrise-net.co.jp",
       "tags": [
-        "口座振替"
+        "口座振替",
+        "依頼書",
+        "紛失",
+        "ダウンロード"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "Sun-NetHP内の『お申込・各種お手続き』ページ内の『【会員様向け】口座振替依頼書ダウンロード』をご利用ください。\n http://www.sunrise-net.ne.jp/contact_list.html\n 印刷し、必要事項に記入・捺印の上、お客様保管用の複写を取った上で弊社までご郵送ください。\n 郵送での発送をご希望の場合は書類再送費用として220円をご請求いたします。郵送希望のお客様は下記メールアドレス宛に、お問合せください。\n info@sunrise-net.co.jp",
-      "category_en": "Payment & Billing",
-      "question_en": "口座振替依頼書を紛失してしまいました。どうすればいいでしょうか？"
+      "answer_en": "Please download a new form from the Sun-Net website under \"Applications & Procedures\" → \"Direct Debit Authorization Form Download (For Members).\":\nhttp://www.sunrise-net.ne.jp/contact_list/",
+      "category_en": "Contract & Billing",
+      "question_en": "I lost my direct debit form. How can I get a new one?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0184",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "払込取扱票にて指定された支払期日が過ぎてしまいました。支払い期日が過ぎた後はどのように支払えばよいのでしょうか？",
       "answer": "期日が過ぎてもお支払いは可能です。但し督促料金が発生している場合は追加のお支払いが必要です。詳しくは弊社カスタマーサポートデスクまでお問い合わせください。",
       "tags": [
-        "払込票払い"
+        "払込票払い",
+        "支払期日",
+        "期日超過",
+        "督促"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "期日が過ぎてもお支払いは可能です。但し督促料金が発生している場合は追加のお支払いが必要です。詳しくは弊社カスタマーサポートデスクまでお問い合わせください。",
-      "category_en": "Payment & Billing",
-      "question_en": "払込取扱票にて指定された支払期日が過ぎてしまいました。支払い期日が過ぎた後はどのように支払えばよいのでしょうか？"
+      "answer_en": "Payment is still accepted after the due date. However, if a late payment fee has been applied, an additional payment will be required. Please contact our Customer Support desk for details.",
+      "category_en": "Contract & Billing",
+      "question_en": "The payment due date on my payment slip has passed. Can I still pay?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0185",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "払込取扱票での支払い方法を教えてください。",
-      "answer": "＜ゆうちょ銀行ATMでの方法＞\n \n ---払込取扱票での送金の場合---\n 1.「ご送金」を選択します。\n 2.「払込書でのご送金」を選択します。\n 3.「払込書」を入れます。払込書に住所氏名、会員IDをご記入の上、払込書を入れてください。\n \n ---ゆうちょ口座間での送金の場合---\n 1.「ゆうちょ口座へのご送金」を選択します。\n 2.「通帳、またはカード」を入れます。\n 3.「記号番号」を選択します。\n 4. 記号に「00150-3」を入力します。\n 5. 番号に「611077」を入力します。\n 6. 金額を入力してください。\n 7. 最後に確認を押せば手続きは完了します。",
+      "answer": "【ゆうちょ銀行ATMでの方法】\n \n 【払込取扱票での送金の場合】\n 1.「ご送金」を選択します\n2.「払込書でのご送金」を選択します\n3.「払込書」を入れます。払込書に住所氏名、会員IDをご記入の上、払込書を入れてください\n\n 【ゆうちょ口座間での送金の場合】\n 1.「ゆうちょ口座へのご送金」を選択します\n2.「通帳、またはカード」を入れます\n3.「記号番号」を選択します\n4. 記号に「00150-3」を入力します\n5. 番号に「611077」を入力します\n6. 金額を入力してください\n7. 最後に確認を押せば手続きは完了します。",
       "tags": [
-        "払込票払い"
+        "払込票払い",
+        "ゆうちょ",
+        "ATM",
+        "支払い方法"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "＜ゆうちょ銀行ATMでの方法＞\n \n ---払込取扱票での送金の場合---\n 1.「ご送金」を選択します。\n 2.「払込書でのご送金」を選択します。\n 3.「払込書」を入れます。払込書に住所氏名、会員IDをご記入の上、払込書を入れてください。\n \n ---ゆうちょ口座間での送金の場合---\n 1.「ゆうちょ口座へのご送金」を選択します。\n 2.「通帳、またはカード」を入れます。\n 3.「記号番号」を選択します。\n 4. 記号に「00150-3」を入力します。\n 5. 番号に「611077」を入力します。\n 6. 金額を入力してください。\n 7. 最後に確認を押せば手続きは完了します。",
-      "category_en": "Payment & Billing",
-      "question_en": "払込取扱票での支払い方法を教えてください。"
+      "answer_en": "■ At Japan Post Bank ATM:\n\n【Using a payment slip (haraikomi toriatsukaihyo)】\n1. Select \"Send Money (Okukin).\"\n2. Select \"Send via Payment Slip.\"\n3. Insert the payment slip. Fill in your name, address, and member ID, then insert it.\n\n【Transferring between Japan Post Bank accounts】\n1. Select \"Transfer to Japan Post Bank Account.\"\n2. Insert your passbook or card.\n3. Select \"Account Number (Kigo Bango).\"\n4. Enter the account symbol: 00150, account number: 3-6110.\n5. Enter the transfer amount and your member ID as the reference.",
+      "category_en": "Contract & Billing",
+      "question_en": "How do I pay using the payment slip?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0186",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "契約者以外の銀行口座を引落口座として登録することはできますか？",
-      "answer": "はい。親権者又は代理人の口座であれば可能でございます。口座振替依頼書下部に契約者情報を記入の上お手続きください。",
+      "answer": "はい。親権者又は代理人の口座であれば可能です。口座振替依頼書下部に契約者情報を記入の上お手続きください。",
       "tags": [
         "変更手続き",
         "口座振替"
@@ -2489,97 +2624,80 @@
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "各種お手続き",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "はい。親権者又は代理人の口座であれば可能でございます。口座振替依頼書下部に契約者情報を記入の上お手続きください。",
-      "category_en": "Procedures",
-      "question_en": "契約者以外の銀行口座を引落口座として登録することはできますか？"
+      "answer_en": "Yes. A bank account belonging to a parent or authorized representative is accepted. Please fill in the account holder's information and the subscriber's information at the bottom of the direct debit authorization form.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I register a bank account that is not in my name for direct debit?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0187",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "途中で部屋が変わるかもしれませんが、どうすればよいのでしょうか？",
-      "answer": "下記『お部屋番号変更フォーム』よりお手続きをお願いします。\n https://sunrise-net-s.cms2.jp/changeroom.html",
+      "answer": "下記『お部屋番号変更フォーム』よりお手続きをお願いします\nhttps://sunrise-net-s.cms2.jp/changeroom.html",
       "tags": [
         "変更手続き"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
       "category": "各種お手続き",
       "is_popular": false,
-      "answer_en": "下記『お部屋番号変更フォーム』よりお手続きをお願いします。\n https://sunrise-net-s.cms2.jp/changeroom.html",
+      "answer_en": "Please use the Room Number Change Form below:\nhttps://sunrise-net-s.cms2.jp/changeroom.html",
       "category_en": "Procedures",
-      "question_en": "途中で部屋が変わるかもしれませんが、どうすればよいのでしょうか？"
+      "question_en": "What should I do if my room number changes during my contract?",
+      "user_type": "共通"
     },
     {
       "id": "FAQ-0188",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "料金支払は親に任せたいのですが、どのようにすればよいのでしょうか？",
-      "answer": "お申込時に実家請求希望欄にチェックをお願い致します。",
+      "answer": "お申込時に実家請求希望欄にチェックをお願いいたします。",
       "tags": [
         "料金支払"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "お申込時に実家請求希望欄にチェックをお願い致します。",
-      "category_en": "Payment & Billing",
-      "question_en": "料金支払は親に任せたいのですが、どのようにすればよいのでしょうか？"
-    },
-    {
-      "id": "FAQ-0189",
-      "source": "FAQ",
-      "service": "",
-      "section": null,
-      "question": "コンビニエンスストアで支払う事はできますか？",
-      "answer": "コンビニエンスストアでのお支払いには対応しておりません。コンビニエンスストア設置のATMからのお支払い操作をおねがいします。",
-      "tags": [
-        "料金支払"
-      ],
-      "meta": {
-        "source": "CSV_IMPORT"
-      },
-      "service_tag_a": "ALL",
-      "service_tag_b": null,
-      "category": "料金・お支払い",
-      "is_popular": false,
-      "answer_en": "コンビニエンスストアでのお支払いには対応しておりません。コンビニエンスストア設置のATMからのお支払い操作をおねがいします。",
-      "category_en": "Payment & Billing",
-      "question_en": "コンビニエンスストアで支払う事はできますか？"
+      "answer_en": "Please check the \"Home Billing Request\" box on the application form when signing up.",
+      "category_en": "Contract & Billing",
+      "question_en": "How can I have my parents handle the payment?",
+      "user_type": "個人"
     },
     {
       "id": "FAQ-0190",
       "source": "FAQ",
-      "service": "",
+      "service": "共通",
       "section": null,
       "question": "契約者以外のクレジットカードでの支払いは可能ですか？",
-      "answer": "はい。親権者又は代理人のクレジットカードであれば可能でございます。",
+      "answer": "はい。親権者又は代理人のクレジットカードであれば可能です。",
       "tags": [
         "料金支払"
       ],
       "meta": {
         "source": "CSV_IMPORT"
       },
-      "service_tag_a": "ALL",
+      "service_tag_a": "共通",
       "service_tag_b": null,
-      "category": "料金・お支払い",
+      "category": "契約・料金",
       "is_popular": false,
-      "answer_en": "はい。親権者又は代理人のクレジットカードであれば可能でございます。",
-      "category_en": "Payment & Billing",
-      "question_en": "契約者以外のクレジットカードでの支払いは可能ですか？"
+      "answer_en": "Yes. A credit card belonging to a parent or authorized representative is accepted.",
+      "category_en": "Contract & Billing",
+      "question_en": "Can I pay with a credit card that is not in my name?",
+      "user_type": "個人"
     }
   ]
 }
