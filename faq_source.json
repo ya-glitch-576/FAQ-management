@@ -15,10 +15,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": "dQw4w9WgXcQ",
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 0
+        "originalLine": 0,
+        "imageUrl": ""
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -27,7 +28,9 @@
       "answer_en": "A MAC address is a unique identifier assigned to network devices such as laptops, smartphones, and printers. It is a 12-digit hexadecimal number (e.g., 00-00-00-XX-XX-XX), where the first 6 digits identify the manufacturer and the last 6 digits identify the specific device.",
       "category_en": "MAC Address Registration",
       "question_en": "What is a MAC address?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": "dQw4w9WgXcQ",
+      "image_url": ""
     },
     {
       "id": "FAQ-0002",
@@ -46,7 +49,8 @@
         "youtubeCode": "",
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 2
+        "originalLine": 2,
+        "imageUrl": "https://www.sunrise-net.ne.jp/img/sunnetlogo.png"
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -55,7 +59,9 @@
       "answer_en": "Yes, you can. A MAC address may also be referred to as a physical address or Wi-Fi address depending on the device. Please note that the label may vary by device model.",
       "category_en": "MAC Address Registration",
       "question_en": "Can I use my Wi-Fi address as my MAC address?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": "",
+      "image_url": "https://www.sunrise-net.ne.jp/img/sunnetlogo.png"
     },
     {
       "id": "FAQ-0003",
@@ -70,10 +76,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 3
+        "originalLine": 3,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -82,7 +89,9 @@
       "answer_en": "Please contact our Customer Support team for assistance.",
       "category_en": "MAC Address Registration",
       "question_en": "I forgot which device (MAC address) I registered. What should I do?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0004",
@@ -99,10 +108,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 4
+        "originalLine": 4,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -111,7 +121,9 @@
       "answer_en": "1. Open the \"Settings\" app on your home screen.\n2. Tap \"General.\"\n3. Select \"About.\"\n4. The value shown next to \"Wi-Fi Address\" is your iPhone's MAC address (physical address).",
       "category_en": "MAC Address Registration",
       "question_en": "How do I find the MAC address on my iPhone or iPad?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0005",
@@ -127,10 +139,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 5
+        "originalLine": 5,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -139,7 +152,9 @@
       "answer_en": "Note: Steps may vary depending on your Android OS version and manufacturer. Please search online for instructions specific to your device.\n1. Enable Wi-Fi on your device.\n2. Open the \"Settings\" app.\n3. Tap \"About Phone\" (or \"Device Information\").\n4. Look for \"Wi-Fi MAC Address\" or \"Physical Address.\"",
       "category_en": "MAC Address Registration",
       "question_en": "How do I find the MAC address on my Android device?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0006",
@@ -154,10 +169,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 6
+        "originalLine": 6,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -166,7 +182,9 @@
       "answer_en": "The service is available if Sun-Net has been deployed in your dormitory. Please contact us to confirm availability at your specific dormitory.\nToll-free: 0120-336-326\nEmail: info@sunrise-net.co.jp",
       "category_en": "Contract & Billing",
       "question_en": "Is the dormitory internet service available at my student dormitory?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0007",
@@ -181,10 +199,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 7
+        "originalLine": 7,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -193,7 +212,9 @@
       "answer_en": "If there is no gap in your contract period, your service will continue automatically from the second year onward with no renewal fee. If there is a gap, you will need to re-enroll as a new member.",
       "category_en": "Contract & Billing",
       "question_en": "Do I need to renew my contract for the second year? How do I do it?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0008",
@@ -208,10 +229,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 8
+        "originalLine": 8,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -220,7 +242,9 @@
       "answer_en": "Yes, contracts are available on a month-by-month basis. Please choose the contract period that suits your needs.",
       "category_en": "Contract & Billing",
       "question_en": "Can I sign up for a short-term contract until summer?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0009",
@@ -235,10 +259,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 9
+        "originalLine": 9,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -247,7 +272,9 @@
       "answer_en": "After moving out, you may continue using Sun-Net Hikari at your new address (plan change required; some buildings may not be eligible). Please refer to the following page for details: http://www.sunrise-net.ne.jp/sunnethikari\nTo cancel, please contact our Customer Support team.",
       "category_en": "Contract & Billing",
       "question_en": "What do I need to do to cancel my service when I move out?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0010",
@@ -262,10 +289,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 10
+        "originalLine": 10,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -274,7 +302,9 @@
       "answer_en": "Yes, you can switch mid-contract. However, please note that the purchase plan has a lower monthly fee than the rental plan. We recommend comparing the plans based on your expected usage period. To switch, please use the Plan Change Form.",
       "category_en": "Contract & Billing",
       "question_en": "Can I switch from a router purchase plan to a rental plan mid-contract?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0011",
@@ -289,10 +319,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 11
+        "originalLine": 11,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -301,7 +332,9 @@
       "answer_en": "For system management reasons, only routers provided by Sun-Net are permitted. Please refrain from using your own wireless router or any other personal networking equipment.",
       "category_en": "Service Information",
       "question_en": "Can I use my own wireless router?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0012",
@@ -316,10 +349,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 12
+        "originalLine": 12,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -328,7 +362,9 @@
       "answer_en": "Up to 2 devices of the same type (e.g., iPhones) can be registered. Only devices owned by the account holder are eligible. To register a third device of the same type, a separate written agreement is required.",
       "category_en": "MAC Address Registration",
       "question_en": "I have three iPhones. Can I register all of them?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0013",
@@ -343,10 +379,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 13
+        "originalLine": 13,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -355,7 +392,9 @@
       "answer_en": "This is a personal contract, and only devices owned by the account holder may be registered. Registration and use of devices belonging to other individuals is not permitted.",
       "category_en": "MAC Address Registration",
       "question_en": "Can I register my friend's device under my account?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0014",
@@ -373,10 +412,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 14
+        "originalLine": 14,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -385,7 +425,9 @@
       "answer_en": "We recommend starting with a 1-year contract and renewing on a minimum-period basis until your schedule is confirmed. Please note that for the dormitory internet service only, a temporary suspension may be available if you are on an officially approved leave of absence from your university and plan to return to the same dormitory within your contract period. Please contact Customer Support for details.",
       "category_en": "Contract & Billing",
       "question_en": "What should I do with my contract if I will be away for an extended period?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0015",
@@ -404,10 +446,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 15
+        "originalLine": 15,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -416,7 +459,9 @@
       "answer_en": "Charges apply throughout your contract period, including during vacation breaks.",
       "category_en": "Contract & Billing",
       "question_en": "Will I be charged during summer, winter, and spring breaks when I go home?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0016",
@@ -431,10 +476,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 16
+        "originalLine": 16,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -443,7 +489,9 @@
       "answer_en": "We recommend signing up for a short-term contract and renewing on a minimum-period basis until your study abroad dates are confirmed. For the dormitory internet service only, a temporary suspension may be available for university-approved study abroad programs if you plan to return to the same dormitory within your contract period. Please contact Customer Support for details.",
       "category_en": "Contract & Billing",
       "question_en": "How do I set my contract period if my study abroad dates are not yet confirmed?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0017",
@@ -459,10 +507,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 17
+        "originalLine": 17,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -471,7 +520,9 @@
       "answer_en": "The purchase plan has a lower monthly fee than the rental plan. If you plan to use the service for 2 or more years, the purchase plan is recommended. Both plans include the same internet service quality (except for some plans).",
       "category_en": "Service Information",
       "question_en": "What is the difference between the Wi-Fi Plus rental plan and the purchase plan?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0018",
@@ -486,10 +537,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 18
+        "originalLine": 18,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -498,7 +550,9 @@
       "answer_en": "A wired LAN (wired connection) uses a LAN cable to connect to the internet. It generally provides more stable speeds and signal quality than a wireless connection. A LAN-compatible device and MAC address registration are required. If your device does not have a LAN port, a LAN adapter is available for purchase.",
       "category_en": "Service Information",
       "question_en": "What is a wired LAN (wired connection)?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0019",
@@ -514,10 +568,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 19
+        "originalLine": 19,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -526,7 +581,9 @@
       "answer_en": "Yes, replacement is available for Wi-Fi Plus purchase plan subscribers. The cost of the new router and shipping fees will apply.",
       "category_en": "Service Information",
       "question_en": "Can I replace my wireless router with a new one?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0020",
@@ -543,10 +600,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 20
+        "originalLine": 20,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -555,7 +613,9 @@
       "answer_en": "The wireless router we ship includes a LAN cable. If you only use Wi-Fi, you do not need to prepare one. However, if you use a wired LAN connection or need to reposition the router, an additional LAN cable may be required.",
       "category_en": "Service Information",
       "question_en": "Do I need a LAN cable?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0027",
@@ -571,10 +631,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 27
+        "originalLine": 27,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -583,7 +644,9 @@
       "answer_en": "If \"Private Address\" or \"Random MAC Address\" features are ON in your smartphone's Wi-Fi settings, please try turning them OFF.",
       "category_en": "Device Settings",
       "question_en": "My smartphone cannot connect to Wi-Fi. What should I do?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0028",
@@ -599,10 +662,11 @@
       "meta": {
         "iconType": 31,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 28
+        "originalLine": 28,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -611,7 +675,9 @@
       "answer_en": "The setup process varies by game console, but generally you can connect by going to Network Settings, selecting Wi-Fi, and entering the SSID and password. Please refer to the guidebook for detailed instructions for your specific console.",
       "category_en": "Device Settings",
       "question_en": "How do I set up an internet connection on my game console?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0029",
@@ -627,10 +693,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 29
+        "originalLine": 29,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -639,7 +706,9 @@
       "answer_en": "Please check your security software settings and try temporarily disabling it. If the connection works after disabling it, review and adjust your security software settings accordingly.",
       "category_en": "Device Settings",
       "question_en": "Can security software affect my internet connection?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0030",
@@ -655,10 +724,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 30
+        "originalLine": 30,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -667,7 +737,9 @@
       "answer_en": "Yes, smart home devices can be used on our network. Please follow the setup instructions for each device and take appropriate security precautions. For device-specific questions, please contact the manufacturer's support.",
       "category_en": "Device Settings",
       "question_en": "Can I control home appliances over the internet?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0035",
@@ -685,10 +757,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 35
+        "originalLine": 35,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -697,7 +770,9 @@
       "answer_en": "■ For iPhone users:\nTurn off the \"Private Address\" setting.\nIf you are unsure how to do this, please refer to: https://support.apple.com\n\n■ For Android users:\nDisable the \"Random MAC Address\" or \"Use Random MAC\" setting in your Wi-Fi settings.\n\nIf the issue persists after adjusting these settings, please contact our Customer Support team.",
       "category_en": "Connection Troubleshooting",
       "question_en": "My smartphone's Wi-Fi is not working. How do I fix it?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0036",
@@ -716,10 +791,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 36
+        "originalLine": 36,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -728,7 +804,9 @@
       "answer_en": "To connect to our internet service, you need to configure a fixed MAC address on your Windows PC. Please follow these steps:\n1. Click \"Settings.\"\n2. Go to \"Network & Internet.\"\n3. Select \"Wi-Fi\" and click on your connection.\n4. Turn off \"Random hardware addresses.\"\nAfter updating the setting, please submit a new MAC address registration.",
       "category_en": "Connection Troubleshooting",
       "question_en": "My Windows PC cannot connect to Wi-Fi. How do I fix it?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0037",
@@ -744,10 +822,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 37
+        "originalLine": 37,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -756,7 +835,9 @@
       "answer_en": "Consider using a Wi-Fi range extender or mesh Wi-Fi system. We recommend consulting Sun-Net support before purchasing to ensure compatibility.",
       "category_en": "Speed & Quality",
       "question_en": "The Wi-Fi signal is weak in my room. What can I do?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0038",
@@ -772,10 +853,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 38
+        "originalLine": 38,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -784,7 +866,9 @@
       "answer_en": "You can use an online speed test service such as Speedtest.net. If you have questions about your results, please contact Sun-Net support.",
       "category_en": "Speed & Quality",
       "question_en": "How do I test my internet speed?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0039",
@@ -800,10 +884,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 39
+        "originalLine": 39,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -812,7 +897,9 @@
       "answer_en": "Keeping your router's firmware up to date is important for security and performance improvements. Check for updates regularly and apply them as needed. Please refer to your router's manual for update instructions.",
       "category_en": "Speed & Quality",
       "question_en": "Do I need to update my router's firmware?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0040",
@@ -828,10 +915,11 @@
       "meta": {
         "iconType": 21,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 40
+        "originalLine": 40,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -840,7 +928,9 @@
       "answer_en": "Yes, speed may decrease as more devices share the available bandwidth. When performing important tasks, try reducing the number of connected devices to improve performance.",
       "category_en": "Speed & Quality",
       "question_en": "Does using multiple devices at the same time slow down the internet?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0045",
@@ -855,10 +945,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 45
+        "originalLine": 45,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -867,7 +958,9 @@
       "answer_en": "Pressing the reset button will restore the router to its factory settings and change the SSID. Select the primary SSID (e.g., \"aterm~~\") and enter the password printed on the back of the router.",
       "category_en": "Getting Started",
       "question_en": "I accidentally pressed the reset button on my router. What should I do?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0046",
@@ -882,10 +975,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 46
+        "originalLine": 46,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -894,7 +988,9 @@
       "answer_en": "In most cases, automatic (DHCP) settings will work without any issues. If manual configuration is required, go to your device's network settings, select \"Configure IP Manually,\" and enter the necessary information.",
       "category_en": "Getting Started",
       "question_en": "How do I configure my IP address settings?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0047",
@@ -909,10 +1005,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 47
+        "originalLine": 47,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -921,7 +1018,9 @@
       "answer_en": "Go to your device's network settings, select \"Configure DNS Manually,\" and enter the DNS server address provided by Sun-Net.",
       "category_en": "Getting Started",
       "question_en": "How do I configure my DNS server settings?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0048",
@@ -936,10 +1035,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 48
+        "originalLine": 48,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -948,7 +1048,9 @@
       "answer_en": "IPv6 availability depends on your Sun-Net service plan and location. Please contact Customer Support to check availability. If supported, we will provide setup instructions.",
       "category_en": "Getting Started",
       "question_en": "Is IPv6 supported?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0053",
@@ -963,10 +1065,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 53
+        "originalLine": 53,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -975,7 +1078,9 @@
       "answer_en": "Yes, you can sign up in advance. Once your laptop arrives, please find its MAC address and submit a MAC address registration request using the form below:\nhttps://sunrise-net-s.cms2.jp/contact_list/mac_application",
       "category_en": "Contract & Billing",
       "question_en": "Can I sign up even if I do not have a laptop yet?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0054",
@@ -991,10 +1096,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 54
+        "originalLine": 54,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1003,7 +1109,9 @@
       "answer_en": "Please return the rental router within one week of your contract end date. If you move out or relocate before your contract ends, please return it in advance.",
       "category_en": "Contract & Billing",
       "question_en": "What is the deadline for returning the rental wireless router?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0055",
@@ -1019,10 +1127,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 55
+        "originalLine": 55,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1031,7 +1140,9 @@
       "answer_en": "Please contact us as soon as possible and return the router promptly. If the router is not returned, you may be charged a replacement fee equivalent to the router's value.",
       "category_en": "Contract & Billing",
       "question_en": "I forgot to return the router and it has been over a week since my contract ended. What should I do?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0056",
@@ -1047,10 +1158,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 56
+        "originalLine": 56,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1059,7 +1171,9 @@
       "answer_en": "■ Return address:\nSunrise Co., Ltd.\n2-14-1 Higashi-Nihonbashi, Chuo-ku, Tokyo 103-0004\nDKK Higashi-Nihonbashi Building 4F\n\nIf a prepaid return label is included in the router's box or bag, please use it.\nIf no label is included, please ship the router at your own expense using a trackable shipping method.",
       "category_en": "Contract & Billing",
       "question_en": "How do I return the wireless router?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0057",
@@ -1075,10 +1189,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 57
+        "originalLine": 57,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1087,7 +1202,9 @@
       "answer_en": "First, check if the router is powered on. Next, verify that the Wi-Fi SSID and password are correct. If you still cannot connect, try restarting your device.",
       "category_en": "Connection Troubleshooting",
       "question_en": "How do I fix the internet connection issue?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0058",
@@ -1103,10 +1220,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 58
+        "originalLine": 58,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1115,7 +1233,9 @@
       "answer_en": "The Wi-Fi password (encryption key) is usually located on the back or bottom of the router. If you cannot find it, please contact Sun-Net support.",
       "category_en": "Connection Troubleshooting",
       "question_en": "Where can I find my Wi-Fi password?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0059",
@@ -1131,10 +1251,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 59
+        "originalLine": 59,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1143,7 +1264,9 @@
       "answer_en": "Try restarting the router or moving closer to it. Also, check the usage status of other devices and optimize network settings if necessary.",
       "category_en": "Speed & Quality",
       "question_en": "Why is my internet speed slow, and how can I improve it?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0060",
@@ -1159,10 +1282,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 60
+        "originalLine": 60,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1171,7 +1295,9 @@
       "answer_en": "Please check whether the router is in \"BR (Bridge)\" mode. Check the switch on the side or bottom of the router, toggle it if necessary, and restart the router.",
       "category_en": "Connection Troubleshooting",
       "question_en": "The \"ACTIVE\" light on my router is not on. What should I do?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0061",
@@ -1187,10 +1313,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 61
+        "originalLine": 61,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1199,7 +1326,9 @@
       "answer_en": "Possible causes include router placement, radio interference, or outdated firmware. Try restarting the router, changing its position, or updating to the latest firmware.",
       "category_en": "Connection Troubleshooting",
       "question_en": "Why does my internet keep disconnecting?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0067",
@@ -1214,10 +1343,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 67
+        "originalLine": 67,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1226,7 +1356,9 @@
       "answer_en": "Please check whether your roommate is also a Sun-Net subscriber. Each router is issued per individual contract, so each subscriber should use their own router. If you need a HUB to share the connection, please contact us — we can provide a rental HUB. If your roommate is not a subscriber, please return the extra router.",
       "category_en": "Contract & Billing",
       "question_en": "My roommate already has a router. Do I still need to return mine?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0068",
@@ -1241,10 +1373,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 68
+        "originalLine": 68,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1253,7 +1386,9 @@
       "answer_en": "Since the HUB is issued per individual contract, each account holder is responsible for returning their own HUB.",
       "category_en": "Contract & Billing",
       "question_en": "Who is responsible for returning the HUB in a shared room?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0069",
@@ -1268,10 +1403,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 69
+        "originalLine": 69,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1280,7 +1416,9 @@
       "answer_en": "If you need a HUB to share the connection between two routers, please contact us. We can provide a rental HUB.",
       "category_en": "Contract & Billing",
       "question_en": "There are not enough ports for two routers in my shared room. What should I do?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0070",
@@ -1297,10 +1435,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 70
+        "originalLine": 70,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1309,7 +1448,9 @@
       "answer_en": "A MAC address (physical address) is a unique identifier assigned to a network device. At Sun-Net, registration of each device's MAC address is required for security and management.",
       "category_en": "MAC Address Registration",
       "question_en": "What is a MAC address (physical address), and why do I need to register it?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0071",
@@ -1326,10 +1467,11 @@
       "meta": {
         "iconType": 36,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 71
+        "originalLine": 71,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1338,7 +1480,9 @@
       "answer_en": "The method varies by device, but generally for a Windows PC, type 'getmac /v' in the command prompt. For Mac OS, check under 'System Preferences' -> 'Network'.",
       "category_en": "MAC Address Registration",
       "question_en": "How do I find my MAC address?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0072",
@@ -1355,10 +1499,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 72
+        "originalLine": 72,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1367,7 +1512,9 @@
       "answer_en": "Check the physical address of the new device and follow the procedures via the MAC address addition form: https://sunrise-net-s.cms2.jp/contact_list/mac_application_add.html",
       "category_en": "MAC Address Registration",
       "question_en": "I purchased a new device. How do I register it?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0073",
@@ -1384,10 +1531,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 73
+        "originalLine": 73,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1396,7 +1544,9 @@
       "answer_en": "Up to 5 devices can be registered. From the 6th device onwards, additional registration is possible for 220 yen (tax included) per month per device.",
       "category_en": "MAC Address Registration",
       "question_en": "Is there a limit on how many devices I can register?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0078",
@@ -1414,10 +1564,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 78
+        "originalLine": 78,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1426,7 +1577,9 @@
       "answer_en": "1) Is your contract still active? Internet access is not available after the contract end date.\n2) Have you registered your device's MAC address? Internet access requires MAC address registration.\n3) Is your router properly set up? Make sure the router is powered on and the ACTIVE light is lit.\nIf you have checked all of the above and still cannot connect, please contact our Customer Support team.",
       "category_en": "Connection Troubleshooting",
       "question_en": "What should I check first if I cannot connect to the internet?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0079",
@@ -1443,10 +1596,11 @@
       "meta": {
         "iconType": 74,
         "partsType": null,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 79
+        "originalLine": 79,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット,Sun-Net光",
       "service_tag_b": null,
@@ -1455,7 +1609,9 @@
       "answer_en": "Sun-Net services do not have a data usage cap under normal use. However, excessive use or unauthorized activity is prohibited.",
       "category_en": "Service Information",
       "question_en": "Is there a data usage limit or cap?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0080",
@@ -1471,10 +1627,11 @@
       "meta": {
         "iconType": 74,
         "partsType": null,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 80
+        "originalLine": 80,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット,Sun-Net光",
       "service_tag_b": null,
@@ -1483,7 +1640,9 @@
       "answer_en": "Yes, you can change your payment method. Please contact Sun-Net Customer Support and let us know your preferred payment method.",
       "category_en": "Contract & Billing",
       "question_en": "How do I change my payment method?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0081",
@@ -1500,10 +1659,11 @@
       "meta": {
         "iconType": 60,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 81
+        "originalLine": 81,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1512,7 +1672,9 @@
       "answer_en": "The service is available if Sun-Net has been deployed in your dormitory. Please contact us to confirm availability at your specific dormitory.\nToll-free: 0120-336-326\nEmail: info@sunrise-net.co.jp",
       "category_en": "Contract & Billing",
       "question_en": "Is Sun-Net available at the dormitory I am moving into?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0083",
@@ -1529,10 +1691,11 @@
       "meta": {
         "iconType": null,
         "partsType": 2,
-        "youtubeCode": "",
+        "youtubeCode": null,
         "youtubeWidth": 0,
         "youtubeHeight": 0,
-        "originalLine": 83
+        "originalLine": 83,
+        "imageUrl": null
       },
       "service_tag_a": "寮内ネット",
       "service_tag_b": null,
@@ -1541,7 +1704,9 @@
       "answer_en": "Contracts are available on a month-by-month basis. Please choose the contract period that suits your needs.",
       "category_en": "Contract & Billing",
       "question_en": "What is the minimum contract period?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0113",
@@ -1557,7 +1722,9 @@
         "継続"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1566,7 +1733,9 @@
       "answer_en": "If your new address is within the Sun-Net service area, you can transfer your service. Please contact Sun-Net support as early as possible to confirm the process.",
       "category_en": "Contract & Billing",
       "question_en": "I am planning to move. What happens to my internet service?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0114",
@@ -1581,7 +1750,9 @@
         "確認方法"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1590,7 +1761,9 @@
       "answer_en": "You can check the latest service outage information on the Sun-Net official website and social media accounts. For major outages, you will also be notified by email.",
       "category_en": "Connection Troubleshooting",
       "question_en": "Where can I check for internet service outage information?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0115",
@@ -1606,7 +1779,9 @@
         "問い合わせ"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1615,7 +1790,9 @@
       "answer_en": "For urgent issues, please refer to the Help Center or FAQ on the Sun-Net official website. You can also contact support on the next business day.",
       "category_en": "Connection Troubleshooting",
       "question_en": "What should I do if I have an issue outside of support hours?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0116",
@@ -1630,7 +1807,9 @@
         "手続き"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1639,7 +1818,9 @@
       "answer_en": "To cancel your service, please contact Sun-Net Customer Support. We will guide you through the cancellation process, required documents, and equipment return procedures.",
       "category_en": "Contract & Billing",
       "question_en": "How do I cancel my internet service?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0117",
@@ -1652,7 +1833,9 @@
         "エリア判定"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1661,7 +1844,9 @@
       "answer_en": "Yes, you can apply. Please provide your new address and we will check the internet infrastructure, whether installation work is required, and the earliest available activation date. Feel free to contact us for more details.",
       "category_en": "Getting Started",
       "question_en": "Can I sign up for Sun-Net Hikari at my new address after moving?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0118",
@@ -1677,7 +1862,9 @@
         "審査"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1686,7 +1873,9 @@
       "answer_en": "We will first check the system availability at your address. Depending on the building, we may contact the owner directly on your behalf to obtain permission. Please note that service may not be available in some cases due to building structure, owner preferences, or regional NTT service limitations. Please feel free to consult us.",
       "category_en": "Getting Started",
       "question_en": "Can I apply even if my property requires the owner's permission?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0119",
@@ -1702,7 +1891,9 @@
         "申込"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1711,7 +1902,9 @@
       "answer_en": "■ If you are currently subscribed to NTT East or West fiber optic service: You can switch via a transfer (tenyo) procedure.\n■ If you are using another fiber optic reseller (hikari collaboration): You can switch via a provider change (jigyosha-henko) procedure.\nNote: Your current ISP contract cannot be transferred through these procedures. You will need to cancel it separately.\nFor other types of internet connections, a new contract will be required.",
       "category_en": "Getting Started",
       "question_en": "Can I switch to Sun-Net Hikari from another fiber optic provider?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0120",
@@ -1726,7 +1919,9 @@
         "サービス内容"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1735,7 +1930,9 @@
       "answer_en": "Sun-Net Hikari bundles the fiber optic line and ISP service together, so no separate ISP contract is needed.",
       "category_en": "Service Information",
       "question_en": "Do I need to sign up for a separate ISP contract?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0121",
@@ -1751,7 +1948,9 @@
         "長期不在"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1760,7 +1959,9 @@
       "answer_en": "Yes, a temporary suspension is available. However, monthly internet charges will still apply during the suspension period. We recommend consulting us before signing up if you have upcoming plans that may affect your service.",
       "category_en": "Contract & Billing",
       "question_en": "Can I put my service on hold during a long-term study abroad?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0122",
@@ -1776,7 +1977,9 @@
         "サービス継続"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1785,7 +1988,9 @@
       "answer_en": "This depends on the NTT East/West service area. If you are moving within the same area, you can continue your service by completing a relocation procedure.\n- Relocation administrative fee: ¥3,300\n- Relocation installation fee: ¥4,950 (if applicable)\nPlease contact us for details based on your specific situation.",
       "category_en": "Contract & Billing",
       "question_en": "Can I continue using the service at my new address after moving?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0123",
@@ -1801,7 +2006,9 @@
         "申請"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1810,7 +2017,9 @@
       "answer_en": "MAC address registration is not required for Sun-Net Hikari. There are no restrictions on the number or type of personal devices you can connect.",
       "category_en": "MAC Address Registration",
       "question_en": "Do I need to register my MAC address when switching from dormitory internet to Sun-Net Hikari?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0124",
@@ -1826,7 +2035,9 @@
         "データ上限"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1835,7 +2046,9 @@
       "answer_en": "There is no device limit with Sun-Net Hikari. However, please note that connecting more devices simultaneously may reduce internet speed. There is no monthly data cap — the service is unlimited.",
       "category_en": "Service Information",
       "question_en": "Are there limits on the number of devices or data usage when switching to Sun-Net Hikari?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0125",
@@ -1851,7 +2064,9 @@
         "レンタル"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1860,7 +2075,9 @@
       "answer_en": "Yes, you can continue renting your router at ¥200/month (ex. tax) / ¥220/month (inc. tax). Please note that the router will need to be reset and reconfigured for use with the fiber optic connection.",
       "category_en": "Service Information",
       "question_en": "Can I keep using my rental router after switching to Sun-Net Hikari?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0126",
@@ -1876,7 +2093,9 @@
         "持ち込み"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1885,7 +2104,9 @@
       "answer_en": "Yes, you can continue using your purchased router. Please note that it will need to be reset and reconfigured for use with the fiber optic connection.",
       "category_en": "Service Information",
       "question_en": "Can I keep using my purchased router after switching to Sun-Net Hikari?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0127",
@@ -1901,7 +2122,9 @@
         "レンタル"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1910,7 +2133,9 @@
       "answer_en": "You are not required to use a Sun-Net approved router. However, configuration must be done by the customer. Sun-Net does not provide setup support for non-approved routers. Please contact the router manufacturer for assistance.",
       "category_en": "Service Information",
       "question_en": "Do I need to use a Sun-Net approved router for Sun-Net Hikari?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0128",
@@ -1926,7 +2151,9 @@
         "解約"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "Sun-Net光",
       "service_tag_b": null,
@@ -1935,7 +2162,9 @@
       "answer_en": "If the building already provides high-quality internet as a facility, we do not recommend switching to our service for in-room use. However, if you find the provided internet to be insufficient after moving in, feel free to contact us to explore your options.",
       "category_en": "Contract & Billing",
       "question_en": "Should I keep Sun-Net Hikari after moving to a property with free internet?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0142",
@@ -1949,7 +2178,9 @@
         "紛失"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
@@ -1958,7 +2189,9 @@
       "answer_en": "Please contact us immediately.\nAlso, please file a lost property or theft report with your local police station.\nTo prevent unauthorized use by a third party who may have found your SIM card, please lock your device remotely.\nNote: You will still be charged during the period before the SIM card is suspended.",
       "category_en": "Contract & Billing",
       "question_en": "I lost my SIM card. What should I do?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0143",
@@ -1971,7 +2204,9 @@
         "APN設定"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
@@ -1980,7 +2215,9 @@
       "answer_en": "Please contact your current or previous mobile carrier to request a SIM unlock.\nYou can apply through each carrier's online account portal or at a store.\nOnce unlocked, reinsert the SIM card and follow the setup steps.",
       "category_en": "Connection Troubleshooting",
       "question_en": "My SIM card is not working due to a SIM lock. How do I fix it?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0144",
@@ -1996,7 +2233,9 @@
         "解約"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
@@ -2005,7 +2244,9 @@
       "answer_en": "If the two services have different contract periods, please apply for each separately. If billed monthly, charges for multiple services will be combined into a single invoice. Note that each service requires 1 month's notice for mid-term cancellation.",
       "category_en": "Contract & Billing",
       "question_en": "Can I manage the contracts, payments, and cancellations for dormitory internet and SIM service separately?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0145",
@@ -2020,7 +2261,9 @@
         "SIMカード"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
@@ -2029,7 +2272,9 @@
       "answer_en": "No. Sun-Net SIM cards are for use in Japan only.",
       "category_en": "Service Information",
       "question_en": "Can I use my Sun-Net SIM card overseas?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0146",
@@ -2044,7 +2289,9 @@
         "SIMロック"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
@@ -2053,7 +2300,9 @@
       "answer_en": "■ How to check SIM lock status on iOS 14 or later:\n1. Go to \"Settings\" → \"General\" → \"About.\"\n2. Scroll to find the \"SIM Lock\" entry.\n3. If it shows \"No SIM Restrictions,\" your iPhone is unlocked and compatible with our SIM.\nIf it shows \"SIM Locked,\" you will need to contact your carrier to request a SIM unlock before using our service.\nYou can also check by inserting the SIM card and looking for messages such as \"SIM Not Supported\" or \"Activation Required.\"",
       "category_en": "Getting Started",
       "question_en": "How do I check if my iPhone is SIM locked?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0147",
@@ -2068,7 +2317,9 @@
         "SIMロック"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
@@ -2077,7 +2328,9 @@
       "answer_en": "The method to check SIM lock status varies by Android model.\nTypically: Go to \"Settings\" → \"About Phone\" (or \"Device Info\") → \"SIM Card Status\" → \"SIM Lock Status.\"\nIf you are unsure, please search online for instructions specific to your device model, or visit a carrier store for assistance.",
       "category_en": "Getting Started",
       "question_en": "How do I check if my Android smartphone is SIM locked?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0148",
@@ -2093,7 +2346,9 @@
         "紛失"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
@@ -2102,7 +2357,9 @@
       "answer_en": "A replacement SIM card will be issued. A reissuance fee and shipping cost will apply.",
       "category_en": "Contract & Billing",
       "question_en": "My SIM card is damaged. What should I do?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0149",
@@ -2115,7 +2372,9 @@
         "APN設定"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "SIMサービス",
       "service_tag_b": null,
@@ -2124,7 +2383,9 @@
       "answer_en": "Yes, it can be used.\nHowever, the SIM lock must be unlocked.\nTo check: Go to \"Settings\" → \"General\" → \"About\" → \"SIM Lock.\"\nIf it shows \"No SIM Restrictions,\" your iPhone is ready to use with our SIM.",
       "category_en": "Getting Started",
       "question_en": "Can I use my canceled Docomo iPhone with Sun-Net SIM?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0153",
@@ -2140,7 +2401,9 @@
         "忘れた"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2149,7 +2412,9 @@
       "answer_en": "Please contact our Customer Support team for assistance.",
       "category_en": "Procedures",
       "question_en": "I forgot my member ID. How can I retrieve it?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0154",
@@ -2162,7 +2427,9 @@
         "クレジットカード払い"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2171,7 +2438,9 @@
       "answer_en": "The email will be sent to your registered email address within one week of your application being received. Please note that the link has an expiration date — complete the payment setup before it expires. If the link has expired, please contact us.",
       "category_en": "Contract & Billing",
       "question_en": "When will I receive the credit card payment setup email?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0155",
@@ -2187,7 +2456,9 @@
         "料金"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2196,7 +2467,9 @@
       "answer_en": "We do not issue receipts. Please use the statement issued by your credit card company as proof of payment.",
       "category_en": "Contract & Billing",
       "question_en": "Can I get a receipt for my credit card payment?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0156",
@@ -2211,7 +2484,9 @@
         "支払い方法"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2220,7 +2495,9 @@
       "answer_en": "We will send you a URL to re-enter your credit card information by email. Please send an email to info@sunrise-net.co.jp with \"Credit Card URL Request\" and your name in the message.",
       "category_en": "Contract & Billing",
       "question_en": "How do I switch to a different credit card for payment?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0157",
@@ -2236,7 +2513,9 @@
         "自動決済"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2245,7 +2524,9 @@
       "answer_en": "Payments are processed around the 10th of each month. Please note that the date may change during year-end/New Year holidays, Golden Week, or other extended public holidays due to payment system schedules.",
       "category_en": "Contract & Billing",
       "question_en": "When is my monthly credit card payment processed?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0158",
@@ -2262,7 +2543,9 @@
         "Mastercard"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2271,7 +2554,9 @@
       "answer_en": "We accept the following international credit card brands: Visa, Mastercard, JCB, American Express, and Diners Club.",
       "category_en": "Contract & Billing",
       "question_en": "Which credit card brands are accepted?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0159",
@@ -2286,7 +2571,9 @@
         "支払い方法"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2295,7 +2582,9 @@
       "answer_en": "Acceptance of debit cards may vary depending on the card issuer and conditions. Please check with your card issuer for details.",
       "category_en": "Contract & Billing",
       "question_en": "Can I use a debit card for payment?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0163",
@@ -2310,7 +2599,9 @@
         "支払い方法"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2319,7 +2610,9 @@
       "answer_en": "Yes. A credit card belonging to a parent or authorized representative is accepted.",
       "category_en": "Contract & Billing",
       "question_en": "Can I use a family member's credit card for payment?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0166",
@@ -2334,7 +2627,9 @@
         "コンビニ"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2343,7 +2638,9 @@
       "answer_en": "Cash payments at convenience store counters are not accepted. However, you can pay using the ATM available at convenience stores.",
       "category_en": "Contract & Billing",
       "question_en": "Can I pay at a convenience store?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0167",
@@ -2356,7 +2653,9 @@
         "現金振込"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2365,7 +2664,9 @@
       "answer_en": "■ At Japan Post Bank ATM:\n\n【Using a payment slip (haraikomi toriatsukaihyo)】\n1. Select \"Send Money (Okukin).\"\n2. Select \"Send via Payment Slip.\"\n3. Insert the payment slip. Fill in your name, address, and member ID, then insert it.\n\n【Transferring between Japan Post Bank accounts】\n1. Select \"Transfer to Japan Post Bank Account.\"\n2. Insert your passbook or card.\n3. Select \"Account Number (Kigo Bango).\"\n4. Enter the account symbol: 00150, account number: 3-6110.\n5. Enter the transfer amount and your member ID as the reference.",
       "category_en": "Contract & Billing",
       "question_en": "How do I make a payment at Japan Post Bank?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0168",
@@ -2378,7 +2679,9 @@
         "支払い方法"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2387,7 +2690,9 @@
       "answer_en": "Please transfer your payment to one of the following accounts.\nNote: Please enter your member ID number when making the transfer.\n\n1. Japan Post Bank\nAccount symbol and number: 00150-3-6110\nAccount name: Kabushiki Kaisha Sunrise\n\n2. Mizuho Bank, Higashi-Nihonbashi Branch\nAccount type: Ordinary\nAccount number: 1760148\nAccount name: Kabushiki Kaisha Sunrise",
       "category_en": "Contract & Billing",
       "question_en": "What is the bank transfer destination for my monthly fee?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0169",
@@ -2400,7 +2705,9 @@
         "変更手続き"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2409,7 +2716,9 @@
       "answer_en": "Please use the \"Change Request (Customer Information / Contract Plan)\" form on the Procedures page:\nhttps://sunrise-net-s.cms2.jp/contact_list/alteration.html",
       "category_en": "Procedures",
       "question_en": "How do I update my phone number or email address?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0170",
@@ -2425,7 +2734,9 @@
         "振込"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2434,7 +2745,9 @@
       "answer_en": "Re-debit (re-furikae) is not available. Please make a bank transfer by the payment due date.",
       "category_en": "Contract & Billing",
       "question_en": "What should I do if my bank direct debit fails?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0171",
@@ -2449,7 +2762,9 @@
         "28日"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2458,7 +2773,9 @@
       "answer_en": "Direct debit is processed on the 28th of each month. If the 28th falls on a weekend or public holiday, the debit will be processed on the next business day. Please ensure your account balance is sufficient by the business day prior.",
       "category_en": "Contract & Billing",
       "question_en": "When is my monthly bank direct debit processed?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0172",
@@ -2474,7 +2791,9 @@
         "外国人"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2483,7 +2802,9 @@
       "answer_en": "No. Only bank accounts held at financial institutions in Japan are accepted for direct debit.",
       "category_en": "Contract & Billing",
       "question_en": "Can I use a bank account from outside Japan for direct debit?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0173",
@@ -2499,7 +2820,9 @@
         "印鑑"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2508,7 +2831,9 @@
       "answer_en": "If your online bank required a signature at account opening, please sign in the seal field. If no seal or signature was required at account opening, the field can be left blank. Please contact your bank directly if you are unsure.",
       "category_en": "Contract & Billing",
       "question_en": "What should I do about the seal on the direct debit form if my online bank does not require one?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0174",
@@ -2524,7 +2849,9 @@
         "再提出"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2533,7 +2860,9 @@
       "answer_en": "The reason for rejection is noted in the resubmission notice you received. Common reasons include:\n- Missing, incorrect, or unclear registered seal\n- Account registered under someone else's name\n- Inconsistent name format or missing furigana\n- Incorrect or missing bank name, branch name, or account number\nPlease carefully correct the identified issues and resubmit.",
       "category_en": "Contract & Billing",
       "question_en": "My direct debit form was rejected due to errors. How do I resubmit it correctly?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0175",
@@ -2549,7 +2878,9 @@
         "ダウンロード"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2558,7 +2889,9 @@
       "answer_en": "Please download a new form from the Sun-Net website under \"Applications & Procedures\" → \"Direct Debit Authorization Form Download (For Members).\":\nhttp://www.sunrise-net.ne.jp/contact_list/",
       "category_en": "Contract & Billing",
       "question_en": "I lost my direct debit form. How can I get a new one?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0184",
@@ -2574,7 +2907,9 @@
         "督促"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2583,7 +2918,9 @@
       "answer_en": "Payment is still accepted after the due date. However, if a late payment fee has been applied, an additional payment will be required. Please contact our Customer Support desk for details.",
       "category_en": "Contract & Billing",
       "question_en": "The payment due date on my payment slip has passed. Can I still pay?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0185",
@@ -2599,7 +2936,9 @@
         "支払い方法"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2608,7 +2947,9 @@
       "answer_en": "■ At Japan Post Bank ATM:\n\n【Using a payment slip (haraikomi toriatsukaihyo)】\n1. Select \"Send Money (Okukin).\"\n2. Select \"Send via Payment Slip.\"\n3. Insert the payment slip. Fill in your name, address, and member ID, then insert it.\n\n【Transferring between Japan Post Bank accounts】\n1. Select \"Transfer to Japan Post Bank Account.\"\n2. Insert your passbook or card.\n3. Select \"Account Number (Kigo Bango).\"\n4. Enter the account symbol: 00150, account number: 3-6110.\n5. Enter the transfer amount and your member ID as the reference.",
       "category_en": "Contract & Billing",
       "question_en": "How do I pay using the payment slip?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0186",
@@ -2622,7 +2963,9 @@
         "口座振替"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2631,7 +2974,9 @@
       "answer_en": "Yes. A bank account belonging to a parent or authorized representative is accepted. Please fill in the account holder's information and the subscriber's information at the bottom of the direct debit authorization form.",
       "category_en": "Contract & Billing",
       "question_en": "Can I register a bank account that is not in my name for direct debit?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0187",
@@ -2644,7 +2989,9 @@
         "変更手続き"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2653,7 +3000,9 @@
       "answer_en": "Please use the Room Number Change Form below:\nhttps://sunrise-net-s.cms2.jp/changeroom.html",
       "category_en": "Procedures",
       "question_en": "What should I do if my room number changes during my contract?",
-      "user_type": "共通"
+      "user_type": "共通",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0188",
@@ -2666,7 +3015,9 @@
         "料金支払"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2675,7 +3026,9 @@
       "answer_en": "Please check the \"Home Billing Request\" box on the application form when signing up.",
       "category_en": "Contract & Billing",
       "question_en": "How can I have my parents handle the payment?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     },
     {
       "id": "FAQ-0190",
@@ -2688,7 +3041,9 @@
         "料金支払"
       ],
       "meta": {
-        "source": "CSV_IMPORT"
+        "source": "CSV_IMPORT",
+        "youtubeCode": null,
+        "imageUrl": null
       },
       "service_tag_a": "共通",
       "service_tag_b": null,
@@ -2697,7 +3052,9 @@
       "answer_en": "Yes. A credit card belonging to a parent or authorized representative is accepted.",
       "category_en": "Contract & Billing",
       "question_en": "Can I pay with a credit card that is not in my name?",
-      "user_type": "個人"
+      "user_type": "個人",
+      "youtube_code": null,
+      "image_url": null
     }
   ]
 }
